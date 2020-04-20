@@ -32,14 +32,37 @@
 | S3 types| S3 Standard | S3 Intelligent Tiering| S3 Standard IA | S3 One Zone - IA |  S3 Glacier | S3 Glacier Deep Archive |
 | ----------- | ----------- | ----------- |----------- |----------- |----------- |----------- |
 | Durability| 11 9% | 11 9% | 11 9% | 11 9% | 11 9% | 11 9% |
+| Availability | 99.99% | 99.9% | 99.9%  | 99.5% | N/A | N/A|
+Availability Zones | >= 3 | >= 3 |  >= 3 | 
 
 ![S3 test](/images/S3_image.png)
 
 
-# Structured documents
+# S3 Storage Gateway 
 
-Sometimes it's useful to have different levels of headings to structure your documents. Start lines with a `#` to create headings. Multiple `##` in a row denote smaller heading sizes.
+## S3 Storage Gateway Types:
+1. File gateway (NFS & SMB): 
+    - flat files stored directly on S3
+    - store and retrieve files directly using the NFS version 3 or 4.1 protocol.
+    - store and retrieve files directly using the SMB file system version, 2 and 3 protocol.
+    - access the data directly in S3 from any AWS Cloud application or service.
+    - manage S3 data using lifecycle policies, cross-region replication, and versioning.
 
-### This is a third-tier heading
+2. Volume gateway (iSCSI)
+    - Stored Volumes: 
+        - data stored on site and assynchronous backed up to S3.
+        - Gateway-stored volume configuration provides durable and inexpensive off-site backups that you can recover to your local data center or Amazon EC2. For example, if you need replacement capacity for disaster recovery, you can recover the backups to Amazon EC2
+        - 
+    - Cached Volumes: 
+        - data is stored on S3 and the most frequently accessed data is cached on site.
+        - All gateway-cached volume data and snapshot data is stored in Amazon S3 encrypted at rest using server-side encryption (SSE) and it cannot be accessed with S3 API or any other tools
+3. Tape Gateway
+    - 
 
-You can use one `#` all the way up to `######` six for different heading sizes.
+## Storage Gateway Facts
+- AWS Storage Gateway backs up the data in Amazon Storage as incremental EBS snapshots
+- AWS Storage Gateway, by default, uploads data using SSL and provides data encryption at rest when stored in S3 or Glacier using AES-256
+
+
+
+
