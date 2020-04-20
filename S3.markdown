@@ -1,10 +1,40 @@
-It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+# S3 - Simple Storage Service Definition
 
-If you want to embed images, this is how you do it:
+# S3 Facts
+- Object storage: flat files
+- Objects consists of:
+    - Key (name of object)
+    - Value (this is simply the data)
+    - Version ID (versioning)
+    - Metadata
+    - Subresources like access control lists and torrent
+- Size: 0 to 5 TBytes
+- S3 uses a universal namespace (i.e. unique name)
+- Uloaded code get 200 HTTP response.
+
+# S3 Features
+- Tiered storage available
+- Lifecycle Management
+- Versioning
+- Encription
+- MFA (Multi-Factor Authentication)
+- Secure date using Access Control lists and Bucket Policies.
+
+# S3 types
+1. S3 standard: 99,99% availability
+2. S3 IA (Infrequent Accessed)
+3. S3 One Zone -IA
+4. S3 Intelligent Tiering
+5. S3 Glacier
+6. S3 Glacier Deep Archive
+
+
+| S3 types| S3 Standard | S3 Intelligent Tiering| S3 Standard IA | S3 One Zone - IA |  S3 Glacier | S3 Glacier Deep Archive |
+| ----------- | ----------- | ----------- |----------- |----------- |----------- |----------- |
+| Durability| 11 9% | 11 9% | 11 9% | 11 9% | 11 9% | 11 9% |
 
 ![S3 test](/images/S3_image.png)
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 # Structured documents
 

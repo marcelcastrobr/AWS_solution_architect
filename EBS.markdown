@@ -7,6 +7,17 @@
 - Cold hard disk drive (HDD)
 - Magnetic
 
+# EBS Facts
+- Volumes exist on  EBS (virtual hard disk)
+- Snapshots exist on S3. 
+- Snapshots are incremental - only the blocks changes since last snapshot are moved to S3.
+- You need to stop instance for EBS as root, we need to stop the instance.
+- AMI´s (Amazon Machine Images) can be created from snapshots.
+- You can change EBS volume sizes on the fly, including changing the size and storage type.
+- Volumes will always be in the same availability zone as the EC2 instance.
+
+
+
 # EBS Comparison
 ![EBS](/images/EBS_comparison.png)
 
