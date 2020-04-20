@@ -2,7 +2,7 @@ It's very easy to make some words **bold** and other words *italic* with Markdow
 
 If you want to embed images, this is how you do it:
 
-![S3 test] (/images/Screenshot 2020-04-20 at 10.10.02.png)
+![S3 test](/images/S3_image.png)
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
