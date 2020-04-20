@@ -13,7 +13,7 @@
 # Table
 
 | Syntax | Description |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |----------- |----------- |----------- |
 | Volume Type | General Purpose SSD | Provisioned IOPS SSD | Throughtput Optimized HDD | Cold HDD |  EBS Magnetic
 | API Name | gp2 | io1 | st1 | sc1 | Standard
 
