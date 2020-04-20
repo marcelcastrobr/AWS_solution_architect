@@ -28,9 +28,4 @@
 
 [Price](https://aws.amazon.com/dynamodb/pricing/on-demand/)
 
-# Table
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
