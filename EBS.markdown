@@ -8,7 +8,7 @@
 - Magnetic
 
 # EBS Comparison
-![EBS](/iimages/EBS_comparison.png)
+![EBS](/images/EBS_comparison.png)
 
 
 
