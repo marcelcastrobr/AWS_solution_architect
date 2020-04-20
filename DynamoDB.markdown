@@ -24,6 +24,10 @@
 - Read operations (such as GetItem, Query, and Scan) provide a ConsistentRead parameter. If you set this parameter to true, DynamoDB uses strongly consistent reads during the operation.
 
 
+# DynamoDB Pricing
+
+[Price](https://aws.amazon.com/dynamodb/pricing/on-demand/)
+
 # Table
 
 | Syntax | Description |
