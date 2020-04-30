@@ -39,16 +39,15 @@ Three types of placement groups:
 - You cannot merge placement groups
 - You can move or remove an instance to a placement group using the AWS CLI and AWS SDK, but cannot do it via console.
 
-
-# EFS - Elastic File System
-
-## EFS Definition
-EFS is a fully managed file storage service for AWS EC2.
-
-## EFS Facts
-- Supportts NFSv4 protocol
-- Only pay for storage you use
-- Data is stored accross multiple AZs within a region.
+# AWS Storage
 
 ![AWS Storage](/images/aws_storage.png)
+
+## [EBS](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EBS.markdown)
+
+## [EFS](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EFS.markdown)
+
+## [S3](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/S3.markdown)
+
+
 
