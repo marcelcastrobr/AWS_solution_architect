@@ -29,7 +29,8 @@
     - Effect (e.g. Allow)
     - Resource
 
-`{
+```json
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -38,4 +39,4 @@
             "Resource": "*"
         }
     ]
-}`
+}```
