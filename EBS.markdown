@@ -1,4 +1,4 @@
-# EBS Definition
+# EBS - Elastic Block Storage: Definition
 
 # EBS Types
 - General purpose (SSD)

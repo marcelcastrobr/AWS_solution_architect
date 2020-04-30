@@ -43,11 +43,11 @@ Three types of placement groups:
 
 ![AWS Storage](/images/aws_storage.png)
 
-## [EBS](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EBS.markdown)
+## [EBS - Elastic Block Storage](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EBS.markdown)
 
-## [EFS](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EFS.markdown)
+## [EFS - Elastic File System](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EFS.markdown)
 
-## [S3](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/S3.markdown)
+## [S3 - Simple Storage Service](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/S3.markdown)
 
 
 
