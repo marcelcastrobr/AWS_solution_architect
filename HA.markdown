@@ -16,9 +16,13 @@ ELB allows the incomming traffic to be distributted automatically accross multip
 2. Network  load balancer
 - Operated at layer 4 (TCP level).
 - Distributes traffic across targets within the same availability zone.
-
+- If configured with multiple AZs and if all the targets in a single AZ fail, it routes traffic to healthy targets in the other AZs
+- Ability to handle volatile workloads and scale to millions of requests per second, without the need of pre-warming
+- Support for static IP/Elastic IP addresses for the load balancer
+- 
 
 3. Classic load balancer
+- is ideal for simple load balancing of traffic across multiple EC2 instances.
 
 
 ## ELB Facts
