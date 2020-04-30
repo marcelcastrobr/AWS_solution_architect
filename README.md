@@ -2,4 +2,6 @@
 AWS Certificate Solution Architect
 
 
-![IAM](/IAM.markdown)
+[IAM](/IAM.markdown)
+
+
