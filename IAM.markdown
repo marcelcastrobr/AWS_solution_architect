@@ -29,6 +29,7 @@
     - Effect (e.g. Allow)
     - Resource
 
+Example of Admin Policy:
 ```json
 {
     "Version": "2012-10-17",
@@ -42,4 +43,19 @@
 }
 ```
 
-sdwef
+Example of S3ReadOnlyAccess
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
