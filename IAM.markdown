@@ -8,3 +8,34 @@
 
  ![IAM Model](/images/IAM_model.jpg)
  
+
+## IAM consists of:
+ ### IAM Role:
+ - Roles are more secure than storing your access key and secret access key on individual EC2 instances.
+ - Roles are easier to manage.
+ - Roles can be assigned to an EC2 instance after it is created using both the console and command line.
+ 
+
+ ### IAM User:
+
+ ### IAM Groups:
+
+ ### IAM Policies:
+ - Manage level of access to established identities such as IAM Users and Groups.
+ - Each policy contains statement that define users priveledges.
+ - Policy summary is:
+    - Version
+    - Statement
+    - Effect (e.g. Allow)
+    - Resource
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
