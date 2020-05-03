@@ -37,6 +37,14 @@ google.com.        62    IN    A    216.58.201.14
 
 ## AAAA format: IPv6 address
 
+```bash
+$ dig AAAA www.google.com
+[...]
+;; ANSWER SECTION:
+www.google.com.		83	IN	AAAA	2a00:1450:400f:80c::2004
+[...]
+````
+
 ## CNAME format:
     - same format as domain name
 
