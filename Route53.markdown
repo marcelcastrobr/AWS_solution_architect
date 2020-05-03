@@ -109,3 +109,9 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 - Geolocation routing
 - Geoproximity routing
 - Multivalue answer routing
+
+
+#Route53 Resources
+
+[DNS Desmystified] (https://www.youtube.com/watch?v=PVBC1gb78r8&t=1046s)
+
