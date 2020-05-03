@@ -20,15 +20,15 @@
 
 # Supported DNS Resource Record Types:
 ## A (Address) Format: 
-    - Is an IPv4 address in dotted decimal notation, e.g. 192.168.1.12
+A record is an IPv4 address in dotted decimal notation, e.g. 192.168.1.12
 (base) ➜  AWS_Certification dig A www.google.com
 
-`code()`
-; <<>> DiG 9.10.6 <<>> A www.google.com
+`code()
+; dig A www.google.com
 ...
 ;; ANSWER SECTION:
 www.google.com.		2	IN	A	216.58.207.228
-
+`
 
 
 ## AAAA format: IPv6 address
