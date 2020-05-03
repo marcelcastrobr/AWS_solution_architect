@@ -5,18 +5,7 @@
     - Can route internet traffic to CloudFront, Elastic Beanstalk, ELB, or S3.
 - Heath checking
 
-# Route53 Facts
-- By design, the AWS DNS service does not respond to requests originating from outside VPC.
 
-
-# Route53 Routing types:
-- Simple routing
-- Weighted routing
-- Latency-based routing
-- Failover routing
-- Geolocation routing
-- Geoproximity routing
-- Multivalue answer routing
 
 # Supported DNS Resource Record Types:
 ## A (Address) Format: 
@@ -49,7 +38,7 @@ www.google.com.		83	IN	AAAA	2a00:1450:400f:80c::2004
 ```
 
 ## CNAME format:
-CNAME (Canonical Name) can be  used to alias one name to another. A common example is when you have both example.com and www.example.com pointing to the same application and hosted by the same server.
+CNAME (Canonical Name) can be  used to alias one name to another. A common example is when you have both dnsimple.com and www.dnsimple.com pointing to the same application and hosted by the same server.
 
 ```bash
 $ dig A www.dnsimple.com 
@@ -63,9 +52,45 @@ dnsimple.com.		60	IN	A	104.245.210.170
 [...]
 ```
 
+##  ALIAS record:
+
+ALIAS is similar to a CNAME records, but can create an alias record both for the root domain or apex zone, such as example.com, and for subdomains, such as www.example.com. CNAME records can only be used for subdomains.
+
+In AWS you have to use ALIAS records to point your root domain to other DNS records such as your ELB.
+
 ## MX (Mail Xchange) format: 
-    - Contains a decimanl number that represents the priority of the MX record, and the domain name of an email server.
+ MX contains a decimanl number that represents the priority of the MX record, and the domain name of an email server.
 
 ## NS (name server) format
-##  Alias record:
-    - Alias is similar ro a CNAME records, but can create an alias record both for the root domain or apex zone, such as example.com, and for subdomains, such as www.example.com. CNAME records can only be used for subdomains.
+
+## SOA Record
+A SOA (Start of Authority) record is a type of resource record in the DNS containing adminstrative information about the zone.
+
+```bash
+$ dig SOA +multiline google.com   
+
+[...]
+
+;; ANSWER SECTION:
+google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
+				309542872  ; serial
+				900        ; refresh (15 minutes)
+				900        ; retry (15 minutes)
+				1800       ; expire (30 minutes)
+				60         ; minimum (1 minute)
+				)
+
+[...]
+
+# Route53 Facts
+- By design, the AWS DNS service does not respond to requests originating from outside VPC.
+
+
+# Route53 Routing types:
+- Simple routing
+- Weighted routing
+- Latency-based routing
+- Failover routing
+- Geolocation routing
+- Geoproximity routing
+- Multivalue answer routing
