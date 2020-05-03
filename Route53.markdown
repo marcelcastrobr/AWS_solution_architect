@@ -62,6 +62,21 @@ In AWS you have to use ALIAS records to point your root domain to other DNS reco
  MX contains a decimanl number that represents the priority of the MX record, and the domain name of an email server.
 
 ## NS (name server) format
+NS (Name server) indicates which DNS server is authoritative for that domain.
+
+```bash
+$ dig NS google.com    
+
+[...]
+
+;; ANSWER SECTION:
+google.com.		11252	IN	NS	ns2.google.com.
+google.com.		11252	IN	NS	ns4.google.com.
+google.com.		11252	IN	NS	ns1.google.com.
+google.com.		11252	IN	NS	ns3.google.com.
+
+[...]
+```
 
 ## SOA Record
 A SOA (Start of Authority) record is a type of resource record in the DNS containing adminstrative information about the zone.
