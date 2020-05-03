@@ -39,14 +39,29 @@ google.com.        62    IN    A    216.58.201.14
 
 ```bash
 $ dig AAAA www.google.com
+
 [...]
+
 ;; ANSWER SECTION:
 www.google.com.		83	IN	AAAA	2a00:1450:400f:80c::2004
+
 [...]
-````
+```
 
 ## CNAME format:
-    - same format as domain name
+CNAME (Canonical Name) can be  used to alias one name to another. A common example is when you have both example.com and www.example.com pointing to the same application and hosted by the same server.
+
+```bash
+$ dig A www.dnsimple.com 
+
+[...]
+
+;; ANSWER SECTION:
+www.dnsimple.com.	2759	IN	CNAME	dnsimple.com.
+dnsimple.com.		60	IN	A	104.245.210.170
+
+[...]
+```
 
 ## MX (Mail Xchange) format: 
     - Contains a decimanl number that represents the priority of the MX record, and the domain name of an email server.
