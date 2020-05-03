@@ -24,9 +24,9 @@ A record is an IPv4 address in dotted decimal notation, e.g. 192.168.1.12
 (base) ➜  AWS_Certification dig A www.google.com
 
 `code()
-; dig A www.google.com
-...
-;; ANSWER SECTION:
+; dig A www.google.com \\
+... \\
+;; ANSWER SECTION:\\
 www.google.com.		2	IN	A	216.58.207.228
 `
 
