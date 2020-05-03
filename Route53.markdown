@@ -96,22 +96,29 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 				)
 
 [...]
+```
 
 # Route53 Facts
 - By design, the AWS DNS service does not respond to requests originating from outside VPC.
 
 
 # Route53 Routing types:
-- Simple routing
-- Weighted routing
-- Latency-based routing
-- Failover routing
-- Geolocation routing
-- Geoproximity routing
-- Multivalue answer routing
+- Simple routing: one record with multiple IP addresses, where Route53 returns all values to the user in a random order.
+
+- Weighted routing: Route53 returns value according to weight provided.
+
+- Latency-based routing: Router53 returns values based on the lowest network latency for your end user. 
+
+- Failover routing: Used when you want to create a active/passive set up (i.e. primary and secondary sites). 
+
+- Geolocation routing: Route53 returns value based on the geographic location of your users (i.e. location from which the DNS queries originates). 
+
+- Geoproximity routing: Route53 returns value based on geographic location of your users and resources, where a "bias" can be used to expand or shrink the size of the geographic region. You MUST use Route53 traffic flow in order to use geoproximity routing.
+
+- Multivalue answer  routing: allows return of multiple values for almost any record. It is similar to simple routing however it allows you to put health checks on each record set.
 
 
-#Route53 Resources
+# Route53 Links
 
 [DNS Desmystified] (https://www.youtube.com/watch?v=PVBC1gb78r8&t=1046s)
 
