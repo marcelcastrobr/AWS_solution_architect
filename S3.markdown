@@ -11,6 +11,14 @@
 - Size: 0 to 5 TBytes
 - S3 uses a universal namespace (i.e. unique name)
 - Uloaded code get 200 HTTP response.
+- S3 URL styles are:
+    - Virtual hosted style: bucket-name + s3 + region 
+    - Path-style access URL: s3 / bucket 
+    - Static web site URL: bucket name + s3-website +
+        ```bash
+        s3.amazonaws.com
+        ``` 
+    - Legacy global endpoint URL: (has no region)
 
 # S3 Features
 - Tiered storage available

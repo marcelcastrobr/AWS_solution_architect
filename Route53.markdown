@@ -118,6 +118,23 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 - Multivalue answer  routing: allows return of multiple values for almost any record. It is similar to simple routing however it allows you to put health checks on each record set.
 
 
+# Using DNS with your VPC 
+Route 53 has a security feature that prevents internal DNS from being read by external sources. The work around is to create a EC2 hosted DNS instance that does zone transfers from the internal DNS, and allows itself to be queried by external servers.
+
+The following attributes must be set to true in order to instances with a public IP address receive corresponding public DNS hostnames, and the Amazon-provided DNS server can resolve Amazon-provided private DNS hostnames:
+- enableDnsHostnames
+- enableDnsSupport	
+
+You can check this configuration in: Your VPC -> Description:
+    - DNS resolution: Enabled
+    - DNS hostnames: Enabled.
+
+[Link](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html)
+
+
+
+
+
 # Route53 Links
 
 [DNS Desmystified] (https://www.youtube.com/watch?v=PVBC1gb78r8&t=1046s)
