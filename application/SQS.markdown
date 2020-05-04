@@ -3,7 +3,7 @@
 ## SQS Facts
 - SQS is pull-based service, and support messages up to 256KB.
 - Messages can be kept in the queue from 1 minute to 14 days; default is 4 days.
-- Visibility timeout if the amount of time that the messahe is invisible in he SQS queue after a reader picks up the message.
+- Visibility timeout is the amount of time that the message is invisible in he SQS queue after a reader picks up the message.
         - Visibility timeout maximum is 12 hours.
 - SQS Short Polling: 
     - Returns message from queue imediately, even if the message queue is empty.
