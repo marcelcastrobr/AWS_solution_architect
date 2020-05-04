@@ -4,10 +4,10 @@ A virtual private cloud (VPC) is a virtual network dedicated to your AWS account
 A VPC spans all of the availability zones in the region. You can add one or more subnets in each availability zone.
 Each subnet must reside entirely within one availability zone and cannot span zones.
 A VPC contist normally of:
-    - IGW (Internet Gateway) or Virtual Private Gateway.
-    - Route tables
-    - Network Access Control List (NACL)
-    - Security groups
+- IGW (Internet Gateway) or Virtual Private Gateway.
+- Route tables
+- Network Access Control List (NACL)
+- Security groups
 
 AWS always reserve 5 IP addresses within your subnet.
 Security groups cannot span VPCs.
