@@ -1,3 +1,3 @@
 # VPC - Virtual Private Cloud
 
-![VPC Basics ](images/vpc.png)
+![VPC Basics ](../images/vpc.png)
