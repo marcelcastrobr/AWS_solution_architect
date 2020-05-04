@@ -13,7 +13,7 @@
 ## SQS Types:
 
 ### SQS Standard Queue
-- More than one message might be delivery out of order.
+- More than one message might be delivered out of order.
 - Best effort ordering
 
 ### SQS FIFO Queue
