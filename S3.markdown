@@ -11,14 +11,24 @@
 - Size: 0 to 5 TBytes
 - S3 uses a universal namespace (i.e. unique name)
 - Uloaded code get 200 HTTP response.
-- S3 URL styles are:
-    - Virtual hosted style: bucket-name + s3 + region 
-    - Path-style access URL: s3 / bucket 
-    - Static web site URL: bucket name + s3-website +
-        ```bash
-        s3.amazonaws.com
-        ``` 
+- A bucket is owned by the AWS account that created it. Bucket ownership is not transferable.
+- By default, you can create up to 100 buckets in each of your AWS accounts (maximum is 1000 buckets).
+- S3 URL styles are :
+    - Virtual hosted style: 
+    ```bash
+        https://my-bucket.s3.us-west-2.amazonaws.com/puppy.png (bucket-name + s3 + region )
+    ```
+    - Path-style access URL: 
+    ```bash
+       https://s3.us-west-2.amazonaws.com/mybucket/puppy.jpg (s3 / bucket-name )
+ 
+    ```
+    - Static web site URL: bucket name + s3-website + 
+    
     - Legacy global endpoint URL: (has no region)
+    ```bash
+        s3.amazonaws.com 
+    ```
 
 # S3 Features
 - Tiered storage available
@@ -72,5 +82,6 @@ Availability Zones | >= 3 | >= 3 |  >= 3 | 
 - AWS Storage Gateway, by default, uploads data using SSL and provides data encryption at rest when stored in S3 or Glacier using AES-256
 
 
-
+## S3 References
+1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
 
