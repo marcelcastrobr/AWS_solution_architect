@@ -11,12 +11,12 @@ AWS Certificate Solution Architect
 - [EFS](storage/EFS.markdown)
 
 ### Database
-- [RDS](database/RDS.markdown)
+- [RDS ?](database/RDS.markdown)
 - [DynamoDB](database/DynamoDB.markdown)
 
 ### Networking & Content Delivery
-- [VPC](network/VPC.markdown)
-- [Router53](network/Router53.markdown)
+- [VPC ? ](network/VPC.markdown)
+- [Route53](network/Route53.markdown)
 
 ### Management & Governance
 - [Truested Advisor](management/TruestedAdvisor.markdown)
