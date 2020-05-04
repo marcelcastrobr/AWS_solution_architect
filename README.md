@@ -12,7 +12,7 @@ AWS Certificate Solution Architect
 
 ### Database
 - [RDS](database/RDS.markdown)
-- [DynameDB](database/DynameDB.markdown)
+- [DynamoDB](database/DynamoDB.markdown)
 
 ### Networking & Content Delivery
 - [VPC](network/VPC.markdown)
