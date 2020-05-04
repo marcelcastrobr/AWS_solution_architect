@@ -26,8 +26,8 @@
 ## [Visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
 
 Visibility timeout is the amount of time that the message is invisible in he SQS queue after a reader picks up the message.
-        - Visibility timeout maximum is 12 hours (default is 30 seconds).
-        - You can shorten or extend a message's visibility by specifying a new timeout value using the ChangeMessageVisibility action.
+- Visibility timeout maximum is 12 hours (default is 30 seconds).
+- You can shorten or extend a message's visibility by specifying a new timeout value using the ChangeMessageVisibility action.
 
 AWS SQS messages has three basic states:
 1. stored: message sent to a queue by a producer.
