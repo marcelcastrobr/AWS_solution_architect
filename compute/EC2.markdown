@@ -39,6 +39,8 @@ Three types of placement groups:
 - You cannot merge placement groups
 - You can move or remove an instance to a placement group using the AWS CLI and AWS SDK, but cannot do it via console.
 
+# [Elastic Load Balancer] (../high_availability/HA.markdown)
+
 # AWS Storage
 
 ![AWS Storage](/images/aws_storage.png)
