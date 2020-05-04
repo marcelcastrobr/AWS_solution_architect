@@ -19,7 +19,7 @@ AWS Certificate Solution Architect
 - [Route53](networking/Route53.markdown)
 
 ### Management & Governance
-- [Truested Advisor](management/TruestedAdvisor.markdown)
+- [Truested Advisor](management/TrustedAdvisor.markdown)
 
 ### Security, Identity & Compliance
 - [IAM](security/IAM.markdown)
