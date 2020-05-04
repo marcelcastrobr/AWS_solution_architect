@@ -18,17 +18,18 @@
     ```bash
         https://my-bucket.s3.us-west-2.amazonaws.com/puppy.png (bucket-name + s3 + region )
     ```
-    - Path-style access URL: 
+    - Path-style access URL **: 
     ```bash
        https://s3.us-west-2.amazonaws.com/mybucket/puppy.jpg (s3 / bucket-name )
  
     ```
     - Static web site URL: bucket name + s3-website + 
-    
+
     - Legacy global endpoint URL: (has no region)
     ```bash
         s3.amazonaws.com 
     ```
+    - ** Buckets created after September 30, 2020, will support only virtual hosted-style requests.
 
 # S3 Features
 - Tiered storage available
