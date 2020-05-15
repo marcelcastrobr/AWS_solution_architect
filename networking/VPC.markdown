@@ -32,3 +32,18 @@ Security groups cannot span VPCs.
 - You can peer VPC's with other AWS accounts VPC's.
 - Peering is a star configuration. No transitive peering is allowed. (i.e. A - B - C, A can talk to B but A can not talk to C through B)
 - It is allowed to peer between regions.
+
+
+## VPC Endpoints
+
+A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+### Types of VPC endpoints:
+- Interface endpoints (powered by AWS PrivateLink)
+It is a elastic network interface with a private IP address that serves as an entry point for traffic destinated to a supported service. 
+
+- Gateway endpoints
+A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service.
+Currently gateway enpoints support:
+    - Amazon S3
+    - DynamoDB

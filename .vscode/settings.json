@@ -1,0 +1,34 @@
+{
+    "sqltools.connections": [
+
+
+        
+
+        {
+            "database": "idsdev",
+            "dialect": "AWS Redshift",
+            "name": "Redshift",
+            "password": "TwoCompani3s?",
+            "port": 5439,
+            "server": "redshift-datalake-dev.cokvu8lcc9pw.eu-west-1.redshift.amazonaws.com",
+            "username": "dsidata",
+            "pgOptions": {
+                "ssl": "true"
+            }
+        },
+        {
+            "database": "idsdemo",
+            "dialect": "AWS Redshift",
+            "isActive": false,
+            "isConnected": false,
+            "name": "Redshift-Demo",
+            "password": "Seriouslythebetterdatalak3!",
+            "port": 5439,
+            "server": "redshift-datalake-demo.cokvu8lcc9pw.eu-west-1.redshift.amazonaws.com",
+            "username": "datalake_admin",
+            "pgOptions": {
+                "ssl": "true"
+            }
+        }
+    ]
+}
