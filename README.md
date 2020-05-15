@@ -15,7 +15,7 @@ AWS Certificate Solution Architect
 - [DynamoDB](database/DynamoDB.markdown)
 
 ### Networking & Content Delivery
-- [VPC ? ](networking/VPC.markdown)
+- [VPC](networking/VPC.markdown)
 - [Route53](networking/Route53.markdown)
 
 ### Management & Governance
