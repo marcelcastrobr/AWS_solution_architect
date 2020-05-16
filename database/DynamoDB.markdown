@@ -6,8 +6,9 @@
 
 # DynamoDB Basics
 
-1- Stored on SSD storage
-2- Spread accross 3 geographically distinct data
+1 - Stored on SSD storage
+2 - Spread accross 
+3 - Geographically distinct data
 
 # Data Consistency
 
