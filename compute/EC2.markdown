@@ -45,7 +45,7 @@ Three types of placement groups:
 - Scale out: add instances
 - Scale in: remove instances
 
-Default termination policy:
+[Default termination policy:](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html)
 1. Availability zones with most instances, and at least one instance that is not protected from scale in
 2. Determine which instances to terminate so as to align the remaining instances to the allocation strategy for the On-Demand or Spot Instance that is terminating.
 3. Determine whether any of the instances use the oldest launch template or configuration
