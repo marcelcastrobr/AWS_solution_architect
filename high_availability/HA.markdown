@@ -1,6 +1,4 @@
-# High Available Architecture
-
-## ELB - Elastic Load Balancer Definition
+# ELB - Elastic Load Balancer Definition
 ELB allows the incomming traffic to be distributted automatically accross multiple heath EC2 instances.
 
 
@@ -32,3 +30,5 @@ ELB allows the incomming traffic to be distributted automatically accross multip
 - Load balancers only work across AZs within a region.
 
 ![ELB](/images/ELB.png)
+
+

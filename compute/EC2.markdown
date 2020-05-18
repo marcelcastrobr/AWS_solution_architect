@@ -39,6 +39,21 @@ Three types of placement groups:
 - You cannot merge placement groups
 - You can move or remove an instance to a placement group using the AWS CLI and AWS SDK, but cannot do it via console.
 
+
+
+# EC2 Auto Scaling
+- Scale out: add instances
+- Scale in: remove instances
+
+Default termination policy:
+1. Availability zones with most instances, and at least one instance that is not protected from scale in
+2. Determine which instances to terminate so as to align the remaining instances to the allocation strategy for the On-Demand or Spot Instance that is terminating.
+3. Determine whether any of the instances use the oldest launch template or configuration
+    - Amazon EC2 Auto Scaling terminates instances that use a launch configuration before instances that use a launch template.
+4. Determine which instances are closest to the next billing hour
+
+
+
 # [Elastic Load Balancer](../high_availability/HA.markdown)
 
 # AWS Storage
