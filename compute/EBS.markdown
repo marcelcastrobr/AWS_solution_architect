@@ -1,10 +1,10 @@
 # EBS - Elastic Block Storage: Definition
 
 # EBS Types
-- General purpose (SSD)
-- Provisioned IOPS (SSD)
-- Throughput optimised Hard Disk drive  (HDD)
-- Cold hard disk drive (HDD)
+- gp2 - General purpose (SSD)
+- io1 - Provisioned IOPS (SSD)
+- st1 - Throughput optimised Hard Disk drive  (HDD)
+- sc1 - Cold hard disk drive (HDD)
 - Magnetic
 
 # EBS Facts
