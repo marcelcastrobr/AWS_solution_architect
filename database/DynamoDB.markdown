@@ -9,6 +9,7 @@
 1 - Stored on SSD storage
 2 - Spread accross 
 3 - Geographically distinct data
+4 - Uses B-tree primitived.
 
 # Data Consistency
 

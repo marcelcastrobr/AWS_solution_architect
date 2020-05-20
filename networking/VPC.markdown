@@ -47,3 +47,16 @@ A gateway endpoint is a gateway that you specify as a target for a route in your
 Currently gateway enpoints support:
     - Amazon S3
     - DynamoDB
+
+
+# Direct Connect Link
+Solution to establish a dedicated connection from your premises o AWS.
+
+## Steps needed:
+- Create a virtual interface: Public Virtual Interface -> Name -> Owner -> VLAN not used in your network -> Router Peer IP (customer and AWS IPs) -> BGP Peer enabled
+- Create a new customer GW
+- Create new Virtual Private Gateway (VGW)
+- Attached VGW to VPC
+- Create new VPN connection using customer and AWS gateway
+
+![AWS Direct Connect](../images/direct_connect.png)
