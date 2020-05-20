@@ -10,7 +10,8 @@ AWS Shield Advanced protects against higher level of protection, including follo
 
 
 # AWS Macie
-- Macie used AI to analyze data in S3 and help identify PII.
+
+ Macie used AI to analyze data in S3 and help identify PII.
 - Can also be used to analyze CloudTrail logs for suspicious API activity
 - Includes dashboards, reports and alerting.
 - Great for PCI-DSS compliance and prevent ID theft.
