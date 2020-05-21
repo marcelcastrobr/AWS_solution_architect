@@ -21,4 +21,4 @@ AWS Shield Advanced protects against higher level of protection, including follo
 
 # AWS Shared Responsibility Model
 
-[Shared Responsibility Model](../images/aws_shared_model.png)
+![Shared Responsibility Model](/images/aws_shared_model.png)
