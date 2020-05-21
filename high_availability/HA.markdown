@@ -39,3 +39,11 @@ ELB allows the incomming traffic to be distributted automatically accross multip
 - Everything can fail
 
 
+# AWS Operational Excellence
+- AWS Config: Track resource such as EBS volumes and EC2.
+- AWS CloudFormation: Convert json and yaml to infracture and resources
+- AWS Trusted Advisor: check account for best practice on security, availability, etc.
+- AWS Inspector: check EC2 instance for vulnerabilities.
+- VPC Flow Logs: Log network traffic
+- AWS Cloud Trail: Log API calls
+

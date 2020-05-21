@@ -54,6 +54,16 @@
 | Availability | 99.99% | 99.9% | 99.9%  | 99.5% | N/A | N/A|
 Availability Zones | >= 3 | >= 3 |  >= 3 | 
 
+# S3 Encryption ( data at rest)
+
+Server-side encryption options
+- S3-Managed Keys (SSE-S3)
+- KMS-Managed Keys (SSE-KMS)
+- Customer-Provided Keys (SSE-C)
+
+Client-side encryption options
+- KMS managed encryption keys (CSE-KMS)
+- Custome managed master ecryption keys (CSE-C)
 
 # S3 Payment Model
 Pay for what you use:
@@ -64,6 +74,7 @@ Pay for what you use:
 Free of charge
 - Transfer in to S3
 - Transfer out from S3 to CloudFront
+
 
 # S3 Storage Gateway 
 

@@ -8,3 +8,5 @@ CloudWatch can monitor:
 Metrics:
 - Default
 - Customize
+
+![CloudWatch](/images/CloudWatch.png)
