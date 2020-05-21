@@ -35,5 +35,4 @@ RDS Facts:
 
 | Use Amazon RDS| Do not use Amanzon RDS | 
 | ----------- | ----------- | 
-| - Complex transactions or complex queries 
-   - A medium-tp-high query/write rate | - Massive read/write rates (e.g. 150L write/second) | 
+| - Complex transactions or complex queries - A medium-tp-high query/write rate | - Massive read/write rates (e.g. 150L write/second) | 
