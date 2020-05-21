@@ -17,3 +17,8 @@ AWS Shield Advanced protects against higher level of protection, including follo
 - Great for PCI-DSS compliance and prevent ID theft.
 
 # [AWS WAF](../application/WAF.markdown)
+
+
+# AWS Shared Responsibility Model
+
+[Shared Responsibility Model] ()

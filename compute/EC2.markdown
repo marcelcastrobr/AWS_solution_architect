@@ -45,6 +45,18 @@ Three types of placement groups:
 - Scale out: add instances
 - Scale in: remove instances
 
+Auto Scaling components are:
+- Launch configuration
+    - Specifies EC2 instance size and AIM name
+- Group
+    - Reference the launch configuration
+    - Specifies min, max and desired size of the group
+    - May reference an ELB
+    - Health check type
+- Policy
+    - Specify how much to scale in or out
+    - One or more may be attached to auto scaling group.
+
 [Default termination policy:](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html)
 1. Availability zones with most instances, and at least one instance that is not protected from scale in
 2. Determine which instances to terminate so as to align the remaining instances to the allocation strategy for the On-Demand or Spot Instance that is terminating.
