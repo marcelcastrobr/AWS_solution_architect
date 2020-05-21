@@ -52,6 +52,11 @@ Three types of placement groups:
     - Amazon EC2 Auto Scaling terminates instances that use a launch configuration before instances that use a launch template.
 4. Determine which instances are closest to the next billing hour
 
+## Auto Scaling Cooldown
+Auto scalling cooldown period is a configurable setting for your auto scalling group that ensures auto scalling does  not launch or terminate additional instances before the previous scalling activity tajes effect. 
+
+If a value for the default cooldown period is not provided, its default value is 300 seconds
+
 
 
 # [Elastic Load Balancer](../high_availability/HA.markdown)

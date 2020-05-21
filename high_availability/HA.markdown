@@ -32,3 +32,10 @@ ELB allows the incomming traffic to be distributted automatically accross multip
 ![ELB](/images/ELB.png)
 
 
+# AWS Axioms
+- Single AZ  will never be a right answer
+- AWS Managed services should always be preferrred
+- Fault tolerant and high availability (always be up and can fail over) are not the same
+- Everything can fail
+
+

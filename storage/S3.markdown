@@ -54,8 +54,16 @@
 | Availability | 99.99% | 99.9% | 99.9%  | 99.5% | N/A | N/A|
 Availability Zones | >= 3 | >= 3 |  >= 3 | 
 
-![S3 test](/images/S3_image.png)
 
+# S3 Payment Model
+Pay for what you use:
+- GBs per month
+- Transfer out of region
+- PUT, COPY, POST, LIST and GET requests
+
+Free of charge
+- Transfer in to S3
+- Transfer out from S3 to CloudFront
 
 # S3 Storage Gateway 
 
@@ -83,6 +91,14 @@ Availability Zones | >= 3 | >= 3 |  >= 3 | 
 - AWS Storage Gateway, by default, uploads data using SSL and provides data encryption at rest when stored in S3 or Glacier using AES-256
 
 
+## S3 Multipart Upload
+The Multipart upload API enables you to upload large objects in parts.
+
+Multipart uploading is a three-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket.
+
+ As a best practice, we recommend you configure a lifecycle rule (using the AbortIncompleteMultipartUpload action) to minimize your storage costs.
+
+
 ## S3 References
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
-
+2. [S3 Multipart Upload](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
