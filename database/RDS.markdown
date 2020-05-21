@@ -31,7 +31,7 @@ RDS Facts:
 - Must have automatic backups turned on in order to deploy a read replica.
 -  You can have up to 5 read replicas copies of any database.
 
-# When to User AWS RDS
+# When to Use AWS RDS
 
 | Use Amazon RDS| Do not use Amanzon RDS | 
 | ----------- | ----------- | 
