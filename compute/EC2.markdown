@@ -71,7 +71,7 @@ If a value for the default cooldown period is not provided, its default value is
 
 
 
-## Elastic Network Interface
+## [Elastic Network Interface](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
 An elastic network interface is a logical network component in a VPC that represnets a virtual network csrd. It can includ the following attributes:
 - A primary private IPv4 address from your VPC
 - One or more private secondary IPv4 private address
@@ -90,7 +90,7 @@ Best practices for configuring network interfaces:
 - You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attache)
 - You can move a network interface from one instance to another, if the instances are in the same AZ and VPC but in differents subnets.
 
-[ENI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
+
 
 
 # [Elastic Load Balancer](../high_availability/HA.markdown)
