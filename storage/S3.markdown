@@ -53,7 +53,7 @@
 | Durability| 11 9% | 11 9% | 11 9% | 11 9% | 11 9% | 11 9% |
 | Availability | 99.99% | 99.9% | 99.9%  | 99.5% | N/A | N/A|
 Availability Zones | >= 3 | >= 3 |  >= 3 | 
-
+| Comments |Designed to sustain the loss of 2 facilities concurrently | | Lower fee than S3 standard but you are charged a retrieval fee. | not used for data resilience as it uses only one AZ| Retrieval times configurable from minutes to hours. | retrieval time of 12 hours is acceptable.|  
 # S3 Encryption ( data at rest)
 
 Server-side encryption options
