@@ -147,3 +147,4 @@ CORS is configured with a XML document with rules that identify the origns that 
 ## S3 References
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
 2. [S3 Multipart Upload](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
+3. [CORS](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html)

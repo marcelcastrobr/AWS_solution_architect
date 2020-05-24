@@ -72,6 +72,23 @@ If a value for the default cooldown period is not provided, its default value is
 
 
 ## Elastic Network Interface
+An elastic network interface is a logical network component in a VPC that represnets a virtual network csrd. It can includ the following attributes:
+- A primary private IPv4 address from your VPC
+- One or more private secondary IPv4 private address
+- One elastic IP address per private IPC4 address
+- One public IPv4
+- One onr more IPv6 addresses
+- A MAC address
+- A source/destination check flag
+- A description
+
+You CANNOT detach a primary network interface from an instance. 
+
+![Elastic Network Interface](/images/elastic_network_interface.png)
+
+Best practices for configuring network interfaces:
+- You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attache)
+- You can move a network interface from one instance to another, if the instances are in the same AZ and VPC but in differents subnets.
 
 [ENI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
 
@@ -81,12 +98,5 @@ If a value for the default cooldown period is not provided, its default value is
 # AWS Storage
 
 ![AWS Storage](/images/aws_storage.png)
-
-## [EBS - Elastic Block Storage](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EBS.markdown)
-
-## [EFS - Elastic File System](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/EFS.markdown)
-
-## [S3 - Simple Storage Service](https://github.com/marcelcastrobr/AWS_solution_architect/blob/master/S3.markdown)
-
 
 
