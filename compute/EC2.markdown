@@ -71,6 +71,11 @@ If a value for the default cooldown period is not provided, its default value is
 
 
 
+## Elastic Network Interface
+
+[ENI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
+
+
 # [Elastic Load Balancer](../high_availability/HA.markdown)
 
 # AWS Storage
