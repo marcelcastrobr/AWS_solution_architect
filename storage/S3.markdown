@@ -52,7 +52,8 @@
 | ----------- | ----------- | ----------- |----------- |----------- |----------- |----------- |
 | Durability| 11 9% | 11 9% | 11 9% | 11 9% | 11 9% | 11 9% |
 | Availability | 99.99% | 99.9% | 99.9%  | 99.5% | N/A | N/A|
-Availability Zones | >= 3 | >= 3 |  >= 3 | 
+Availability Zones | >= 3 | >= 3 |  >= 3 | 1 | >= 3 | >= 3 |
+| Minimum storage duration | N/A | 30 days | 30 days | 30 days | 90 days | 180 days| 
 | Comments |Designed to sustain the loss of 2 facilities concurrently | | Lower fee than S3 standard but you are charged a retrieval fee. | not used for data resilience as it uses only one AZ| Retrieval times configurable from minutes to hours. | retrieval time of 12 hours is acceptable.|  
 # S3 Encryption ( data at rest)
 
@@ -143,8 +144,16 @@ CORS is configured with a XML document with rules that identify the origns that 
 </CORSConfiguration>
 ```
 
+## S3 Transfer Accelation
+Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
+
+## S3 - Uploading objects using a presigned URLs
+ The presigned URLs are useful if you want your user/customer to be able to upload a specific object to your bucket, but you don't require them to have AWS security credentials or permissions.
+ When you create a presigned URL, you must provide your security credentials and then specify a bucket name, an object key, an HTTP method (PUT for uploading objects), and an expiration date and time. The presigned URLs are valid only for the specified duration.
 
 ## S3 References
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
 2. [S3 Multipart Upload](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
 3. [CORS](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html)
+4. [S3 Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html)
+5. [S3 presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html)

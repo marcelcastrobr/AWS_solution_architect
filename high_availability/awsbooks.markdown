@@ -21,3 +21,13 @@ Vertical scaling (Scale up and down)
 Horizontal scaling (scale in and out)
 - E.g. From 1 to 10 EC2 instances
 - Change the number of instances (add or remove instances as needed)
+
+
+## OLTP versus OLAP
+OLTP: online transactional processing
+OLAP: online analytic processing
+
+# AWS White Papers
+
+1) [AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/wellarchitected-Analytics-Lens.pdf?did=wp_card&trk=wp_card)
+2) [Backup and Recovery Approaches Using AWS](https://d1.awsstatic.com/whitepapers/Storage/Backup_and_Recovery_Approaches_Using_AWS.pdf?did=wp_card&trk=wp_card)

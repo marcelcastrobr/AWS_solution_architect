@@ -8,7 +8,9 @@ Placement group determines how instances are placed on underlying hardware
     2) Reserved
     3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
     4) Dedicated Host
-    - 
+
+### EC2 Spot Instance
+- Spot instances can be stopped in the event of interruption, instead of been terminated. This is enabled by choosing "stop" as interruption behaviour when submitting a persistent spot request.
 
 ## EC2 Facts
 
@@ -100,3 +102,6 @@ Best practices for configuring network interfaces:
 ![AWS Storage](/images/aws_storage.png)
 
 
+# References
+
+1) [Spot instance interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html)

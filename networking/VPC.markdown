@@ -48,6 +48,12 @@ Currently gateway enpoints support:
     - Amazon S3
     - DynamoDB
 
+### Accessing VPC Endpoints from Remote Networks
+- VPC endpoints are only accessible from AWS EC2 instances inside a VPC. This in order for remote networks to access VPC endpoints (e.g. for S3 access from a remote network), a local instance must proxy all remote request before they can utilize a VPC endpoint connection.
+
+![VPC Endpoints from Remote Networks](../images/remote_vpc_endpoint.png)
+
+
 
 # Direct Connect Link
 Solution to establish a dedicated connection from your premises o AWS.
@@ -60,3 +66,10 @@ Solution to establish a dedicated connection from your premises o AWS.
 - Create new VPN connection using customer and AWS gateway
 
 ![AWS Direct Connect](../images/direct_connect.png)
+
+
+# NAT - Network Address Translation
+Types:
+- NAT instance: 
+    - When creating a NAT instance, 
+- NAT gateway

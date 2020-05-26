@@ -31,3 +31,8 @@
 [Price](https://aws.amazon.com/dynamodb/pricing/on-demand/)
 
 
+# DynameDB Streams
+DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
+
+
+[DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
