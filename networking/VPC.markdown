@@ -50,7 +50,7 @@ Currently gateway enpoints support:
 
 ### Accessing VPC Endpoints from Remote Networks
 - VPC endpoints are only accessible from AWS EC2 instances inside a VPC. This in order for remote networks to access VPC endpoints (e.g. for S3 access from a remote network), a local instance must proxy all remote request before they can utilize a VPC endpoint connection.
-
+C2 
 ![VPC Endpoints from Remote Networks](../images/remote_vpc_endpoint.png)
 
 
@@ -71,5 +71,14 @@ Solution to establish a dedicated connection from your premises o AWS.
 # NAT - Network Address Translation
 Types:
 - NAT instance: 
-    - When creating a NAT instance, 
+    - When creating a NAT instance, disable source/destination check on the instance.
+    - NAT instance must be in the public subnet, and private subnet need to have a route out of the NAT instance.
+    - NAT instances are behind a security group.
 - NAT gateway
+    - Redundant inside the availability zone.
+    - Scales from 5Gbps to 45Gbps
+    - No need to patch
+    - Not associated with security groups
+    - Automatically assigned a public ip address
+    - You need to remember to update your route table
+    - No need to disable source/destination checks.

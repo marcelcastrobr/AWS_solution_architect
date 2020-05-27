@@ -34,5 +34,13 @@
 # DynameDB Streams
 DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
 
+# DynameDB Accelerator (DAX)
+Provides improvement to performance with response times in microseconds for millions of requests per second for read-heavy workloads.
 
-[DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
+DAX is a DynamoDB-compatible caching service that enables you to benefit from fast in-memory performance for demanding applications
+
+![DAX](/images/DAX.png)
+
+# References
+1) [DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
+2) [DynamoDB Accelerator - DAX](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html)

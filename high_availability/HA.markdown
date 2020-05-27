@@ -10,6 +10,7 @@ ELB allows the incomming traffic to be distributted automatically accross multip
     - Support path-based routing (i.e. forward request based on the URL in the request).
     - Support sticky sessions.
 - Supports security groups to control the traffic allowed to and from the load balancer.
+- Dynamic port mapping with an ALB makes it easier to run multiple tasks on the same ECS (Elastic Container Service) on an ECS cluster.
 
 2. Network  load balancer
 - Operated at layer 4 (TCP level).
