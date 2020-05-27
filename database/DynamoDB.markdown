@@ -41,6 +41,9 @@ DAX is a DynamoDB-compatible caching service that enables you to benefit from fa
 
 ![DAX](/images/DAX.png)
 
+# DynamoDB  provisioned throughput capacity
+When you create a new provisioned table in Amazon DynamoDB, you must specify its provisioned throughput capacity. This is the amount of read and write activity that the table can support. DynamoDB uses this information to reserve sufficient system resources to meet your throughput requirements.
+
 # References
 1) [DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
 2) [DynamoDB Accelerator - DAX](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html)
