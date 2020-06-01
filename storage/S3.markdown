@@ -45,6 +45,12 @@
 3. S3 One Zone -IA
 4. S3 Intelligent Tiering
 5. S3 Glacier
+    - Retrievals data options
+        - Expedited: urgent request (1-5 minutes). With two options:
+            - On-demand:
+            - Provisioned
+        - Standard: access archives within 3-5 hours.
+        - Bulk retrials: large amount, even petabytes, in a day (5-12 hours)
 6. S3 Glacier Deep Archive
 
 
