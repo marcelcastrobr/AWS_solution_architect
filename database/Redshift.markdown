@@ -35,7 +35,7 @@ Factors that afect query performance:
 
 
 # Redshift Spectrum
-Efficiently query and retrieb structured and semistructured data from files in AWS S3 without having to load the data into AWS Redshift tables. 
+Efficiently query and retrieb structured and semistructured data from files in AWS S3 without having to load the data into AWS Redshift tables. Processing occurs in Redshift Spectrum layer and data remains in AWS S3.
 
 # Reference
 - [Overview](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)
