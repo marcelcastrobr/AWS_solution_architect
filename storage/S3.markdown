@@ -97,7 +97,7 @@ Free of charge
     - Stored Volumes: 
         - data stored on site and assynchronous backed up to S3.
         - Gateway-stored volume configuration provides durable and inexpensive off-site backups that you can recover to your local data center or Amazon EC2. For example, if you need replacement capacity for disaster recovery, you can recover the backups to Amazon EC2
-        - 
+        - supports iSCSI protocol.
     - Cached Volumes: 
         - data is stored on S3 and the most frequently accessed data is cached on site.
         - All gateway-cached volume data and snapshot data is stored in Amazon S3 encrypted at rest using server-side encryption (SSE) and it cannot be accessed with S3 API or any other tools

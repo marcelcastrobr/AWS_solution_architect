@@ -6,6 +6,8 @@ Placement group determines how instances are placed on underlying hardware
 ## Instance types (TBF)
     1) On Demand :
     2) Reserved
+        - Standard: Some attributes, such as instance size, can be modified during the term; however, the instance family cannot be modified. You cannot exchange a Standard Reserved Instance, only modify it.
+        - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
     3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
     4) Dedicated Host
 
@@ -41,7 +43,17 @@ Three types of placement groups:
 - You cannot merge placement groups
 - You can move or remove an instance to a placement group using the AWS CLI and AWS SDK, but cannot do it via console.
 
+# Enhanced networking
+Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces.
+Enhanced network types:
+- Elastic network adapter: The Elastic Network Adapter (ENA) supports network speeds of up to 100 Gbps for supported instance types.
+- Intel 82599 Virtual Function (VF) interface: supports network speeds of up to 10 Gbps
 
+# EC2 Instance Termination
+By default, EBS root volumes are deleted upon instance termination. But, EBS volumes attached to the instances persists upon instance termination. This behavious is controled by the volumne "DeleteOnTermination" attribute. 
+
+To prevent your instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance. The DisableApiTermination attribute controls whether the instance can be terminated using the console, CLI, or API.
+The DisableApiTermination attribute does not prevent you from terminating an instance by initiating shutdown from the instance when the InstanceInitiatedShutdownBehavior attribute is set.
 
 # EC2 Auto Scaling
 - Scale out: add instances
@@ -67,14 +79,13 @@ Auto Scaling components are:
 4. Determine which instances are closest to the next billing hour
 
 ## Auto Scaling Cooldown
-Auto scalling cooldown period is a configurable setting for your auto scalling group that ensures auto scalling does  not launch or terminate additional instances before the previous scalling activity tajes effect. 
+Auto scalling cooldown period is a configurable setting for your auto scalling group that ensures auto scalling does  not launch or terminate additional instances before the previous scalling activity takes effect. 
 
 If a value for the default cooldown period is not provided, its default value is 300 seconds
 
 
-
 ## [Elastic Network Interface](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
-An elastic network interface is a logical network component in a VPC that represnets a virtual network csrd. It can includ the following attributes:
+An elastic network interface is a logical network component in a VPC that represnets a virtual network card. It can include the following attributes:
 - A primary private IPv4 address from your VPC
 - One or more private secondary IPv4 private address
 - One elastic IP address per private IPC4 address
