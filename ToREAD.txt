@@ -1,0 +1,10 @@
+Check:
+-Kinesis
+- S3 transfer aceleration
+- S3 cache control
+
+CloudTrail:
+- Log file integrity validation
+- Log file durability validation
+
+AWS Shield

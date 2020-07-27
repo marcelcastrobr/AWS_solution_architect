@@ -27,6 +27,11 @@ Horizontal scaling (scale in and out)
 OLTP: online transactional processing
 OLAP: online analytic processing
 
+
+## Blue-Green Deployment
+TBD
+
+
 # AWS White Papers
 
 1) [AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/wellarchitected-Analytics-Lens.pdf?did=wp_card&trk=wp_card)
