@@ -104,7 +104,22 @@ Best practices for configuring network interfaces:
 - You can move a network interface from one instance to another, if the instances are in the same AZ and VPC but in differents subnets.
 
 
+# EC2 Hibernate
+When you hibernate an instance, we signal the operating system to perform hybernation (suspend-to-disk). Hibernation saves the contents from the instance memory (RAM) to your Amazon EBS root volume. We persis instances Amazon EBS root volume and any type Amazon EBS data volumes. 
 
+When you start your instance:
+- The Amazon EBS root volume is restored to its previous state
+- The RAM contents are reloaded
+- The processes that were previously running on the instance are resumed
+- Previously attached data volumes are reattached and the instance retains its instance ID.
+
+Hibernation prerequisites:
+- Supported instance families - C3, C4, C5, M3, M4, M5, R3, R4, R5, and T2.
+- Instance RAM size - must be less than 150 GB.
+- Instance size - not supported for bare metal instances.
+- Supported AMIs (must be an HVM AMI that supports hibernation)
+- Root volume type - must be an Amazon EBS volume, not an instance store volume.
+- Supported Amazon EBS volume types - General Purpose SSD (gp2) or Provisioned IOPS SSD (io1).
 
 # [Elastic Load Balancer](../high_availability/HA.markdown)
 
