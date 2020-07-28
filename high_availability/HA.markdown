@@ -30,6 +30,19 @@ ELB allows the incomming traffic to be distributted automatically accross multip
 - Instances monitoared by ELB are monitored as :  inService or OutOfService.
 - Load balancers only work across AZs within a region.
 
+### ELB Deregistration delay
+It keeps the instance running for serving in-flight requests up to 15 minutes. By default ELB waits 300 seconds before completing the deregistration process.
+ELB states of a deregistering target: draining -> unused.
+If a deregistering target termintes the connection before the deregistration delay elapses, the client receives a 500-level error response. 
+
+### ELB Slow start mode
+It gives targets time to warm up before the load balancer sends them a full share of requests. 
+
+
+### ELB Stick Sessions
+Stick sessions are a mechanism to route requests to the same target in a target group. This is useful for servers that maintain state information in order to provide continuous experience to clients. To use stick sessions, the clients must support cookies. 
+You enable stick sessions at the target group level. 
+
 ![ELB](/images/ELB.png)
 
 
