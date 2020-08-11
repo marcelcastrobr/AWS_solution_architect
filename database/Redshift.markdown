@@ -42,3 +42,23 @@ Efficiently query and retrieb structured and semistructured data from files in A
 - [Redshift Encryption](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html)
 - [Amazon Redshift best practices for designing queries](https://docs.aws.amazon.com/redshift/latest/dg/c_designing-queries-best-practices.html)
 -[Redshift Spectrum](https://docs.aws.amazon.com/redshift/latest/dg/c-using-spectrum.html)
+
+
+# Chech:
+- AQUA RA3 Redshift
+
+Suggestion:
+- Copy during ingestion:
+    - INstead of using one copy for a file.
+        - We should split the file in tp the number of slices, to ensure that all slices are engaged equaly. Keep file in 1MB to 1GB.
+
+- Consider using DROP TABEL or TRUNCATE instead of DETELE.
+- Workload Management
+    - Manual WLM and Auto WLM.
+
+To Check:
+    - SQA (Shory Query Acceleration)
+    - Query Monitoring Rules (QMR)
+    - TODO: We could create different queues for different users with different priority. (e.g. BI with hogh prio, ETL normal and data scientist low priority)
+    - Amazon Redshift Advisor
+    - AppFlow to ingest data in Redshift

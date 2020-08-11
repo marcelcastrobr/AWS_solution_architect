@@ -62,16 +62,31 @@ Availability Zones | >= 3 | >= 3 |  >= 3 | 1 | >= 3 | >= 3 |
 | Minimum storage duration | N/A | 30 days | 30 days | 30 days | 90 days | 180 days| 
 | Comments |Designed to sustain the loss of 2 facilities concurrently | | Lower fee than S3 standard but you are charged a retrieval fee. | not used for data resilience as it uses only one AZ| Retrieval times configurable from minutes to hours. | retrieval time of 12 hours is acceptable.|  
 
-# S3 Encryption ( data at rest)
+# Protecting your data
 
-Server-side encryption options
-- S3-Managed Keys (SSE-S3)
-- KMS-Managed Keys (SSE-KMS)
-- Customer-Provided Keys (SSE-C)
+## Data in transit
+ You can protect your data in transit using:
+ - SSL/TLS: Secure Socket Layer / Transport Layer Security
+ - Client side encryption
 
-Client-side encryption options
-- KMS managed encryption keys (CSE-KMS)
-- Custome managed master ecryption keys (CSE-C)
+
+## Data at rest
+You can protect your data at rest using:
+- Server side encription:
+    - S3-Managed Keys (SSE-S3).
+        - Each object encripted by a unique key. 
+        - As additional safeguard, it encrypts the key itself with a master key that it regularly rotates. 
+        - Uses 256-bit advanced encryption standard (AES-256)
+    - Customer master keys (CMKs) stored in AWS KMS-Key Management Service (SSE-KMS):
+        - Add addional separed permissions for use of a CMK.
+        - Provide audit trail which show when your CMK was used.
+    - Customer-Provided Keys (SSE-C): 
+        - User manages the encryption keys and S3 manages the encryption, as it writes to disks and decryption when you access your objects.
+        - S3 does not store the encryption key you provided, only a randomly salted HMAC value of the encryption key to validate future requests.
+
+- Client-side encryption options
+    - KMS managed encryption keys (CSE-KMS)
+    - Custome managed master ecryption keys (CSE-C)
 
 # S3 Payment Model
 Pay for what you use:
@@ -170,6 +185,15 @@ Transfer Acceleration takes advantage of Amazon CloudFront’s globally distribu
     - SRR: single region replication
         - Aggregate logs into a single bucket
         - configure live replication between production and testing accounts.
+
+
+## S3 Object Lock
+With S3 object lock you can stored objects using write-once-read-manhy (WORM) model. You can use it to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely. 
+It provided two retention modes:
+- governance mode: users cannot overwrite or delete an object version or alter its lock settings unless they have special permissions. To override or remove governance model retentionl, a user must have s3:BypassGovernanceRetention. 
+- compliance mode: protected object version cannot be overwritten or deleted by any user, including the root user in your AWS account. 
+
+Object Lock also enables you to place a legal hold on an object version. Like a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed. Legal holds can be freely placed and removed by any user who has the s3:PutObjectLegalHold permission.
 
 ## S3 References
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
