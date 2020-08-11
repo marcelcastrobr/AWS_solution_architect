@@ -1,31 +1,45 @@
-# AWS_solution_architect
-AWS Certificate Solution Architect
-
-### Compute
-- [EC2](compute/EC2.markdown)
-- [EBS](compute/EBS.markdown)
-- [Lambda](compute/Lambda.markdown)
-
-### Storage
-- [S3](storage/S3.markdown)
-- [EFS](storage/EFS.markdown)
-
-### Database
-- [RDS ?](database/RDS.markdown)
-- [DynamoDB](database/DynamoDB.markdown)
-
-### Networking & Content Delivery
-- [VPC](networking/VPC.markdown)
-- [Route53](networking/Route53.markdown)
-
-### Management & Governance
-- [Truested Advisor](management/TrustedAdvisor.markdown)
-
-### Security, Identity & Compliance
-- [IAM](security/IAM.markdown)
-
-### Application Integration
+## analytics
+- [EMR](analytics/EMR.markdown)
+- [glue](analytics/glue.markdown)
+- [kinesis](analytics/kinesis.markdown)
+## application
 - [SQS](application/SQS.markdown)
+- [WAF](application/WAF.markdown)
+## compute
+- [EBS](compute/EBS.markdown)
+- [EC2](compute/EC2.markdown)
+- [ElasticBeanstalk](compute/ElasticBeanstalk.markdown)
+- [lambda](compute/lambda.markdown)
+## container
+- [ECS](container/ECS.markdown)
+## database
+- [DynamoDB](database/DynamoDB.markdown)
+- [RDS](database/RDS.markdown)
+- [Redshift](database/Redshift.markdown)
+- [elasticcache](database/elasticcache.markdown)
+## high_availability
+- [HA](high_availability/HA.markdown)
+- [awsbooks](high_availability/awsbooks.markdown)
+## management
+- [CloudFormation](management/CloudFormation.markdown)
+- [CloudTrail](management/CloudTrail.markdown)
+- [CloudWatch](management/CloudWatch.markdown)
+- [TrustedAdvisor](management/TrustedAdvisor.markdown)
+## migration
+- [DataSync](migration/DataSync.markdown)
+## networking
+- [APIGateway](networking/APIGateway.markdown)
+- [CloudFront](networking/CloudFront.markdown)
+- [GlobalAccelerator](networking/GlobalAccelerator.markdown)
+- [Route53](networking/Route53.markdown)
+- [VPC](networking/VPC.markdown)
+## security
+- [CloudHSM](security/CloudHSM.markdown)
+- [IAM](security/IAM.markdown)
+- [aws_sec](security/aws_sec.markdown)
+## storage
+- [EFS](storage/EFS.markdown)
+- [FSx](storage/FSx.markdown)
+- [S3](storage/S3.markdown)
 
-### Others
-- [High Availability](high_availability/HA.markdown)
+Count: 11

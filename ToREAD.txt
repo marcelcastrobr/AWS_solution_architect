@@ -10,8 +10,3 @@ CloudTrail:
 AWS Shield
 
 AWS Cognito (Serverless?)
-
-AWS Global Accelerator (Application load balancing?)
-
-
-S3 server-side encription versus client-side encription
