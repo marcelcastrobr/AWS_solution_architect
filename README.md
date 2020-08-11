@@ -36,10 +36,14 @@
 ## security
 - [CloudHSM](security/CloudHSM.markdown)
 - [IAM](security/IAM.markdown)
+<<<<<<< HEAD
 - [aws_sec](security/aws_sec.markdown)
 ## storage
 - [EFS](storage/EFS.markdown)
 - [FSx](storage/FSx.markdown)
 - [S3](storage/S3.markdown)
+=======
+- [CloudHSM](./security/CloudHSM.markdown)
+>>>>>>> 91d5937733b4b124b09eed893508553cb2213c7f
 
 Count: 11
