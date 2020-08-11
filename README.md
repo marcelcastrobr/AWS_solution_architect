@@ -23,6 +23,7 @@ AWS Certificate Solution Architect
 
 ### Security, Identity & Compliance
 - [IAM](security/IAM.markdown)
+- [CloudHSM](./security/CloudHSM.markdown)
 
 ### Application Integration
 - [SQS](application/SQS.markdown)
