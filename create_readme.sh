@@ -12,6 +12,6 @@ do
 	    let count=count+1
     done
 done
-#echo ""
-echo "Run #bash create_readme.sh > README.md  in order to create README file automatically"
-echo "Number of markdown pages so far are: $count"
+echo ""
+echo $'\n\n Run #bash create_readme.sh > README.md  in order to create README file automatically'
+echo $'\n Number of markdown pages so far are: $count'

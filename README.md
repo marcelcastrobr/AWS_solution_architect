@@ -41,5 +41,9 @@
 - [EFS](storage/EFS.markdown)
 - [FSx](storage/FSx.markdown)
 - [S3](storage/S3.markdown)
-Run #bash create_readme.sh > README.md  in order to create README file automatically
-Number of markdown pages so far are: 32
+
+
+
+ Run #bash create_readme.sh > README.md  in order to create README file automatically
+
+ Number of markdown pages so far are: $count
