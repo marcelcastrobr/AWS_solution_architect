@@ -4,7 +4,6 @@
 - [kinesis](analytics/kinesis.markdown)
 ## application
 - [SQS](application/SQS.markdown)
-- [WAF](application/WAF.markdown)
 ## compute
 - [EBS](compute/EBS.markdown)
 - [EC2](compute/EC2.markdown)
@@ -36,6 +35,7 @@
 ## security
 - [CloudHSM](security/CloudHSM.markdown)
 - [IAM](security/IAM.markdown)
+- [Shield_WAF](security/Shield_WAF.markdown)
 - [aws_sec](security/aws_sec.markdown)
 ## storage
 - [EFS](storage/EFS.markdown)
