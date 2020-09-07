@@ -19,7 +19,8 @@ Placement group determines how instances are placed on underlying hardware
             - Launch specification
             - Valid from, valid until.
             - Desired number of instances
-    ![Termination of Spot instances](/images/spot-instance.png)
+
+![Termination of Spot instances](/images/spot-instance.png)
 
 ### Spot Fleets
     - Collection of spot instances and optionaly, on-demand instances. 
