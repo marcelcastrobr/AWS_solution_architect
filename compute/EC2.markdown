@@ -13,6 +13,22 @@ Placement group determines how instances are placed on underlying hardware
 
 ### EC2 Spot Instance
 - Spot instances can be stopped in the event of interruption, instead of been terminated. This is enabled by choosing "stop" as interruption behaviour when submitting a persistent spot request.
+- Spot request input:
+            - Maximum price
+            - Request type: Persistent (launch again instances), one-time.
+            - Launch specification
+            - Valid from, valid until.
+            - Desired number of instances
+    ![Termination of Spot instances](/images/spot-instance.png)
+
+### Spot Fleets
+    - Collection of spot instances and optionaly, on-demand instances. 
+    - Can have multiple pools.
+    - Strategies:
+        - capacityOptimized: guarantee certain amount of capacity
+        - lowestPrice: default strategy
+        - diversified: distributed accross your pools
+        - InstancePoolsToUSeCount: distributted accross number of spot instance.
 
 ## EC2 Facts
 
@@ -120,6 +136,41 @@ Hibernation prerequisites:
 - Supported AMIs (must be an HVM AMI that supports hibernation)
 - Root volume type - must be an Amazon EBS volume, not an instance store volume.
 - Supported Amazon EBS volume types - General Purpose SSD (gp2) or Provisioned IOPS SSD (io1).
+- Instances cannot be hibernated for more than 60 days.
+
+# HPC on AWS
+
+##  Enhanced Networking:
+- Elastic Network Adpater: 
+    - single root I/O virtualization (SR-IOV)
+        - Higher I/O 
+        - lower CPU
+    - Two types:
+        - Elastic network adapter : up to 100Gbps
+        - Intel 82599 Virtual function: up to 10Gbps( legacy)
+
+- Elastic Fabric Adapter
+    - OS-bypass: bypass the OS kernel and connected directly to the EFA device.
+    - Lower latence and faster.
+
+## Storage:
+- Instance attached to storage;:
+    - EBS: scale up to 64KIOPS
+    - Instance storage: scale to millions of IOPS
+- Network storage:
+    - S3
+    - EFS
+    - FSx Lustre: HPC optimized file system
+
+## Orchestration & Automation
+- AWS Batch:
+    - multi-node parallel jobs withj multiple EC2
+- AWS ParallelCluster:
+    - Each to manage HPC clusters on AWS
+    - Automate craeation of VPC
+
+
+
 
 # [Elastic Load Balancer](../high_availability/HA.markdown)
 

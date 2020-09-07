@@ -10,3 +10,14 @@ CloudTrail:
 AWS Shield
 
 AWS Cognito (Serverless?)
+
+AWS Directory Service
+
+Lab on Amazon ECS
+
+AWS CodeDeploy
+AWS CodeBuild
+
+Dynamo DB: Optimistic concurrency and pessimistic concurrency ?
+
+AWS ElasticBeanstalk  
