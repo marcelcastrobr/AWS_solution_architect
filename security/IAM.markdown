@@ -87,4 +87,4 @@ Example of S3ReadOnlyAccess
 
 # IAM Policies
 
-![ARN - Amazon Resource Name](/images/IAM_model.jpg)
+![ARN - Amazon Resource Name](/images/arn.png)
