@@ -32,7 +32,8 @@
 
 
 # DynameDB Streams
-DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
+- DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
+- Inserts, Update and Deletes.
 
 # DynameDB Accelerator (DAX)
 Provides improvement to performance with response times in microseconds for millions of requests per second for read-heavy workloads.
@@ -43,6 +44,43 @@ DAX is a DynamoDB-compatible caching service that enables you to benefit from fa
 
 # DynamoDB  provisioned throughput capacity
 When you create a new provisioned table in Amazon DynamoDB, you must specify its provisioned throughput capacity. This is the amount of read and write activity that the table can support. DynamoDB uses this information to reserve sufficient system resources to meet your throughput requirements.
+
+# Transactions
+- Two underlying reads and writes ( prepare/commit)
+- Operate up to 25 items or 4MBytes of data
+
+# On-Demand Capacity
+- Pay-per-request pricing
+- Balance cost and performance
+- No char for read/write - only storage and backupds
+- Pay more per requests
+- Can use for new product launches.
+- Backup and Retsore:
+    - full backup at any time.
+    - Zero impact on table performance
+    - Consisent within seconds and retained until deleted.
+- Point-in-Time-Recovery (PITR)
+    - Protects against accidental writes or deletes
+    - Retsore to any point in the last 35 days
+    - Incremental backups
+    - not enabled by default
+    - Latest restorable time stamp: 5 minutes
+
+# Global Tables
+- Based on dynamoDB streams
+- Globaly distributed applications
+- multi-region redundancy for DR (disaster recover) and HA (high availability).
+- Replication latency under one second.
+
+# Database Migration Service (DMS)
+
+
+# Security
+- encrypted at rest using KMS
+- IAM policies and roles
+- Site-to-site VPN
+- Direct connect (DX)
+- VPC endpoints
 
 # References
 1) [DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)

@@ -59,3 +59,32 @@ Example of S3ReadOnlyAccess
     ]
 }
 ```
+
+# Advanced IAM
+
+- AWS Managed Microsoft AD
+    - AD domain controllers running Windows Server
+    - Extend existing AD to on-premises using AD trust.
+- Simple AD
+    - Standalone managed directory
+    - Basic AD features
+    - small < 500 users and large < 5000 users
+- AD connector
+    - Diretory gatewaty (proxy) for on-premise AD
+    - Avoid caching information on the cloud
+    - Scale accross multiple AD connectors.
+
+- Cloud Directory
+    - Directory based store for developers
+    - Use cases: org charts, course catalogues, device register
+    - Fully managed service
+
+- Amazon Cognito User Pools
+    - Managed user directory for SaaS applications
+    - Sign-up and sign-in for web and mobile 
+    - Works with social media identities
+
+
+# IAM Policies
+
+![ARN - Amazon Resource Name](/images/IAM_model.jpg)
