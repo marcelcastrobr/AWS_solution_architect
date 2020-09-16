@@ -88,3 +88,15 @@ Example of S3ReadOnlyAccess
 # IAM Policies
 
 ![ARN - Amazon Resource Name](/images/arn.png)
+
+
+# Resource Access Management
+Share resource accross accounts. Current resources that is possible to share between accounts:
+ - Aurora,
+ - AppMesh
+ - CodeBuild
+ - EC2,
+ - EC2 Image Builder
+ - License Manager
+ - Resource Groups
+ - Route53
