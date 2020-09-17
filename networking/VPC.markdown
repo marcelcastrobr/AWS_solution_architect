@@ -34,6 +34,12 @@ Security groups cannot span VPCs.
 - It is allowed to peer between regions.
 
 
+## VPC PrivateLink
+- Allow to open your service in a VPC to another VPC using Private Link.
+- Does not require VPC peering: no route tablem NAT, IGWs, etc.
+- Requires network load balancer on the service VPC and an ENI on the customer VPC.
+
+
 ## VPC Endpoints
 
 A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
@@ -82,3 +88,30 @@ Types:
     - Automatically assigned a public ip address
     - You need to remember to update your route table
     - No need to disable source/destination checks.
+
+
+# AWS Global Accelerator
+Direct traffic to optimal endpoints over AWS network.
+By default, global accelerator provides you two static IP addressed that you associate with your accelerator.
+The componnets are: static ip addresses, accelerator, DNS name, network zone, listener, endpoint group and endpoint.
+
+
+# Transit Gateway
+- Simplify your network topology.
+- Operates in a hub-and-spoke model.
+- Can use accross multiple AWS accounts using RAM (Resource Access Manager)
+- Use route tables to limit how VPC talk to one another. 
+
+# VPN CloudHub
+- Allow users to connected to a single private gateway. 
+- Hub-and-spoke model. 
+- Operates over the public internet, but traffic is encrypted. 
+
+# VPC cost optimization
+Free:
+- Traffic in to VPC is free.
+- Traffic within same AZ using private IP addresses is free. 
+Cost:
+- Traffic accross AZ has costs (1 cent per GB)
+- Traffic outside AZ (traversing internet) twice more expensive. ( 2 cents per GB)
+- Traffic between AZ withing different VPCs also costs.

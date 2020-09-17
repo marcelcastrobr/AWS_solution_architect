@@ -46,6 +46,27 @@ You enable stick sessions at the target group level.
 ![ELB](/images/ELB.png)
 
 
+# High Availability Bastion
+Realized through:
+- Network load balancer static IP address with two hosts in two AZs (production environment)
+- Autoscaling group that launch an additional bastion in another subnet (test and dev environment)
+
+# On Premises Strategies with AWS
+- Database migration service (DMS)
+    - Allow to move DBs to and from AWS
+    - Support homogenous (oracle to oracle) and heterogeneous migration (oracle to RDS)
+
+- Server migration service (SMS)
+    - supports incremental replication of your on-premise servers in to AWS.
+    - Can be used as a backup tool.
+
+- AWS application discovery service
+
+- VM import/export 
+
+- Download Amazon Linux 2 as an ISO image.
+
+
 # AWS Axioms
 - Single AZ  will never be a right answer
 - AWS Managed services should always be preferrred
