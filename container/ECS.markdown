@@ -2,11 +2,15 @@
 
 ## Background
 Containers are:
-    - Package that contains an application, libraries, runtime and tools required to run it.
-    - Docker is a container engine
-    - Provides isolation benefits compared to virtualization, such as less overhead and faster starts than VMs.
-    - Containerized applications are portable.
+- Package that contains an application, libraries, runtime and tools required to run it.
+- Docker is a container engine
+- Provides isolation benefits compared to virtualization, such as less overhead and faster starts than VMs.
+- Containerized applications are portable.
+
+
 ![Elastic Cloud Container](/images/ecs.png)
+
+
 
 ## Facts
 - ECS is a container management service that makes it easy to run, stop and manage Docker containers on a cluster. 
