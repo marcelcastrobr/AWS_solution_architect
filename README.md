@@ -23,6 +23,7 @@
 - [CloudFormation](management/CloudFormation.markdown)
 - [CloudTrail](management/CloudTrail.markdown)
 - [CloudWatch](management/CloudWatch.markdown)
+- [SystemsManager](management/SystemsManager.markdown)
 - [TrustedAdvisor](management/TrustedAdvisor.markdown)
 ## migration
 - [DataSync](migration/DataSync.markdown)
@@ -35,6 +36,7 @@
 ## security
 - [CloudHSM](security/CloudHSM.markdown)
 - [IAM](security/IAM.markdown)
+- [KMS](security/KMS.markdown)
 - [Shield_WAF](security/Shield_WAF.markdown)
 - [aws_sec](security/aws_sec.markdown)
 ## storage
