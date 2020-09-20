@@ -5,8 +5,7 @@
 - Lambda function can triggers other functions
 - AWS X-rays allow you to debug serveless application
 
-# Lambda Triggers
-- 
+## Lambda Triggers
 
 ## Lambda Pricing
 - Number of Requests: first 1 million requests are free. 0.20 USD per 1 million requests thereafter.

@@ -6,14 +6,14 @@ AWS KMS is integrated with CloudTrail, a service that captures API calls made by
 
 ## CloudTrail Events
 It is a record of an activity in an AWS account. Activity can be an action taken by a user, role or service.
-There are two type of events, management events and data events. By defaul, trails log management events and not data events. 
-    - Management events
-        - Provide information about management events that are performed on resources in your AWS account. Known as control plane operations:
-            - Configure security (e.g. IAM attached role policy)
-            - Registering devices (e.g. EC2 create default VPC)
-            - Configuring rules for routing data (EC2 create subnet)
-            - Setting up logging
-            - It can also non-API events.
+There are two type of events, management events and data events. By default, trails log management events and not data events. 
+- Management events
+    - Provide information about management events that are performed on resources in your AWS account. Known as control plane operations:
+        - Configure security (e.g. IAM attached role policy)
+        - Registering devices (e.g. EC2 create default VPC)
+        - Configuring rules for routing data (EC2 create subnet)
+        - Setting up logging
+        - It can also non-API events.
 
     - Data events
         - Provide information about the resources operations performed on or in a resource. Known also as data plane operations:

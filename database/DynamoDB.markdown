@@ -1,15 +1,14 @@
 
 # DynamoDB Definition
-
-1 - DynamoDB is a noSQL database.
-2 - Fully managed database and supports both document and key-value data models.
+- DynamoDB is a noSQL database.
+- Fully managed database and supports both document and key-value data models.
 
 # DynamoDB Basics
 
-1 - Stored on SSD storage
-2 - Spread accross 
-3 - Geographically distinct data
-4 - Uses B-tree primitived.
+- Stored on SSD storage
+- Spread accross 
+- Geographically distinct data
+- Uses B-tree primitived.
 
 # Data Consistency
 
@@ -31,11 +30,11 @@
 [Price](https://aws.amazon.com/dynamodb/pricing/on-demand/)
 
 
-# DynameDB Streams
+# DynamoDB Streams
 - DynamoDB Streams captures a time-ordered sequence of item-level modifications in any DynamoDB table and stores this information in a log for up to 24 hours. Applications can access this log and view the data items as they appeared before and after they were modified, in near-real time.
 - Inserts, Update and Deletes.
 
-# DynameDB Accelerator (DAX)
+# DynamoDB Accelerator (DAX)
 Provides improvement to performance with response times in microseconds for millions of requests per second for read-heavy workloads.
 
 DAX is a DynamoDB-compatible caching service that enables you to benefit from fast in-memory performance for demanding applications
@@ -52,10 +51,10 @@ When you create a new provisioned table in Amazon DynamoDB, you must specify its
 # On-Demand Capacity
 - Pay-per-request pricing
 - Balance cost and performance
-- No char for read/write - only storage and backupds
+- No char for read/write - only storage and backups
 - Pay more per requests
 - Can use for new product launches.
-- Backup and Retsore:
+- Backup and Restore:
     - full backup at any time.
     - Zero impact on table performance
     - Consisent within seconds and retained until deleted.
@@ -71,9 +70,6 @@ When you create a new provisioned table in Amazon DynamoDB, you must specify its
 - Globaly distributed applications
 - multi-region redundancy for DR (disaster recover) and HA (high availability).
 - Replication latency under one second.
-
-# Database Migration Service (DMS)
-
 
 # Security
 - encrypted at rest using KMS

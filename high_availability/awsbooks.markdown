@@ -16,7 +16,7 @@ Question: You are running an EC2 instance which use EBS for storing its state. Y
 
 Vertical scaling (Scale up and down)
 - E.g. from small to Xlarge instance
-- Chnage in the specifications of instances (more CPU, memory)
+- Change in the specifications of instances (more CPU, memory)
 
 Horizontal scaling (scale in and out)
 - E.g. From 1 to 10 EC2 instances
@@ -24,8 +24,8 @@ Horizontal scaling (scale in and out)
 
 
 ## OLTP versus OLAP
-OLTP: online transactional processing
-OLAP: online analytic processing
+- OLTP: online transactional processing
+- OLAP: online analytic processing
 
 
 ## Blue-Green Deployment

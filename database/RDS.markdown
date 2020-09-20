@@ -3,7 +3,7 @@
 
  RDS backup types:
  - Automated backups:
-    - Allow recovery to any point in time withn a "retention period".
+    - Allow recovery to any point in time within a "retention period".
     - Retention period between one and 35 days.
     - Full daily snapshot.
     - Enabled by default and backup data stored in S3.
@@ -14,7 +14,7 @@
 
 RDS Facts:
 - Encryption at rest is supported for MySQL, Oracle, SQL server, POstegreSQL, MariaDB & Aurora.
-- Encryption done usng KMS (Key Management Service)
+- Encryption done using KMS (Key Management Service)
 
 # Multi-AZ:
 - Allows you to have exact copy of your production database in another AZ.
@@ -24,9 +24,9 @@ RDS Facts:
     - Oracle,
     - MySQL server
     - PostgreSQL
-    -MariaDB
+    - MariaDB
 
-Amazon RDS automatically switches to a standby replica in another Availability Zone if you have enabled Multi-AZ. Failover times are typically 60–120 seconds.The primary DB instance switches over automatically to the standby replica if any of the following conditions occur:
+Amazon RDS automatically switches to a standby replica in another Availability Zone if you have enabled Multi-AZ. Failover times are typically 60–120 seconds. The primary DB instance switches over automatically to the standby replica if any of the following conditions occur:
 - An Availability Zone outage
 - The primary DB instance fails
 - The DB instance's server type is changed
@@ -42,4 +42,4 @@ Amazon RDS automatically switches to a standby replica in another Availability Z
 
 | Use Amazon RDS| Do not use Amanzon RDS | 
 | ----------- | ----------- | 
-| - Complex transactions or complex queries <br> - A medium-tp-high query/write rate <br/>  - No more than a single worker node/shard <br> - High durability<br/>| - Massive read/write rates (e.g. 150L write/second) <br> - Sharding (partitioning) <br/> - Simple GET/PUT requests and queries <br> - RDBMS customaization<br/> | 
+| - Complex transactions or complex queries <br> - A medium-to-high query/write rate <br/>  - No more than a single worker node/shard <br> - High durability<br/>| - Massive read/write rates (e.g. 150K write/second) <br> - Sharding (partitioning) <br/> - Simple GET/PUT requests and queries <br> - RDBMS customization<br/> | 

@@ -29,13 +29,13 @@ Factors that afect query performance:
         - ALL: A copy of the entire table is distributed to every node. Where EVEN distribution or KEY distribution place only a portion of a table's rows on each node, ALL distribution ensures that every row is collocated for every join that the table participates in.
 - Data sort order
 - Dataset size
-- Concurrent oprtations
+- Concurrent operations
 - Query structure 
 
 
 
 # Redshift Spectrum
-Efficiently query and retrieb structured and semistructured data from files in AWS S3 without having to load the data into AWS Redshift tables. Processing occurs in Redshift Spectrum layer and data remains in AWS S3.
+Efficiently query and retrieval of structured and semistructured data from files in AWS S3 without having to load the data into AWS Redshift tables. Processing occurs in Redshift Spectrum layer and data remains in AWS S3.
 
 # Reference
 - [Overview](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)
@@ -44,21 +44,21 @@ Efficiently query and retrieb structured and semistructured data from files in A
 -[Redshift Spectrum](https://docs.aws.amazon.com/redshift/latest/dg/c-using-spectrum.html)
 
 
-# Chech:
+# Check:
 - AQUA RA3 Redshift
 
 Suggestion:
 - Copy during ingestion:
-    - INstead of using one copy for a file.
-        - We should split the file in tp the number of slices, to ensure that all slices are engaged equaly. Keep file in 1MB to 1GB.
+    - Instead of using one copy for a file.
+        - We should split the file in to the number of slices, to ensure that all slices are engaged equaly. Keep file in 1MB to 1GB.
 
-- Consider using DROP TABEL or TRUNCATE instead of DETELE.
+- Consider using DROP TABEL or TRUNCATE instead of DELETE.
 - Workload Management
     - Manual WLM and Auto WLM.
 
 To Check:
-    - SQA (Shory Query Acceleration)
-    - Query Monitoring Rules (QMR)
-    - TODO: We could create different queues for different users with different priority. (e.g. BI with hogh prio, ETL normal and data scientist low priority)
-    - Amazon Redshift Advisor
-    - AppFlow to ingest data in Redshift
+- SQA (Shory Query Acceleration)
+- Query Monitoring Rules (QMR)
+- TODO: We could create different queues for different users with different priority. (e.g. BI with high prio, ETL normal and data scientist low priority)
+- Amazon Redshift Advisor
+- AppFlow to ingest data in Redshift

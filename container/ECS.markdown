@@ -14,7 +14,7 @@ Containers are:
 
 ## Facts
 - ECS is a container management service that makes it easy to run, stop and manage Docker containers on a cluster. 
-- IAM role needs to be associayed with the ECS task definition.
+- IAM role needs to be associated with the ECS task definition.
 
 ![Elastic Cloud Container](/images/ecs-2.png)
 
@@ -28,7 +28,7 @@ Containers are:
 
 
 ## AWS Fargate
-It is a serverless compute engine for containers that works with noth ECS (Elastic Container Service) and EKS (Elactis Kubernetes Service). Fargate is a managed serverless  solution.
+It is a serverless compute engine for containers that works with  ECS (Elastic Container Service) and EKS (Elactis Kubernetes Service). Fargate is a managed serverless  solution.
 Fargate runs each task or pod in its own kernel providing the tasks and pods their own isolated compute environment.
 
 ## ECR - Elastic Container Service

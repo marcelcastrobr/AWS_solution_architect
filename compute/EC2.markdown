@@ -3,7 +3,14 @@
 ## EC2 Definition
 Placement group determines how instances are placed on underlying hardware
 
-## Instance types (TBF)
+## Instance Types (TBD)
+- General purpose
+- Compute optimized
+- Memory optimized
+- Accelerated computing
+- Storage optimized
+
+## Instance Reservation types
    
    1) On Demand
    2) Reserved
@@ -11,30 +18,37 @@ Placement group determines how instances are placed on underlying hardware
         - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
    3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
    4) Dedicated Host
+   
+### Accelarated computing instances
+Instances which uses hardware accelerators, or co-processors.
+Types are:
+- GPU computing instances (general purpose)
+- GPU graphics instances
+- FPGA instances.
 
 ### EC2 Spot Instance
 - Spot instances can be stopped in the event of interruption, instead of been terminated. This is enabled by choosing "stop" as interruption behaviour when submitting a persistent spot request.
 - Spot request input:
-            - Maximum price
-            - Request type: Persistent (launch again instances), one-time.
-            - Launch specification
-            - Valid from, valid until.
-            - Desired number of instances
+    - Maximum price
+    - Request type: Persistent (launch again instances), one-time.
+    - Launch specification
+    - Valid from, valid until.
+    - Desired number of instances
 
 ![Termination of Spot instances](/images/spot-instance.png)
 
 ### Spot Fleets
-    - Collection of spot instances and optionaly, on-demand instances. 
-    - Can have multiple pools.
-    - Strategies:
-        - capacityOptimized: guarantee certain amount of capacity
-        - lowestPrice: default strategy
-        - diversified: distributed accross your pools
-        - InstancePoolsToUSeCount: distributted accross number of spot instance.
+- Collection of spot instances and optionaly, on-demand instances. 
+- Can have multiple pools.
+- Strategies:
+    - capacityOptimized: guarantee certain amount of capacity
+    - lowestPrice: default strategy
+    - diversified: distributed accross your pools
+    - InstancePoolsToUSeCount: distributted accross number of spot instance.
 
 ## EC2 Facts
 
-## EC2 PLacement Groups
+## EC2 Placement Groups
 
 ### EC2 PLacement Groups Types
 
@@ -63,12 +77,13 @@ Three types of placement groups:
 
 # Enhanced networking
 Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces.
+
 Enhanced network types:
 - Elastic network adapter: The Elastic Network Adapter (ENA) supports network speeds of up to 100 Gbps for supported instance types.
 - Intel 82599 Virtual Function (VF) interface: supports network speeds of up to 10 Gbps
 
 # EC2 Instance Termination
-By default, EBS root volumes are deleted upon instance termination. But, EBS volumes attached to the instances persists upon instance termination. This behavious is controled by the volumne "DeleteOnTermination" attribute. 
+By default, EBS root volumes are deleted upon instance termination. But, EBS volumes attached to the instances persists upon instance termination. This behaviour is controled by the volumne "DeleteOnTermination" attribute. 
 
 To prevent your instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance. The DisableApiTermination attribute controls whether the instance can be terminated using the console, CLI, or API.
 The DisableApiTermination attribute does not prevent you from terminating an instance by initiating shutdown from the instance when the InstanceInitiatedShutdownBehavior attribute is set.
@@ -108,7 +123,7 @@ An elastic network interface is a logical network component in a VPC that repres
 - One or more private secondary IPv4 private address
 - One elastic IP address per private IPC4 address
 - One public IPv4
-- One onr more IPv6 addresses
+- One or more IPv6 addresses
 - A MAC address
 - A source/destination check flag
 - A description
@@ -118,12 +133,12 @@ You CANNOT detach a primary network interface from an instance.
 ![Elastic Network Interface](/images/elastic_network_interface.png)
 
 Best practices for configuring network interfaces:
-- You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attache)
+- You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attach)
 - You can move a network interface from one instance to another, if the instances are in the same AZ and VPC but in differents subnets.
 
 
 # EC2 Hibernate
-When you hibernate an instance, we signal the operating system to perform hybernation (suspend-to-disk). Hibernation saves the contents from the instance memory (RAM) to your Amazon EBS root volume. We persis instances Amazon EBS root volume and any type Amazon EBS data volumes. 
+When you hibernate an instance, we signal the operating system to perform hybernation (suspend-to-disk). Hibernation saves the contents from the instance memory (RAM) to your Amazon EBS root volume. We persist instances Amazon EBS root volume and any type Amazon EBS data volumes. 
 
 When you start your instance:
 - The Amazon EBS root volume is restored to its previous state
@@ -153,11 +168,11 @@ Hibernation prerequisites:
 
 - Elastic Fabric Adapter
     - OS-bypass: bypass the OS kernel and connected directly to the EFA device.
-    - Lower latence and faster.
+    - Lower latency and faster.
 
 ## Storage:
 - Instance attached to storage;:
-    - EBS: scale up to 64KIOPS
+    - EBS: scale up to 64K IOPS
     - Instance storage: scale to millions of IOPS
 - Network storage:
     - S3
@@ -166,7 +181,7 @@ Hibernation prerequisites:
 
 ## Orchestration & Automation
 - AWS Batch:
-    - multi-node parallel jobs withj multiple EC2
+    - multi-node parallel jobs with multiple EC2
 - AWS ParallelCluster:
     - Each to manage HPC clusters on AWS
     - Automate craeation of VPC
