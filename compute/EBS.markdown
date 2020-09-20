@@ -21,11 +21,6 @@
 # EBS Comparison
 ![EBS](/images/EBS_comparison.png)
 
-# Table
-
-| Syntax | Description | dd | dd | dd | dd |
-
-
 
 | Volume Type | General Purpose SSD | Provisioned IOPS SSD | Throughtput Optimized HDD | Cold HDD |  EBS Magnetic
 | ----------- | ----------- | ----------- |----------- |----------- |----------- |
