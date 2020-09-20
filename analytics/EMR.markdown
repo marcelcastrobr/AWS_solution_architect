@@ -1,5 +1,5 @@
 # EMR
-- EMR is teh cluster
+- It utilizes a hosted Hadoop framework running on the web-scale infrastructure of Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3).
 - A cluster is a collection of EC2.
 - Node types:
     - Master node: manages the custer. Track the status of the tasks and monitors the heathy of the cluster. Stored in /mnt/var/log.
