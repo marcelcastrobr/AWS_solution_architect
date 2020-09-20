@@ -4,7 +4,8 @@
 Placement group determines how instances are placed on underlying hardware
 
 ## Instance types (TBF)
-    1) On Demand :
+    
+    1) On Demand
     2) Reserved
         - Standard: Some attributes, such as instance size, can be modified during the term; however, the instance family cannot be modified. You cannot exchange a Standard Reserved Instance, only modify it.
         - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
