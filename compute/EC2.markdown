@@ -4,13 +4,13 @@
 Placement group determines how instances are placed on underlying hardware
 
 ## Instance types (TBF)
-    
-    1) On Demand
-    2) Reserved
+   
+   1) On Demand
+   2) Reserved
         - Standard: Some attributes, such as instance size, can be modified during the term; however, the instance family cannot be modified. You cannot exchange a Standard Reserved Instance, only modify it.
         - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
-    3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
-    4) Dedicated Host
+   3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
+   4) Dedicated Host
 
 ### EC2 Spot Instance
 - Spot instances can be stopped in the event of interruption, instead of been terminated. This is enabled by choosing "stop" as interruption behaviour when submitting a persistent spot request.
