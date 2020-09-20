@@ -11,14 +11,13 @@ By using AWS Global Accelerator, you can:
 Control the proportion of traffic directed to each endpoint within an endpoint group by assigning weights across the endpoints.
 
 Main facts:
-- Lower first byte latency (round trip time for a package tyo go from a client to your endpoint and back again)
+- Lower first byte latency (round trip time for a package to go from a client to your endpoint and back again)
 - Increase throughput
 - Global service not tied to specific regions.
 - While ELB provides load balancing within one region, AWS Global Accelerator provides traffic management accross multiple regions.
 - Benefits:
     - instant regional failover
     - high availability
-    - 
 
 
 Differences between Global Accelerator and CloudFront

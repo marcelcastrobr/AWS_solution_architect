@@ -1,9 +1,9 @@
 # IAM - Identity Access Management
 
 ## IAM Facts:
-- IAM is universal. It dows not apply to regiaons at this time.
+- IAM is universal. It dows not apply to regions at this time.
 - New users have NO PERMISSION when first created.
-- New users are assigned Access Key ID & Secret Access Keys when first created. Access Key & secrerct are used to access AWS APIs and command line.
+- New users are assigned Access Key ID & Secret Access Keys when first created. Access Key & secret are used to access AWS APIs and command line.
 - Role -> connected to services and Policies to Users.
 
  ![IAM Model](/images/IAM_model.jpg)

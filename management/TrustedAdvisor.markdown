@@ -1,4 +1,4 @@
-# Trusted Adviser Definition
+# Trusted Advisor Definition
 It is an online tool that provides real time guidance to help you provision resources following AWS best practices, in terms of cost optimization, performance, security, fault tolerance and service limits.
 
 ## Security Checks
@@ -7,4 +7,4 @@ It is an online tool that provides real time guidance to help you provision reso
 - IAM use
 - MFA on root account
 - EBS public snapshot
-- RDS puclic snapshot
+- RDS public snapshot

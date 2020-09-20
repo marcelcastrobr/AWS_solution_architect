@@ -35,3 +35,11 @@
 # Management
 - CloudFormation: deploy AWS resource as a code (similar to Terraform).
 - CloudTrail: governance, compliance, risk, audit,  etc.
+- CloudWatch: monitor CPU, network and queue size. 
+- TrustedAdvisor: guidance on AWS resource provisioning (cost optimization, performance, security, fault tolerance and service limits). 
+
+# CloudFront
+- TTL up to 1 day. If need to remove file, use: invalidate file or file versioning. 
+
+
+

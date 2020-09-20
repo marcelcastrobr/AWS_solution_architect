@@ -36,7 +36,7 @@ Security groups cannot span VPCs.
 
 ## VPC PrivateLink
 - Allow to open your service in a VPC to another VPC using Private Link.
-- Does not require VPC peering: no route tablem NAT, IGWs, etc.
+- Does not require VPC peering: no route table NAT, IGWs, etc.
 - Requires network load balancer on the service VPC and an ENI on the customer VPC.
 
 
@@ -56,13 +56,13 @@ Currently gateway enpoints support:
 
 ### Accessing VPC Endpoints from Remote Networks
 - VPC endpoints are only accessible from AWS EC2 instances inside a VPC. This in order for remote networks to access VPC endpoints (e.g. for S3 access from a remote network), a local instance must proxy all remote request before they can utilize a VPC endpoint connection.
-C2 
+
 ![VPC Endpoints from Remote Networks](../images/remote_vpc_endpoint.png)
 
 
 
 # Direct Connect Link
-Solution to establish a dedicated connection from your premises o AWS.
+Solution to establish a dedicated connection from your premises to AWS.
 
 ## Steps needed:
 - Create a virtual interface: Public Virtual Interface -> Name -> Owner -> VLAN not used in your network -> Router Peer IP (customer and AWS IPs) -> BGP Peer enabled
@@ -90,11 +90,6 @@ Types:
     - No need to disable source/destination checks.
 
 
-# AWS Global Accelerator
-Direct traffic to optimal endpoints over AWS network.
-By default, global accelerator provides you two static IP addressed that you associate with your accelerator.
-The componnets are: static ip addresses, accelerator, DNS name, network zone, listener, endpoint group and endpoint.
-
 
 # Transit Gateway
 - Simplify your network topology.
@@ -111,6 +106,7 @@ The componnets are: static ip addresses, accelerator, DNS name, network zone, li
 Free:
 - Traffic in to VPC is free.
 - Traffic within same AZ using private IP addresses is free. 
+
 Cost:
 - Traffic accross AZ has costs (1 cent per GB)
 - Traffic outside AZ (traversing internet) twice more expensive. ( 2 cents per GB)
