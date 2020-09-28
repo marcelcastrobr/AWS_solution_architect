@@ -3,15 +3,14 @@
 ## EC2 Definition
 Placement group determines how instances are placed on underlying hardware
 
-## Instance Types (TBD)
-- General purpose
-- Compute optimized
-- Memory optimized
-- Accelerated computing
-- Storage optimized
+## Instance Types
+- General purpose: T3, T2, M5 and M4 types. It provides a balance of compute, memory, and network resources.
+- Compute optimized: Includes C5 and C4. Suggested for demand webservers, high-end machine learnings.
+- Memory optimized: X1e, X1 and R4 types. Suggested for intensive database, data analysis and caching operations.
+- Accelerated computing: P3, P2, G3 and F1 types-Achive high performing general purpose graphics processing unit(GPU). 
+- Storage optimized: H1, I3 and D3 types. Suggested for distributed file systems and heavyweigth data processing applications.
 
 ## Instance Reservation types
-   
    1) On Demand
    2) Reserved
         - Standard: Some attributes, such as instance size, can be modified during the term; however, the instance family cannot be modified. You cannot exchange a Standard Reserved Instance, only modify it.

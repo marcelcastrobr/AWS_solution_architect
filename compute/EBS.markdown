@@ -15,6 +15,10 @@
 - AMI´s (Amazon Machine Images) can be created from snapshots.
 - You can change EBS volume sizes on the fly, including changing the size and storage type.
 - Volumes will always be in the same availability zone as the EC2 instance.
+- Attributes selectable when creating an EBS:
+    - Volume type
+    - IOPS
+    - CMK
 
 
 
@@ -29,3 +33,8 @@
 | Usecase |  Most work loads | Databases | Big data  & Warehouse | File servers | workload where data is infrequently accessed.
 | Max IOPS Volume | 16.000 | 64.000 | 500 | 250 | 40-200 |
 
+
+# EBS Snapshots
+- Backups data from your EBS volume to S3. 
+- Snapshots are incremental backups.
+- Snapshots are constrained to the AWS Region where they were created.

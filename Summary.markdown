@@ -41,5 +41,15 @@
 # CloudFront
 - TTL up to 1 day. If need to remove file, use: invalidate file or file versioning. 
 
+# Security:
+- 
 
 
+TODO:
+- target tracking policy
+- simple scaling policy 
+
+Cloud formation:
+- Parameters: Input from users (e.g. IP addresses, names, etc.)
+- AMI ID are different in each region.
+- Mapping: used to specify base AMI.

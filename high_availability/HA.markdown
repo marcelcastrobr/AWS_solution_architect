@@ -67,6 +67,13 @@ Realized through:
 - Download Amazon Linux 2 as an ISO image.
 
 
+# AWS Disaster Recovery Scenarios:
+- Backup and Recovery: Simple and low cost.
+- Pilot light: limited set of core services are kept running syncing mutable data.
+- Warm standby: a scaled-down version of a fully functional environment is always running on the cloud.
+- Multi-site: run DR on AWS as well as on your on-site infrastructure. 
+
+
 # AWS Axioms
 - Single AZ  will never be a right answer
 - AWS Managed services should always be preferrred

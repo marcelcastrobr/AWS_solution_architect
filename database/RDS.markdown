@@ -25,6 +25,7 @@ RDS Facts:
     - MySQL server
     - PostgreSQL
     - MariaDB
+- synchronous standby replica in a different Availability Zone
 
 Amazon RDS automatically switches to a standby replica in another Availability Zone if you have enabled Multi-AZ. Failover times are typically 60–120 seconds. The primary DB instance switches over automatically to the standby replica if any of the following conditions occur:
 - An Availability Zone outage
