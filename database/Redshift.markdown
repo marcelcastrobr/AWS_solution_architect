@@ -68,9 +68,9 @@ To Check:
 
 ## Create Parquet file
 ~~~~sql
-UNLOAD ('select * from service_visualization.manual_document_s3')
-    TO 's3://digital-twin-subsea/test_parquet/'
-    IAM_ROLE 'arn:aws:iam::012006820026:role/RedshiftToS3Role'
+UNLOAD ('select * from schema.table')
+    TO 's3://bucket-name/test_parquet/'
+    IAM_ROLE 'arn:aws:iam::account:role/RedshiftToS3Role'
     PARQUET
     ALLOWOVERWRITE
 ~~~~
