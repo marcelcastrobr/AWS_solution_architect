@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cat README_cover.md
+
 let count=0
 for f in $(ls -d */ | sed 's/\/$//' |grep -v 'resources'|grep -v 'images')
 do
