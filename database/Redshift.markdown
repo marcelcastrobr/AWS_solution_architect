@@ -33,7 +33,6 @@ Factors that afect query performance:
 - Query structure 
 
 
-
 # Redshift Spectrum
 Efficiently query and retrieval of structured and semistructured data from files in AWS S3 without having to load the data into AWS Redshift tables. Processing occurs in Redshift Spectrum layer and data remains in AWS S3.
 
@@ -62,3 +61,16 @@ To Check:
 - TODO: We could create different queues for different users with different priority. (e.g. BI with high prio, ETL normal and data scientist low priority)
 - Amazon Redshift Advisor
 - AppFlow to ingest data in Redshift
+
+
+
+# Redshift Tasks
+
+## Create Parquet file
+~~~~sql
+UNLOAD ('select * from service_visualization.manual_document_s3')
+    TO 's3://digital-twin-subsea/test_parquet/'
+    IAM_ROLE 'arn:aws:iam::012006820026:role/RedshiftToS3Role'
+    PARQUET
+    ALLOWOVERWRITE
+~~~~

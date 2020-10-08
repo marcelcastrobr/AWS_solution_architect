@@ -14,7 +14,8 @@ Containers are:
 
 ## Facts
 - ECS is a container management service that makes it easy to run, stop and manage Docker containers on a cluster. 
-- IAM role needs to be associated with the ECS task definition.
+- IAM role needs to be associated with the ECS task definition. You can only apply one IAM role to a task definition. 
+- With rge EC2 launch type you can apply IAM foles at the container and task level.
 
 ![Elastic Cloud Container](/images/ecs-2.png)
 
