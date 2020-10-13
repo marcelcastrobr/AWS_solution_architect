@@ -74,3 +74,15 @@ UNLOAD ('select * from schema.table')
     PARQUET
     ALLOWOVERWRITE
 ~~~~
+
+## Create CSV file
+~~~~sql
+UNLOAD ('select * from schema.table')
+    TO 's3://bucket-name/test_csv/'
+    IAM_ROLE 'arn:aws:iam::account:role/RedshiftToS3Role'
+    FORMAT AS CSV
+    HEADER
+    PARALLEL OFF
+    GZIP
+    ALLOWOVERWRITE;
+~~~~
