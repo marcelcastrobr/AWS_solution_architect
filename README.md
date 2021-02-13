@@ -4,7 +4,9 @@ The objective of this repository is to share my learning notes during my prepara
 
 This repository is target for people that are planning to start using AWS (Amazon Web Services) or willing to pursue the certification path.
 
-Feel free to fork this repository and contribute to it in your 
+Feel free to fork this repository and contribute to it.
+
+Please not that this repo is under construction and will be update as part of my learning path with Amazon Web Service journey.
 
 ![My badge](/images/AWS-SolArchitect-Associate_badge.png)
 
@@ -14,6 +16,7 @@ Feel free to fork this repository and contribute to it in your
 
 ## analytics
 - [EMR](analytics/EMR.markdown)
+- [glue.assets](analytics/glue.assets/image-20210213105549426.png)
 - [glue](analytics/glue.markdown)
 - [kinesis](analytics/kinesis.markdown)
 ## application
@@ -62,4 +65,4 @@ Feel free to fork this repository and contribute to it in your
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 34
+ Number of markdown pages so far are: 35
