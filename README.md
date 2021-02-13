@@ -62,4 +62,4 @@ Feel free to fork this repository and contribute to it in your
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: $count
+ Number of markdown pages so far are: 34
