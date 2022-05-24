@@ -16,4 +16,12 @@ You can monitor VPN tunnels using CloudWatch. The following metrics are availabl
 
 
 
-![CloudWatch](/images/CloudWatch.png)
+![CloudWatch](../images/CloudWatch.png)
+
+
+
+## Services:
+
+![image-20220524133817567](CloudWatch.assets/image-20220524133817567.png)
+
+(Ref. Handling Distribution - Advanced Techniques for AWS Monitoring, Metrics and Logging by CloudAcademy.)
