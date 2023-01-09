@@ -127,9 +127,49 @@ The following attributes must be set to true in order to instances with a public
 
 You can check this configuration in: Your VPC -> Description:
     - DNS resolution: Enabled
-    - DNS hostnames: Enabled.
+        - DNS hostnames: Enabled.
 
 [Link](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html)
+
+
+
+# [Route 53 Resolver](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html)
+
+Amazon Route 53 Resolver responds recursively to DNS queries from AWS resources for:
+
+- public records, 
+- Amazon VPC-specific DNS names, 
+- and Amazon Route 53 private hosted zones
+
+An Amazon VPC connects to a Route 53 Resolver at a VPC+2 IP address. This VPC+2 address connects to a Route 53 Resolver within an Availability Zone.
+
+
+
+A Route 53 Resolver automatically answers DNS queries for:
+
+- Local VPC domain names for EC2 instances (for example, ec2-192-0-2-44.compute-1.amazonaws.com).
+- Records in private hosted zones (for example, acme.example.com).
+- For public domain names, Route 53 Resolver performs recursive lookups against public name servers on the internet.
+
+Through Resolver endpoints and conditional forwarding rules, you can **resolve DNS queries between your on-premises resources and VPCs** to create a hybrid cloud setup over VPN or Direct Connect (DX).
+
+- **Inbound Resolver** endpoints allow DNS queries to your VPC from your on-premises network or another VPC.
+- **Outbound Resolver** endpoints allow DNS queries from your VPC to your on-premises network or another VPC.
+- **Resolver rules** enable you to create one forwarding rule for each domain name and specify the name of the domain for which you want to forward DNS queries from your VPC to an on-premises DNS resolver and from your on-premises to your VPC. Rules are applied directly to your VPC and can be shared across multiple accounts.
+
+The  diagram below shows hybrid DNS resolution with Resolver endpoints. Note that the diagram is simplified to show only one Availability Zone (Ref. [What is Amazon Route 53 Resolver?](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html)).
+
+![image-20230109161118452](./assets/image-20230109161118452.png)
+
+
+
+
+
+Ref. [AWS DirectC onnect + Hybrid DNS Workshop ](https://catalog.workshops.aws/dxhybrid/en-US)and picture below for an example of Route53 Resolver implementation.
+
+![image-20230109155414781](./assets/image-20230109155414781.png)
+
+
 
 
 
@@ -137,5 +177,5 @@ You can check this configuration in: Your VPC -> Description:
 
 # Route53 Links
 
-[DNS Desmystified] (https://www.youtube.com/watch?v=PVBC1gb78r8&t=1046s)
+- [DNS Desmystified] (https://www.youtube.com/watch?v=PVBC1gb78r8&t=1046s)
 
