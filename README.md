@@ -1,6 +1,10 @@
 # README
 
-The objective of this repository is to share my learning notes during my preparation for the AWS Certified Solutions Architect - Associate.
+The objective of this repository is to share my learning notes during my preparation for:
+
+- AWS Certified Solutions Architect - Associate.
+- AWS Certified Developer - Associate.
+- AWS Certified Solutions Architect - Professional.
 
 This repository is target for people that are planning to start using AWS (Amazon Web Services) or willing to pursue the certification path.
 
@@ -12,7 +16,6 @@ Please not that this repo is under construction and will be update as part of my
 
 
 # Table of Content
-
 
 ## analytics
 - [EMR](analytics/EMR.markdown)
