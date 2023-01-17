@@ -7,7 +7,7 @@ for f in $(ls -d */ | sed 's/\/$//' |grep -v 'resources'|grep -v 'images')
 do
     echo "## $f"
     #let count=count+1
-    for l in $(find -s $f -type f -not -path '*/\.*')
+    for l in $(find -s $f -type f -not -path '*/\.*'|grep -v assets)
     do
 	    var=$(echo $l| cut -d '/' -f2 |sed 's/\.markdown$//')
 	    echo "- [$var]($l)"
