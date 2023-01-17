@@ -17,3 +17,4 @@ done
 echo ""
 echo $'\n\n Run #bash create_readme.sh > README.md  in order to create README file automatically'
 echo $'\n Number of markdown pages so far are: '$count
+cat References.md 

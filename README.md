@@ -14,7 +14,6 @@ Please not that this repo is under construction and will be update as part of my
 
 ![My badge](/images/AWS-SolArchitect-Associate_badge.png)
 
-
 # Table of Content
 
 ## analytics
@@ -71,3 +70,11 @@ Please not that this repo is under construction and will be update as part of my
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
  Number of markdown pages so far are: 37
+
+
+
+
+# References:
+
+- [AWS Certified Developer Associate An A Cloud Guru Course Repository](https://github.com/ACloudGuru-Resources/course-aws-certified-developer-associate)
+- [AWS Certified Solutions Architect – Professional (SAP-C01) Notes](https://github.com/Ernyoke/certified-aws-solutions-architect-professional)

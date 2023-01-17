@@ -14,6 +14,5 @@ Please not that this repo is under construction and will be update as part of my
 
 ![My badge](/images/AWS-SolArchitect-Associate_badge.png)
 
-
 # Table of Content
 
