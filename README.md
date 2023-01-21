@@ -27,6 +27,7 @@ Please not that this repo is under construction and will be update as part of my
 - [EBS](compute/EBS.markdown)
 - [EC2](compute/EC2.markdown)
 - [ElasticBeanstalk](compute/ElasticBeanstalk.markdown)
+- [SAM](compute/SAM.markdown)
 - [lambda](compute/lambda.markdown)
 ## container
 - [ECS](container/ECS.markdown)
@@ -55,11 +56,13 @@ Please not that this repo is under construction and will be update as part of my
 - [VPC](networking/VPC.markdown)
 ## security
 - [CloudHSM](security/CloudHSM.markdown)
+- [Cognito](security/Cognito.markdown)
 - [IAM](security/IAM.markdown)
 - [KMS](security/KMS.markdown)
 - [Shield_WAF](security/Shield_WAF.markdown)
 - [X_Ray](security/X_Ray.markdown)
 - [aws_sec](security/aws_sec.markdown)
+- [test_questions.md](security/test_questions.md)
 ## storage
 - [EFS](storage/EFS.markdown)
 - [FSx](storage/FSx.markdown)
@@ -69,7 +72,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 37
+ Number of markdown pages so far are: 40
 
 
 
