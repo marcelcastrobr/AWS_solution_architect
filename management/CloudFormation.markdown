@@ -45,7 +45,7 @@ Facts:
 
   Example using nested stack.
 
-  ```yaml
+  ```bash
   Resources:
   Type: AWS::CloudFormation::Stack
   Properties:
