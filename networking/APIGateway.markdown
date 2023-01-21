@@ -37,12 +37,48 @@ Amazon API Gateway is an AWS service for creating, publishing, maintaining, moni
 ## Throttling 
 
 - 10.000 request/sec per region.
-
 - 5000 requests is the max  concurrent requests at any given time  across all APIs per region.
-
 - 429 Error: too many requests
+- 
 
-  
+## Resource Policies
+
+Resource policy are json policy documents that you attach to an API to control whether a specified principal can invoke the API.
+
+API Gateway resource policies are attached to resources
+
+You can use it to all your API to be securely invoked by:
+
+- Users from a specified AWS account
+- Specified source IP address ranges or CIDR blocks
+- Specified VPCs or VPC endpoints.
+
+
+
+Below is an example of a resource policy that allows users in another AWS account to use an API via [Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html) (SigV4) protocols. .
+
+```json
+{
+   "Version": "2012-10-17",
+   "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::account-id-2:user/Alice",
+                    "account-id-2"
+                ]
+            },
+            "Action": "execute-api:Invoke",
+            "Resource": [
+                "execute-api:/stage/GET/pets"
+            ]
+        }
+    ]
+}
+```
+
+
 
 ## References
 

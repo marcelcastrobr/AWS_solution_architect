@@ -16,3 +16,26 @@ ElastiCache supports two open-source in memory cachhing engines:
 | Memcached | Redis |
 | ----------- | ----------- | 
 | - Multithreading <br> - Low maintenance <br/>  - Easy horizontal scalability with Auto Discovery | - Support for data structures <br> - Persistent <br/> - Atomic operations <br> - Pub/sub messaging <br/> - Read replicas/failover <br> - Cluster mode/sharded cluster <br/>|
+
+
+
+## [Caching Strategies](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html):
+
+- Lazy loading: loads data into cache only when necessary
+
+- Write-through: adds or update data in the cache whenever data is written to the database.
+
+- Adding TTL: use TTL to expire data in the cache.
+
+  
+
+Example of Lazy loading:
+
+```
+record_value = cache.get(record_key) 
+if (record_value == NULL)
+	record_value = db.query("SELECT Details FROM Records WHERE ID == {0}", record_key)
+	cache.set (record_key, record_value)
+
+```
+

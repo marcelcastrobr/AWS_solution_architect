@@ -7,14 +7,14 @@
 - Role -> connected to services and Policies to Users.
 
  ![IAM Model](/images/IAM_model.jpg)
- 
+
 
 ## IAM consists of:
  ### IAM Role:
  - Roles are more secure than storing your access key and secret access key on individual EC2 instances.
  - Roles are easier to manage.
  - Roles can be assigned to an EC2 instance after it is created using both the console and command line.
- 
+
 
  ### IAM User:
 
@@ -60,6 +60,19 @@ Example of S3ReadOnlyAccess
 }
 ```
 
+
+
+### Types of IAM policies:
+
+- AWS Managed: created and administrated by AWS (e.g. AmazonDynameDBFullAccess).
+- Customer managed polices: standalone created and administrated by you.
+  - Recommended when managed policies is not good enought
+- Inline Policies: 1:1 relationship between the entity and the policy
+  - You can not attached to multiple user, group or role.
+  - Recommended when the policy should not be adverted assigned to any other user, group or role than the one you intended. 
+
+
+
 # Advanced IAM
 
 - AWS Managed Microsoft AD
@@ -100,3 +113,8 @@ Share resource accross accounts. Current resources that is possible to share bet
  - License Manager
  - Resource Groups
  - Route53
+
+
+
+
+
