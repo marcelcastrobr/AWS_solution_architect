@@ -27,9 +27,9 @@
 
 
 
-## SQS Delay Queue:
+## [SQS Delay Queue:](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-delay-queues.html)
 
-- Able to postpone delivery of new messages to a queue for a number of seconds (900 sec is maximum).
+- Able to postpone delivery of new messages to a queue for a number of seconds (900 sec is maximum - 15 minutes).
 
 - Only affect delay of newly arrived messages in the queue.
 
@@ -49,7 +49,7 @@ AWS SQS messages has three basic states:
     - Maximum inflight message for standard queue is 120.000 and 20.000 for FIFO queues.
 3. deleted: message deleted from the queue.
 
-![Visibility Timeout](../images/visibility.png)
+![image-20230122112605079](./assets/image-20230122112605079.png)
 
 ## Best Practise:
 

@@ -37,9 +37,11 @@ sam deploy \
 
 - **Resources** declares the AWS resources that you want to include in the stack
 
+- Transform and Resources are the only required sections!!!
+
   
 
-sExample of SAM application:
+Example of SAM application:
 
 ```yaml
 AWSTemplateFormatVersion: 2010-09-09

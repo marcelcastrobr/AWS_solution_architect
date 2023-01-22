@@ -19,13 +19,29 @@ Facts:
 
   ## CF Template structure:
 
-  - Metadata: data  
-  - Parameters: input values to CF. E.g. environment type.
-  - Conditions: test a condition and take actions. E.g. evaluate parameters.
-  - Mappings: e.g. AMI for a specific region
+  - **Metadata**: data  
+  - **Parameters:** input values to CF. E.g. environment type.
+  
+    - CloudFormation currently supports the following parameter types:
+  
+      ```bash
+      String – A literal string
+      Number – An integer or float
+      List<Number> – An array of integers or floats
+      CommaDelimitedList – An array of literal strings that are separated by commas
+      AWS::EC2::KeyPair::KeyName – An Amazon EC2 key pair name
+      AWS::EC2::SecurityGroup::Id – A security group ID
+      AWS::EC2::Subnet::Id – A subnet ID
+      AWS::EC2::VPC::Id – A VPC ID
+      List<AWS::EC2::VPC::Id> – An array of VPC IDs
+      List<AWS::EC2::SecurityGroup::Id> – An array of security group IDs
+      List<AWS::EC2::Subnet::Id> – An array of subnet IDs
+      ```
+  - **Conditions**: test a condition and take actions. E.g. evaluate parameters.
+  - **Mappings**: e.g. AMI for a specific region
   - **Transform**: include snippets of code that is outside main template (e.g code for lambda function.)
   - **Resources**: AWS resources you are deploying. Only mandatory section of the template.
-  - Outputs: e.g. output instance ids of EC2 deployed. 
+  - **Outputs**: e.g. output instance ids of EC2 deployed. 
 
 
 
@@ -34,7 +50,9 @@ Facts:
 
 
 
-## Nested Stacks
+## CF Features
+
+### Nested Stacks
 
 - Allows to re-use of cloud formation code for common use cases.
 
@@ -60,3 +78,17 @@ Facts:
   ```
 
   
+
+### Drift Detection
+
+Drift detection enables you to detect whether a stack's actual  configuration differs, or has drifted, from its expected configuration.  Use CloudFormation to detect drift on an entire stack, or individual  resources within the stack. 
+
+A resource is considered to have drifted if  any of its actual property values differ from the expected property  values. This includes if the property or resource.
+
+
+
+### Change Set
+
+Change sets allow you to preview how proposed changes to a stack might  impact your running resources.
+
+For example, whether your changes will  delete or replace any critical resources, AWS CloudFormation makes the  changes to your stack only when you decide to execute the change set,  allowing you to decide whether to proceed with your proposed changes or  explore other changes by creating another change set.

@@ -80,6 +80,19 @@ Below is an example of a resource policy that allows users in another AWS accoun
 
 
 
+## API Gateway Authentication and Authorization
+
+You can use the following mechanisms:
+
+- Resource polices
+- Standard AWS IAM roles and polices
+- IAM tags
+- Endpoint policies for interface VPC endpoints
+- Lambda authorizers
+- Amazon Cognito user pools
+
+
+
 ## References
 
 1) [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)

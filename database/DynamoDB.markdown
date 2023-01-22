@@ -123,6 +123,11 @@ How about eventually consistent:
 - Two underlying reads and writes ( prepare/commit)
 - Operate up to 25 items or 4MBytes of data
 
+#### Conditional Writes
+
+- Supported for write operations (PutItem, UpdateItem and DeleteItem). 
+- Conditional write succeeds only if the item attributes meet one or more expected conditions (e.g. not already item with the same primary key, item with attributes with a certain value).
+
 
 
 # On-Demand Capacity
@@ -185,6 +190,11 @@ How about eventually consistent:
 ## DynamoDB Transactions
 
 - Provide ACID (Atomic, Consistent, Isolated, Durable) consistency.
+- **`TransactWriteItems`**
+  - is a synchronous and idempotent write operation that groups up to 25 write actions in a single all-or-nothing operation. 
+  - the aggregate size of the items in the transaction cannot exceed 4 MB. 
+  - the actions are completed atomically so that either all of them succeed or none of them succeeds.
+
 
 
 
@@ -228,7 +238,21 @@ Query is much more efficient than scan.
 
 
 
+## DynamoDB Backup 
+
+It offers two built-in backup methods:
+
+- On-demand 
+- Point-in-time recovery: 
+
+Both backups use S3, but you are not able to access the S3 bucket. If you need to backup and download locally, you will need to use either, AWS Data Pipeline, Amazon EMR or AWS Glue.
+
+
+
+
+
 # References
+
 1) [DynamoDBStreams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
 2) [DynamoDB Accelerator - DAX](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html)
 3) [Service, account, and table quotas in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ServiceQuotas.html#limits-secondary-indexes)
