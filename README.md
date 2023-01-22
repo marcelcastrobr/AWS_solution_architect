@@ -36,6 +36,8 @@ Please not that this repo is under construction and will be update as part of my
 - [RDS](database/RDS.markdown)
 - [Redshift](database/Redshift.markdown)
 - [elasticcache](database/elasticcache.markdown)
+## dev_tools
+- [CodeDeploy](dev_tools/CodeDeploy.markdown)
 ## high_availability
 - [HA](high_availability/HA.markdown)
 - [awsbooks](high_availability/awsbooks.markdown)
@@ -72,7 +74,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 40
+ Number of markdown pages so far are: 41
 
 
 
