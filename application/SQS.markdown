@@ -3,6 +3,7 @@
 ## SQS Facts
 - SQS is pull-based service, and support messages up to 256KB.
 - Messages can be kept in the queue from 1 minute to 14 days; default is 4 days.
+- You can retrieve maximum [10 messages](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-using-receive-delete-message.html) from SQS queue.
 - SQS Short Polling: 
     - Returns message from queue imediately, even if the message queue is empty.
     - Short polling occurs when the WaitTimeSeconds parameter of a ReceiveMessage request is set to 0.

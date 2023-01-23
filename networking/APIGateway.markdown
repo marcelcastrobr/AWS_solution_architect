@@ -88,7 +88,7 @@ You can use the following mechanisms:
 - Standard AWS IAM roles and polices
 - IAM tags
 - Endpoint policies for interface VPC endpoints
-- Lambda authorizers
+- **Lambda authorizers**: is an API Gateway feature that uses a Lambda function to control access to your API.
 - Amazon Cognito user pools
 
 

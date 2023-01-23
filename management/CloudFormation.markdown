@@ -52,6 +52,8 @@ Facts:
 
 ## CF Features
 
+
+
 ### Nested Stacks
 
 - Allows to re-use of cloud formation code for common use cases.
@@ -92,3 +94,21 @@ A resource is considered to have drifted if  any of its actual property values d
 Change sets allow you to preview how proposed changes to a stack might  impact your running resources.
 
 For example, whether your changes will  delete or replace any critical resources, AWS CloudFormation makes the  changes to your stack only when you decide to execute the change set,  allowing you to decide whether to proceed with your proposed changes or  explore other changes by creating another change set.
+
+
+
+### [Cross-Stack References](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref.html):
+
+The following restrictions apply to cross-stack references:
+
+- For each AWS account, `Export` names must be unique within a region.
+
+- 10You can't create cross-stack references across regions. You can use the intrinsic function         `Fn::ImportValue` to import only values that have been exported within the same region.
+
+- For outputs, the value of the `Name` property of an `Export` can't use `Ref` or `GetAtt` functions that depend on a resource.
+
+  Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions that depend on a resource.
+
+- You can't delete a stack if another stack references one of its outputs.
+
+- You can't modify or remove an output value that is referenced by another stack.
