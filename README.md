@@ -14,12 +14,10 @@ Please not that this repo is under construction and will be update as part of my
 
 
 
-| ![My badge](./images/sa-ass.png) | ![My badge](./images/devops-ass.png) |
-| -------------------------------- | ------------------------------------ |
+| <img src="./images/sa-ass.png" alt="drawing" width="400"/> | <img src="./images/devops-ass.png" alt="drawing" width="400"/> |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
 
-
-
-# 
+ 
 
 # Table of Content
 
