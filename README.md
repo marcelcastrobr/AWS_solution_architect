@@ -29,6 +29,7 @@ Please not that this repo is under construction and will be update as part of my
 - [SQS](application/SQS.markdown)
 - [step_function](application/step_function.markdown)
 ## compute
+- [AWS_App_Runner](compute/AWS_App_Runner.markdown)
 - [EBS](compute/EBS.markdown)
 - [EC2](compute/EC2.markdown)
 - [ElasticBeanstalk](compute/ElasticBeanstalk.markdown)
@@ -37,20 +38,24 @@ Please not that this repo is under construction and will be update as part of my
 ## container
 - [ECS](container/ECS.markdown)
 ## database
+- [Aurora](database/Aurora.markdown)
 - [DynamoDB](database/DynamoDB.markdown)
 - [RDS](database/RDS.markdown)
 - [Redshift](database/Redshift.markdown)
 - [elasticcache](database/elasticcache.markdown)
 ## dev_tools
 - [CodeDeploy](dev_tools/CodeDeploy.markdown)
+## end_user_computing
+- [AmazonWorkspaces](end_user_computing/AmazonWorkspaces.markdown)
 ## high_availability
 - [HA](high_availability/HA.markdown)
 - [awsbooks](high_availability/awsbooks.markdown)
 ## management
+- [AWS_Organizations](management/AWS_Organizations.markdown)
 - [CloudFormation](management/CloudFormation.markdown)
 - [CloudTrail](management/CloudTrail.markdown)
 - [CloudWatch](management/CloudWatch.markdown)
-- [SystemsManager](management/SystemsManager.markdown)
+- [Systems_Manager](management/Systems_Manager.markdown)
 - [TrustedAdvisor](management/TrustedAdvisor.markdown)
 ## migration
 - [AWSSnowFamily](migration/AWSSnowFamily.markdown)
@@ -63,6 +68,7 @@ Please not that this repo is under construction and will be update as part of my
 - [Route53](networking/Route53.markdown)
 - [VPC](networking/VPC.markdown)
 ## security
+- [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [Cognito](security/Cognito.markdown)
 - [IAM](security/IAM.markdown)
@@ -80,7 +86,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 42
+ Number of markdown pages so far are: 47
 
 
 

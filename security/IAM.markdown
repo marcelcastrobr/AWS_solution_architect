@@ -6,7 +6,7 @@
 - New users are assigned Access Key ID & Secret Access Keys when first created. Access Key & secret are used to access AWS APIs and command line.
 - Role -> connected to services and Policies to Users.
 
- ![IAM Model](/images/IAM_model.jpg)
+ ![IAM Model](../images/IAM_model.jpg)
 
 
 ## IAM consists of:
@@ -100,10 +100,61 @@ Example of S3ReadOnlyAccess
 
 # IAM Policies
 
-![ARN - Amazon Resource Name](/images/arn.png)
+![ARN - Amazon Resource Name](../images/arn.png)
 
+
+
+## Policies Types
+
+Below are the policy types in IAM.
+
+### Identity-based policies
+
+Grant permission to an identity. Attached managed and inline policies to IAM identities (user, groups, or roles).
+
+### Resource-based policies
+
+Resource-based policies are JSON policy documents that you attach to a resource such as an Amazon S3 bucket.
+
+### [Permissions Boundaries](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)
+
+Permissions boundaries is an advanced feature for using a managed policy to set the maximum permission that an **identity-based policy** can grant to an IAM entity.
+
+Example below shows  a policy that can be allocate to an IAM user to manage only Amamzon S3, CloudWatch an EC2.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "cloudwatch:*",
+                "ec2:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+
+
+### Organization SCPs
+
+Use an AWS Organizations service control policy (SCP) to define the maximum permissions for account members of an organization or organizational unit (OU).
+
+### Access control lists (ACLs)
+
+Use ACLs to control which principals in other accounts can access the resource to which the ACL is attached.
+
+### Session policies
+
+Pass advanced session policies when you use the AWS CLI or AWS API to assume a role or a federated user.
 
 # Resource Access Management
+
 Share resource accross accounts. Current resources that is possible to share between accounts:
  - Aurora,
  - AppMesh
@@ -113,6 +164,12 @@ Share resource accross accounts. Current resources that is possible to share bet
  - License Manager
  - Resource Groups
  - Route53
+
+
+
+
+
+
 
 
 

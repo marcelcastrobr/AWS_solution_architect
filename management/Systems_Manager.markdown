@@ -2,7 +2,7 @@
 
 
 
-## Parameter Store
+## [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)
 - Components of AWS system manager (SSM)
 - Secure serverless storage for configuration:
     - passwords
