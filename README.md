@@ -53,6 +53,7 @@ Please not that this repo is under construction and will be update as part of my
 - [SystemsManager](management/SystemsManager.markdown)
 - [TrustedAdvisor](management/TrustedAdvisor.markdown)
 ## migration
+- [AWSSnowFamily](migration/AWSSnowFamily.markdown)
 - [DataSync](migration/DataSync.markdown)
 ## networking
 - [APIGateway](networking/APIGateway.markdown)
@@ -79,7 +80,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 41
+ Number of markdown pages so far are: 42
 
 
 
