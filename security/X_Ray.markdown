@@ -20,6 +20,10 @@ X-Ray integrates with:
 
 
 
+Example below has a hands-on troubleshooting using X-Ray [here](https://github.com/ACloudGuru/hands-on-aws-troubleshooting). 
+
+![image-20230117103349806](./assets/image-20230117103349806.png)
+
 
 
 

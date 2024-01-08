@@ -3,6 +3,7 @@
 ## SQS Facts
 - SQS is pull-based service, and support messages up to 256KB.
 - Messages can be kept in the queue from 1 minute to 14 days; default is 4 days.
+- You can retrieve maximum [10 messages](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-using-receive-delete-message.html) from SQS queue.
 - SQS Short Polling: 
     - Returns message from queue imediately, even if the message queue is empty.
     - Short polling occurs when the WaitTimeSeconds parameter of a ReceiveMessage request is set to 0.
@@ -13,6 +14,8 @@
 
 ## SQS Types:
 
+
+
 ### SQS Standard Queue
 - More than one message might be delivered out of order.
 - Best effort ordering
@@ -22,6 +25,18 @@
 - Exactly once processing: message is delivered once and remains available until a consumer processes and deletes it (no dupplicates introduced).
 - Support message groups, allowing multiple ordered message groups within a single queue.
 - FIFO queues are limited to 300 transaction per seconds
+
+
+
+## [SQS Delay Queue:](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-delay-queues.html)
+
+- Able to postpone delivery of new messages to a queue for a number of seconds (900 sec is maximum - 15 minutes).
+
+- Only affect delay of newly arrived messages in the queue.
+
+- Normally used in a large distributed applications.
+
+  
 
 ## [Visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
 
@@ -35,6 +50,10 @@ AWS SQS messages has three basic states:
     - Maximum inflight message for standard queue is 120.000 and 20.000 for FIFO queues.
 3. deleted: message deleted from the queue.
 
-![Visibility Timeout](../images/visibility.png)
+![image-20230122112605079](./assets/image-20230122112605079.png)
 
+## Best Practise:
 
+- Manage large SQS with s3
+  - Messages of size 256KB up to 2GB in size
+  - Use SQS Extended Client Library for java to manage them.
