@@ -29,39 +29,46 @@ Please not that this repo is under construction and will be update as part of my
 - [SQS](application/SQS.markdown)
 - [step_function](application/step_function.markdown)
 ## compute
+- [AWS_App_Runner](compute/AWS_App_Runner.markdown)
 - [EBS](compute/EBS.markdown)
 - [EC2](compute/EC2.markdown)
-- [ElasticBeanstalk](compute/ElasticBeanstalk.markdown)
+- [Elastic_Beanstalk](compute/Elastic_Beanstalk.markdown)
+- [Lambda](compute/Lambda.markdown)
 - [SAM](compute/SAM.markdown)
-- [lambda](compute/lambda.markdown)
 ## container
 - [ECS](container/ECS.markdown)
 ## database
+- [Aurora](database/Aurora.markdown)
 - [DynamoDB](database/DynamoDB.markdown)
+- [ElasticCache](database/ElasticCache.markdown)
 - [RDS](database/RDS.markdown)
 - [Redshift](database/Redshift.markdown)
-- [elasticcache](database/elasticcache.markdown)
 ## dev_tools
-- [CodeDeploy](dev_tools/CodeDeploy.markdown)
+- [Code_Deploy](dev_tools/Code_Deploy.markdown)
+## end_user_computing
+- [Amazon_Workspaces](end_user_computing/Amazon_Workspaces.markdown)
 ## high_availability
+- [AWS_Books](high_availability/AWS_Books.markdown)
 - [HA](high_availability/HA.markdown)
-- [awsbooks](high_availability/awsbooks.markdown)
 ## management
-- [CloudFormation](management/CloudFormation.markdown)
-- [CloudTrail](management/CloudTrail.markdown)
+- [AWS_Organizations](management/AWS_Organizations.markdown)
 - [CloudWatch](management/CloudWatch.markdown)
-- [SystemsManager](management/SystemsManager.markdown)
-- [TrustedAdvisor](management/TrustedAdvisor.markdown)
+- [Cloud_Formation](management/Cloud_Formation.markdown)
+- [Cloud_Trail](management/Cloud_Trail.markdown)
+- [Systems_Manager](management/Systems_Manager.markdown)
+- [Trusted_Advisor](management/Trusted_Advisor.markdown)
 ## migration
-- [DataSync](migration/DataSync.markdown)
+- [AWS_Snow_Family](migration/AWS_Snow_Family.markdown)
+- [Data_Sync](migration/Data_Sync.markdown)
 ## networking
-- [APIGateway](networking/APIGateway.markdown)
-- [CloudFront](networking/CloudFront.markdown)
-- [DirectConnect](networking/DirectConnect.markdown)
-- [GlobalAccelerator](networking/GlobalAccelerator.markdown)
+- [API_Gateway](networking/API_Gateway.markdown)
+- [Cloud_Front](networking/Cloud_Front.markdown)
+- [Direct_Connect](networking/Direct_Connect.markdown)
+- [Global_Accelerator](networking/Global_Accelerator.markdown)
 - [Route53](networking/Route53.markdown)
 - [VPC](networking/VPC.markdown)
 ## security
+- [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [Cognito](security/Cognito.markdown)
 - [IAM](security/IAM.markdown)
@@ -79,7 +86,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 41
+ Number of markdown pages so far are: 47
 
 
 
