@@ -153,6 +153,20 @@ Use ACLs to control which principals in other accounts can access the resource t
 
 Pass advanced session policies when you use the AWS CLI or AWS API to assume a role or a federated user.
 
+
+
+# IAM Roles
+
+## [Service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)
+
+A service-linked role is a type of service role that is linked to an AWS service. 
+
+The service can assume the role to perform an action on your  behalf. 
+
+Service-linked roles appear in your AWS account and are owned by  the service. 
+
+An IAM administrator can view,  but not edit the permissions for service-linked roles.  
+
 # Resource Access Management
 
 Share resource accross accounts. Current resources that is possible to share between accounts:

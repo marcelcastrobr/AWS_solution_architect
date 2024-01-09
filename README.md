@@ -51,6 +51,7 @@ Please not that this repo is under construction and will be update as part of my
 - [AWS_Books](high_availability/AWS_Books.markdown)
 - [HA](high_availability/HA.markdown)
 ## management
+- [AWS_Control_Tower](management/AWS_Control_Tower.markdown)
 - [AWS_Organizations](management/AWS_Organizations.markdown)
 - [CloudWatch](management/CloudWatch.markdown)
 - [Cloud_Formation](management/Cloud_Formation.markdown)
@@ -68,6 +69,8 @@ Please not that this repo is under construction and will be update as part of my
 - [Route53](networking/Route53.markdown)
 - [VPC](networking/VPC.markdown)
 ## security
+- [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
+- [AWS_RAM](security/AWS_RAM.markdown)
 - [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [Cognito](security/Cognito.markdown)
@@ -86,7 +89,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 47
+ Number of markdown pages so far are: 50
 
 
 
