@@ -16,8 +16,8 @@ OrganizationAccountAccessRole must be **created manually** if you invite an exis
 
 **Features**:
 
-- All features (default = consolidated billing + SCP):  invite accounts must approbe enabling all feaures.
-- Consolidated Billing features: aggregate billing accross all account -single payment method. Used for pricing benefits.
+- **All features** (default = consolidated billing + SCP):  invite accounts must approbe enabling all feaures.
+- **Consolidated Billing features**: aggregate billing accross all account -single payment method. Used for pricing benefits.
 
 
 
@@ -37,7 +37,7 @@ OrganizationAccountAccessRole must be **created manually** if you invite an exis
 - Applied at the OU (Organization Unit) or Account level.
 - Does not apply to management account.
 - SCP is applied to all the users and roles in the account **including root user.**
-- SCP **does no affect [service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)**
+- SCP **does no affect [service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)**: Service-linked roles enable other AWS services to integrate with AWS Organizations and can’t be restricted by SCPs.
 - SCP mjst have an **explicit Allow**.
 - Usecases:
   - restrict access to certain services
@@ -107,6 +107,69 @@ OrganizationAccountAccessRole must be **created manually** if you invite an exis
             }
         }
     }
+}
+```
+
+
+
+## Solutions Archiect Scenarios:
+
+#### **[Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html):**
+
+Scenario:  User on master account with ability to perform actions on resource on OU accounts under Consolidated Billing.
+
+- Steps
+
+  - Create an IAM user(s) or role(s) in the master account.
+
+  - In the OU account(s) generate a cross-account role with full permissions while granting access for the master account.
+
+**Example**: A **Production** account manages live applications. Developers and testers use the **Development**      account as a sandbox to freely test applications. In each account, you store application information in Amazon S3 buckets. You manage IAM users in the **Development** account, where you have two IAM user groups: **Developers** and **Testers**. Users in both user groups have permissions to work in the Development account and access resources  there. From time to time, a developer must update the live applications in the **Production** account. The developers store these applications in an Amazon S3 bucket called `productionapp`. 
+
+![image-20240111093935156](./assets/image-20240111093935156.png)
+
+Create **UpdateApp** role in production account that can be used by the development account.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:ListAllMyBuckets",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+       ],
+      "Resource": "arn:aws:s3:::productionapp"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::productionapp/*"
+    }
+  ]
+}
+```
+
+Modify the developer user group to allow them to switch to the UpdateApp role, by adding the following inline policy.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Effect": "Allow",
+    "Action": "sts:AssumeRole",
+    "Resource": "arn:aws:iam::PRODUCTION-ACCOUNT-ID:role/UpdateApp"
+  }
 }
 ```
 

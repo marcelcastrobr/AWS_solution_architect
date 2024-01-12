@@ -24,3 +24,14 @@
   - Managed Prefix list (set of one or mode CIDR blocks)  -> giving central management of CIDR blocks.
 
     
+
+To enable trusted access with AWS Organizations:
+
+- From the AWS RAM CLI, use the `enable-sharing-with-aws-organizations` command.
+- Name of the IAM service-linked role that can be created in accounts when trusted access is enabled: *AWSResourceAccessManagerServiceRolePolicy*.
+
+
+
+## References
+
+- Blog: [Introducing an Easier Way to Delegate Permissions to AWS Services: Service-Linked Roles](https://aws.amazon.com/blogs/security/introducing-an-easier-way-to-delegate-permissions-to-aws-services-service-linked-roles/)

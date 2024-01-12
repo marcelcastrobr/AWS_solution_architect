@@ -21,7 +21,7 @@
     - Path-style access URL **: 
     ```bash
        https://s3.us-west-2.amazonaws.com/mybucket/puppy.jpg (s3 / bucket-name )
- 
+     
     ```
     - Static web site URL: bucket name + s3-website + 
 
@@ -195,7 +195,30 @@ It provided two retention modes:
 
 Object Lock also enables you to place a legal hold on an object version. Like a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed. Legal holds can be freely placed and removed by any user who has the s3:PutObjectLegalHold permission.
 
+
+
+## S3 Advanced Topics
+
+#### Multi-Region Access Points
+
+- Global endpoint that span S3 bbuckets in multiple AWS regions
+- Dynamically route requests to the nearest S3 bucket (lowest latency)
+- bi-direction bucket replication
+- failover controls: active-active or active-passive
+
+#### S3 Object Lambda
+
+- Uses AWS lambda function to change an object before it is retrieved by the application (e.g. analytics application).
+- [Example](https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html) (see picture below): Analytic app request the redacted object from S3 object lambda access point, which call a "redaction lambda function". The reacted lambda function access the S3 bucket using the S3 access point.
+- Usecases:
+  - Redacting PII
+  - Converting accross data formats
+  - Resiizing and watermarking images.
+
+![image-20240111145551913](./assets/image-20240111145551913.png)
+
 ## S3 References
+
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
 2. [S3 Multipart Upload](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
 3. [CORS](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html)
