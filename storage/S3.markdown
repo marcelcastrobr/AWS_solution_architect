@@ -217,6 +217,45 @@ Object Lock also enables you to place a legal hold on an object version. Like a 
 
 ![image-20240111145551913](./assets/image-20240111145551913.png)
 
+## S3 Pre-signed URLs vs CloudFront Signed URLs vs Origin Access Identity (OAI) vs Origin Access Control (OAC)
+
+#### S3 Pre-signed URLs
+
+- All S3 buckets and objects by default are private.
+
+- Pre-signed URLs use the owner´s security credentials to grant other time-limited permission to download or upload objects.
+
+- Steps: security credential, S3 bucket name, object key, specific HTTP method, expiration date and time of the URL
+
+  
+
+#### CloudFront Signed URLs
+
+- Control user access to private content through:
+  - restric access to files in cloudfront edge caches
+  - restric access to files in your S3 bucket
+- Cloudfront can require users to access files using ether signed URLs or signed cookies.
+- sined URLs or signed cookies can be used for any origin such as S3 or HTTP server.
+
+#### Origin Access Identity (OAI)
+
+- S3 bucket can be configure as origin of a cloudfront distribution. S3 files can only be acess through cloudfront URL.
+- Steps: create cloudfrojt user called origin access identity. Give OAI permission to read files in S3. Remove permission from anyone else. 
+- You cannot set OAI if S2 is configured as a website endpoint.
+
+#### Origin Access Control (OAC)
+
+- OAC is more **preferable** was to restrict S3 origin.
+- Enable secure access to S3 files through cloudfront by permitting only designated **cloudfront distribution** o access their S3.
+- AWS signature version 4 (SigV4) can be enabled on cloudfront requests to S3 buckets.
+- Server-side encryption with AWS KMS (SSE-KMS) can also be enabled when performing uploads and downloads through cloud front distribution. 
+
+
+
+
+
+
+
 ## S3 References
 
 1. [S3 URL Style] (https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
