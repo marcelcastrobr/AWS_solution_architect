@@ -15,7 +15,9 @@ Possible configurations are:
 # AWS Shield
 
 Provides Distributed Denial of Service (DDoS) protection.
+
 There are two tiers of AWS Shield:
+
 - Standard
     - AWS Shield Standard defends against most common, frequently occurring network and transport layer DDoS attacks that target your web site or applications. When you use AWS Shield Standard with Amazon CloudFront and Amazon Route 53, you receive comprehensive availability protection against all known infrastructure (Layer 3 and 4) attacks.
 - Advanced
