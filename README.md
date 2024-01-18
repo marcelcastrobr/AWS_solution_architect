@@ -51,6 +51,7 @@ Please not that this repo is under construction and will be update as part of my
 - [AWS_Books](high_availability/AWS_Books.markdown)
 - [HA](high_availability/HA.markdown)
 ## management
+- [AWS_Config](management/AWS_Config.markdown)
 - [AWS_Control_Tower](management/AWS_Control_Tower.markdown)
 - [AWS_Organizations](management/AWS_Organizations.markdown)
 - [CloudWatch](management/CloudWatch.markdown)
@@ -58,6 +59,7 @@ Please not that this repo is under construction and will be update as part of my
 - [Cloud_Trail](management/Cloud_Trail.markdown)
 - [Systems_Manager](management/Systems_Manager.markdown)
 - [Trusted_Advisor](management/Trusted_Advisor.markdown)
+- [typora](management/typora)
 ## migration
 - [AWS_Snow_Family](migration/AWS_Snow_Family.markdown)
 - [Data_Sync](migration/Data_Sync.markdown)
@@ -68,10 +70,13 @@ Please not that this repo is under construction and will be update as part of my
 - [Global_Accelerator](networking/Global_Accelerator.markdown)
 - [Route53](networking/Route53.markdown)
 - [VPC](networking/VPC.markdown)
+## others
+- [AWS_Cloud_Map](others/AWS_Cloud_Map.markdown)
 ## security
 - [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
 - [AWS_RAM](security/AWS_RAM.markdown)
 - [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
+- [Amazon_Inspector](security/Amazon_Inspector.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [Cognito](security/Cognito.markdown)
 - [IAM](security/IAM.markdown)
@@ -89,7 +94,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 50
+ Number of markdown pages so far are: 54
 
 
 
@@ -98,3 +103,4 @@ Please not that this repo is under construction and will be update as part of my
 
 - [AWS Certified Developer Associate An A Cloud Guru Course Repository](https://github.com/ACloudGuru-Resources/course-aws-certified-developer-associate)
 - [AWS Certified Solutions Architect – Professional (SAP-C01) Notes](https://github.com/Ernyoke/certified-aws-solutions-architect-professional)
+- [AWS Certified Solutions Architect - Professional (SAP-C02) Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-pro/AWS-Certified-Solutions-Architect-Professional_Exam-Guide.pdf)

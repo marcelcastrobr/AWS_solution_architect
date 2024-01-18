@@ -41,9 +41,20 @@
 
 # S3 types
 1. S3 standard: 99,99% availability
-2. S3 IA (Infrequent Accessed)
-3. S3 One Zone -IA
+
+2. S3 IA (Infrequent Accessed): usecase: disater recovery and backups
+
+3. S3 One Zone -IA: usecase: secondary backup
+
 4. S3 Intelligent Tiering
+
+    1. Types:
+        1. Frequent access tier: deafult
+        2. Infrequent access tier: objects not accessed for 30 days
+        3. Archive instant access tier: objects not accessed for 90 days
+        4. Archive access tier: configurable from 90 to 700+ days
+        5. Deep archive access tier: configurable from 180 to 700+ days
+
 5. S3 Glacier
     - Retrievals data options
         - Expedited: urgent request (1-5 minutes). With two options:
@@ -51,7 +62,14 @@
             - Provisioned
         - Standard: access archives within 3-5 hours.
         - Bulk retrials: large amount, even petabytes, in a day (5-12 hours)
-6. S3 Glacier Deep Archive
+        
+        - **S3 Glacier Types**
+            - Glacier Instant Retrieval: min storage is 90 days
+            - Glacier Flexible Retrieval: 
+                - Subtypes: Expedited (1-5 minutes), standard ()3-5 hours and Bulk (5-12 hours)
+            - Glacier Deep Archive
+                - Subtypes: standard (12 hours) Bulk (48 hours).
+                - Minimum storage duration of 180 days.
 
 
 | S3 types| S3 Standard | S3 Intelligent Tiering| S3 Standard IA | S3 One Zone - IA |  S3 Glacier | S3 Glacier Deep Archive |
