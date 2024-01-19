@@ -116,11 +116,17 @@ Free of charge
 - Transfer in to S3
 - Transfer out from S3 to CloudFront
 
-
 # S3 Storage Gateway 
 
+Usecases:
+
+- disaster recovery
+- backup & restore
+- Tiered storage
+- On-premise cache & low-latency files access
+
 ## S3 Storage Gateway Types:
-1. File gateway (NFS & SMB): 
+1. **File gateway** (NFS & SMB): 
     - flat files stored directly on S3
     - store and retrieve files directly using the NFS version 3 or 4.1 protocol.
     - store and retrieve files directly using the SMB file system version, 2 and 3 protocol.
@@ -139,7 +145,7 @@ Free of charge
     - 
 
 ## Storage Gateway Facts
-- AWS Storage Gateway backs up the data in Amazon Storage as incremental EBS snapshots
+- AWS Storage Gateway backup the data in Amazon Storage as incremental EBS snapshots
 - AWS Storage Gateway, by default, uploads data using SSL and provides data encryption at rest when stored in S3 or Glacier using AES-256
 
 
@@ -206,12 +212,22 @@ Transfer Acceleration takes advantage of Amazon CloudFront’s globally distribu
 
 
 ## S3 Object Lock
-With S3 object lock you can stored objects using write-once-read-manhy (WORM) model. You can use it to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely. 
+With S3 object lock you can stored objects using write-once-read-many (WORM) model. You can use it to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely. 
 It provided two retention modes:
+
 - governance mode: users cannot overwrite or delete an object version or alter its lock settings unless they have special permissions. To override or remove governance model retentionl, a user must have s3:BypassGovernanceRetention. 
 - compliance mode: protected object version cannot be overwritten or deleted by any user, including the root user in your AWS account. 
 
 Object Lock also enables you to place a legal hold on an object version. Like a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed. Legal holds can be freely placed and removed by any user who has the s3:PutObjectLegalHold permission.
+
+
+
+## S3 Event Notifications
+
+- publish notifications for the following events
+  - Object created, removed, restored, replicated
+  - S3 lifecycle expiration, object tagging
+- event types supported are SQS, SNS, Lambda and EventBridge
 
 
 
