@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Updating...."
-bash create_readme.sh > README.md
+bash create_readme_linux.sh > README.md
