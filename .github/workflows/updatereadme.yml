@@ -27,6 +27,4 @@ jobs:
 
       # Runs command to update readme.md based on changes in the folders
       - name: Update Readme.md at each commit to master
-        run: | 
-        echo "Updating readme.md"
-        ./update_readme.sh  
+        run: ./update_readme.sh  
