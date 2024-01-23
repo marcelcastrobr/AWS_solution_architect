@@ -15,11 +15,11 @@
 ### Primary Key Types:
 
 - **Partition key**: based on unique attribute. It is part of the table primary key. It is a hash function value that is used to retrieve items from your table and allocate data across hosts for scalability and availability.
-- **Composite key** (portion key + sort key): used in situation where portion key is not unique. E.g. user_Id + sort key (timestamp)
+- **Composite key** (partion key + sort key): used in situation where partion key is not unique. E.g. user_Id + sort key (timestamp)
 
 
 
-### Secondly Index
+### Secondary Index
 
 Flexible querying based on attributes that is not the primary key.
 

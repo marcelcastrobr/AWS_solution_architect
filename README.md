@@ -47,10 +47,14 @@ Please not that this repo is under construction and will be update as part of my
 - [Code_Deploy](dev_tools/Code_Deploy.markdown)
 ## end_user_computing
 - [Amazon_Workspaces](end_user_computing/Amazon_Workspaces.markdown)
+## financial
+- [AWS_Budget](financial/AWS_Budget.markdown)
+- [Cost_Control](financial/Cost_Control.markdown)
 ## high_availability
 - [AWS_Books](high_availability/AWS_Books.markdown)
 - [HA](high_availability/HA.markdown)
 ## management
+- [AWS_Compute_Optimizer](management/AWS_Compute_Optimizer.markdown)
 - [AWS_Config](management/AWS_Config.markdown)
 - [AWS_Control_Tower](management/AWS_Control_Tower.markdown)
 - [AWS_Organizations](management/AWS_Organizations.markdown)
@@ -62,6 +66,7 @@ Please not that this repo is under construction and will be update as part of my
 - [typora](management/typora)
 ## migration
 - [AWS_Snow_Family](migration/AWS_Snow_Family.markdown)
+- [Cloud_Migration](migration/Cloud_Migration.markdown)
 - [Data_Sync](migration/Data_Sync.markdown)
 ## networking
 - [API_Gateway](networking/API_Gateway.markdown)
@@ -94,7 +99,7 @@ Please not that this repo is under construction and will be update as part of my
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 54
+ Number of markdown pages so far are: 58
 
 
 

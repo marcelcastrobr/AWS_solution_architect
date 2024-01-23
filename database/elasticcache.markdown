@@ -14,18 +14,18 @@ ElastiCache supports two open-source in memory cachhing engines:
 - Redis
 
 | Memcached | Redis |
-| ----------- | ----------- | 
-| - Multithreading <br> - Low maintenance <br/>  - Easy horizontal scalability with Auto Discovery | - Support for data structures <br> - Persistent <br/> - Atomic operations <br> - Pub/sub messaging <br/> - Read replicas/failover <br> - Cluster mode/sharded cluster <br/>|
+| ----------- | ----------- |
+| - Multi-threading <br> - Low maintenance <br/>  - Easy horizontal scalability with Auto Discovery<br />-  **no persistent**<br /> - **No backup and restore**<br />- Sharding across multi-node (data partition) | - Support for data structures <br> - **Persistent** <br/> - Atomic operations <br> - Pub/sub messaging <br/> - Read replicas/failover <br> - Cluster mode/sharded cluster <br/><br />- MultiAZ with auto-failover |
 
 
 
 ## [Caching Strategies](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html):
 
-- Lazy loading: loads data into cache only when necessary
+- **Lazy loading**: loads data into cache only when necessary
 
-- Write-through: adds or update data in the cache whenever data is written to the database.
+- **Write-through**: adds or update data in the cache whenever data is written to the database.
 
-- Adding TTL: use TTL to expire data in the cache.
+- **Adding TTL**: use TTL to expire data in the cache.
 
   
 
@@ -39,3 +39,12 @@ if (record_value == NULL)
 
 ```
 
+
+
+
+
+# Handling Extreme Rates
+
+![image-20240122083052685](./assets/image-20240122083052685.png)
+
+Picture by Stephane Maarek
