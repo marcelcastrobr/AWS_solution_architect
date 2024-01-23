@@ -25,10 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Updating Readme.md!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: ls
+      # Runs command to update readme.md based on changes in the folders
+      - name: Update Readme.md at each commit to master
+        run: | 
+		echo Updating readme.md
+		./update_readme.sh  

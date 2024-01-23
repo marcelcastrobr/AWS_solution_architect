@@ -40,9 +40,9 @@ Please not that this repo is under construction and will be update as part of my
 ## database
 - [Aurora](database/Aurora.markdown)
 - [DynamoDB](database/DynamoDB.markdown)
-- [ElasticCache](database/ElasticCache.markdown)
 - [RDS](database/RDS.markdown)
 - [Redshift](database/Redshift.markdown)
+- [elasticcache](database/elasticcache.markdown)
 ## dev_tools
 - [Code_Deploy](dev_tools/Code_Deploy.markdown)
 ## end_user_computing
