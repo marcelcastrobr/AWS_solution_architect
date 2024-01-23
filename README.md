@@ -10,7 +10,7 @@ This repository is target for people that are planning to start using AWS (Amazo
 
 Feel free to fork this repository and contribute to it.
 
-Please not that this repo is under construction and will be update as part of my learning path with Amazon Web Service journey.
+Please note that this repo is under construction and will be update as part of my learning path with Amazon Web Service journey.
 
 
 
@@ -22,77 +22,77 @@ Please not that this repo is under construction and will be update as part of my
 # Table of Content
 
 ## analytics
-- [EMR](analytics/EMR.markdown)
 - [glue](analytics/glue.markdown)
 - [kinesis](analytics/kinesis.markdown)
+- [EMR](analytics/EMR.markdown)
 ## application
-- [SQS](application/SQS.markdown)
 - [step_function](application/step_function.markdown)
+- [SQS](application/SQS.markdown)
 ## compute
-- [AWS_App_Runner](compute/AWS_App_Runner.markdown)
-- [EBS](compute/EBS.markdown)
 - [EC2](compute/EC2.markdown)
+- [lambda](compute/lambda.markdown)
+- [EBS](compute/EBS.markdown)
 - [Elastic_Beanstalk](compute/Elastic_Beanstalk.markdown)
-- [Lambda](compute/Lambda.markdown)
 - [SAM](compute/SAM.markdown)
+- [AWS_App_Runner](compute/AWS_App_Runner.markdown)
 ## container
 - [ECS](container/ECS.markdown)
 ## database
-- [Aurora](database/Aurora.markdown)
 - [DynamoDB](database/DynamoDB.markdown)
-- [RDS](database/RDS.markdown)
+- [Aurora](database/Aurora.markdown)
 - [Redshift](database/Redshift.markdown)
 - [elasticcache](database/elasticcache.markdown)
+- [RDS](database/RDS.markdown)
 ## dev_tools
 - [Code_Deploy](dev_tools/Code_Deploy.markdown)
 ## end_user_computing
 - [Amazon_Workspaces](end_user_computing/Amazon_Workspaces.markdown)
 ## financial
-- [AWS_Budget](financial/AWS_Budget.markdown)
 - [Cost_Control](financial/Cost_Control.markdown)
+- [AWS_Budget](financial/AWS_Budget.markdown)
 ## high_availability
-- [AWS_Books](high_availability/AWS_Books.markdown)
 - [HA](high_availability/HA.markdown)
+- [AWS_Books](high_availability/AWS_Books.markdown)
 ## management
-- [AWS_Compute_Optimizer](management/AWS_Compute_Optimizer.markdown)
-- [AWS_Config](management/AWS_Config.markdown)
-- [AWS_Control_Tower](management/AWS_Control_Tower.markdown)
-- [AWS_Organizations](management/AWS_Organizations.markdown)
-- [CloudWatch](management/CloudWatch.markdown)
 - [Cloud_Formation](management/Cloud_Formation.markdown)
-- [Cloud_Trail](management/Cloud_Trail.markdown)
-- [Systems_Manager](management/Systems_Manager.markdown)
+- [CloudWatch](management/CloudWatch.markdown)
+- [AWS_Organizations](management/AWS_Organizations.markdown)
+- [AWS_Config](management/AWS_Config.markdown)
 - [Trusted_Advisor](management/Trusted_Advisor.markdown)
+- [Systems_Manager](management/Systems_Manager.markdown)
+- [Cloud_Trail](management/Cloud_Trail.markdown)
+- [AWS_Compute_Optimizer](management/AWS_Compute_Optimizer.markdown)
+- [AWS_Control_Tower](management/AWS_Control_Tower.markdown)
 - [typora](management/typora)
 ## migration
-- [AWS_Snow_Family](migration/AWS_Snow_Family.markdown)
 - [Cloud_Migration](migration/Cloud_Migration.markdown)
 - [Data_Sync](migration/Data_Sync.markdown)
+- [AWS_Snow_Family](migration/AWS_Snow_Family.markdown)
 ## networking
-- [API_Gateway](networking/API_Gateway.markdown)
-- [Cloud_Front](networking/Cloud_Front.markdown)
-- [Direct_Connect](networking/Direct_Connect.markdown)
 - [Global_Accelerator](networking/Global_Accelerator.markdown)
+- [Cloud_Front](networking/Cloud_Front.markdown)
+- [API_Gateway](networking/API_Gateway.markdown)
 - [Route53](networking/Route53.markdown)
 - [VPC](networking/VPC.markdown)
+- [Direct_Connect](networking/Direct_Connect.markdown)
 ## others
 - [AWS_Cloud_Map](others/AWS_Cloud_Map.markdown)
 ## security
-- [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
-- [AWS_RAM](security/AWS_RAM.markdown)
-- [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
-- [Amazon_Inspector](security/Amazon_Inspector.markdown)
-- [CloudHSM](security/CloudHSM.markdown)
 - [Cognito](security/Cognito.markdown)
-- [IAM](security/IAM.markdown)
-- [KMS](security/KMS.markdown)
 - [Shield_WAF](security/Shield_WAF.markdown)
-- [X_Ray](security/X_Ray.markdown)
-- [aws_sec](security/aws_sec.markdown)
+- [Amazon_Inspector](security/Amazon_Inspector.markdown)
+- [AWS_Security_Hub](security/AWS_Security_Hub.markdown)
+- [CloudHSM](security/CloudHSM.markdown)
+- [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
+- [IAM](security/IAM.markdown)
 - [test_questions.md](security/test_questions.md)
+- [aws_sec](security/aws_sec.markdown)
+- [AWS_RAM](security/AWS_RAM.markdown)
+- [KMS](security/KMS.markdown)
+- [X_Ray](security/X_Ray.markdown)
 ## storage
-- [EFS](storage/EFS.markdown)
 - [FSx](storage/FSx.markdown)
+- [EFS](storage/EFS.markdown)
 - [S3](storage/S3.markdown)
 
 
