@@ -44,3 +44,28 @@ Amazon RDS automatically switches to a standby replica in another Availability Z
 | Use Amazon RDS| Do not use Amanzon RDS | 
 | ----------- | ----------- | 
 | - Complex transactions or complex queries <br> - A medium-to-high query/write rate <br/>  - No more than a single worker node/shard <br> - High durability<br/>| - Massive read/write rates (e.g. 150K write/second) <br> - Sharding (partitioning) <br/> - Simple GET/PUT requests and queries <br> - RDBMS customization<br/> | 
+
+
+
+# RDS Security
+
+- KMS encryption as rest for underlying EBS volume
+- Transparent data encryption (TDE) for Oracle and SQL Servers
+- SSL encryption to RDS in flight
+- IAM authentication for MySQL, PostgreSQL and MariaDB
+  - Through IAM & RDS API calls. 
+  - Auth token has lifetime of 15 min.
+- Authorization happens within RDS
+- CloudTrail can not track queries in RDS
+
+
+
+# RDS for Oracle
+
+- RDS Backups for backup&restore to Amazon RDS Oracle.
+- **Oracle RMAN** (Recovery Manager) for **backup&restore to non-RDS (RDS not supported)**
+- Real Application Cluster (RAC)
+  - RDS for Oracle does NOT support RAC
+  - RAC  is working on Oracle on EC2
+- RDS for Oracle supports Transparedn Data Encryption (TDE) 
+- DMS works on RDS for Oracle 
