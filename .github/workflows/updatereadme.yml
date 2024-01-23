@@ -28,3 +28,21 @@ jobs:
       # Runs command to update readme.md based on changes in the folders
       - name: Update Readme.md at each commit to master
         run: ./update_readme.sh  
+
+      # Commit files
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "Add changes"
+         
+      # Push changes to branch
+      - name: Push changes to branch
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          force: true
+          source_dir: ./README.md
+          destination_dir: ./README.md
+          message: "Update README.md"
