@@ -111,3 +111,12 @@ Figure by Stephane Maarek.
 
 
 
+## [Field-level encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+
+CloudFront can enforce secure end-to-end connections to origin server via HTTPs.
+
+Field level encryption adds an additional layer where you can encrypt sensitive information (up to 10 data fields) at the edge. 
+
+CloudFront field-level encryption uses assymetric encryption (a.k.a public key encryption).
+
+![image-20240123150510326](./assets/image-20240123150510326.png)
