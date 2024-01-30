@@ -62,7 +62,7 @@ Types:
 - Operates at layer 3 (IP packets)
 - Combine functions for:
   - transparent network gateway
-  - load balancer
+  -  load balancer
 - Uses GENEVE protocol on port 6081.
 - Target groups
   - EC2 instances
