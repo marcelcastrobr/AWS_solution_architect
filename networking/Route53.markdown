@@ -54,7 +54,7 @@ dnsimple.com.		60	IN	A	104.245.210.170
 
 ##  ALIAS record:
 
-ALIAS is similar to a CNAME records, but can create an alias record both for the root domain or apex zone, such as example.com, and for subdomains, such as www.example.com. CNAME records can only be used for subdomains.
+ALIAS is similar to a CNAME records, but can create an alias record **both for the root** **domain** or apex zone, such as example.com, and for subdomains, such as www.example.com. CNAME records can only be used for subdomains.
 
 In AWS you have to use ALIAS records to point your root domain to other DNS records such as your ELB.
 
@@ -100,6 +100,8 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 
 # Route53 Facts
 - By design, the AWS DNS service does not respond to requests originating from outside VPC.
+- CNAME used only for non root domain (e.g. some.mydomain.com)
+- Alias works for **root domain and non root domain** (e.g. mydomain.com)
 
 
 # Route53 Routing types:
