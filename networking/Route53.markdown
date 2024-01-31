@@ -98,38 +98,87 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 [...]
 ```
 
+
+
 # Route53 Facts
+
 - By design, the AWS DNS service does not respond to requests originating from outside VPC.
 - CNAME used only for non root domain (e.g. some.mydomain.com)
 - Alias works for **root domain and non root domain** (e.g. mydomain.com)
+- You cannot set an ALIAS record for an EC2 DNS name.
+- Records TTL:
+  - high TTL: less traffic in route 53.
+  - low TTL: more traffic in route 53 but expensive
+  - Except for ALIAS records, TTL is mandatory for each DNS record.
+
+
 
 
 # Route53 Routing types:
-- **Simple routing**: one record with multiple IP addresses, where Route53 returns all values to the user in a random order.
 
-- **Weighted routing**: Route53 returns value according to weight provided.
+- **Simple routing**: one record with multiple IP addresses, where Route53 returns all values to the user in a random order. **Cannot be associated with health check.**
 
-- **Latency-based routing**: Router53 returns values based on the lowest network latency for your end user. 
+  
 
-- **Failover routing**: Used when you want to create a *active/passive* set up (i.e. primary and secondary sites). 
+- **Weighted routing**: Route53 returns value according to weight provided. It can be associated to health check.
+
+  
+
+- **Latency-based routing**: Router53 returns values based on the lowest network latency for your end user. Latency is based on traffic betwen user and AWS regions.
+
+
+
+- **Failover routing**: Used when you want to create a ***active/passive*** set up (i.e. primary and secondary sites). 
+
+
 
 - **Geolocation routing**: Route53 returns value based on the geographic location of your users (i.e. location from which the DNS queries originates). 
 
-- **Geoproximity routing**: Route53 returns value based on geographic location of your users and resources, where a "bias" can be used to expand or shrink the size of the geographic region. You MUST use **Route53 traffic flow** in order to use geoproximity routing.
 
-- **Multivalue answer routing**: allows return of multiple values for almost any record. It is similar to simple routing however it allows you to put health checks on each record set.
+
+- **Geoproximity routing**: Route53 returns value based on geographic location of your users and resources, where a "**bias**" can be used to expand or shrink the size of the geographic region. You MUST use **Route53 traffic flow** in order to use geoproximity routing.
+  - Traffic flow: 
+    - simplify process of creating and maintaining record 
+    - Configuration can be saved as traffic flow policy. Supports versioning.
+
+
+
+- **Multivalue answer routing**: allows return of multiple values for almost any record. It is similar to simple routing however it allows you to put health checks on each record set. Up-to 8 records can be returned.
+
+
+
+- **IP-based routing**:  routing based on clients IP addresses. You provide a list of user-IP to endpoint mappings. Used to optimize performance and reduce network cost. One example if to route endusers from a particular ISP to a specific endpoint.
+
+
+
+# Hosted Zones
+
+- a container for records that define how to route traffic to a domain and its subdomains.
+- Public hosted zones: how to route traffic on the internet (public domain names)
+- Private hosted zones: how to route traffic witihin one or more VPCs.
+
+![image-20240130075810604](./assets/image-20240130075810604.png)
+
+Figure by Stephane Maarek.
 
 
 # Using DNS with your VPC 
 Route 53 has a security feature that prevents internal DNS from being read by external sources. The work around is to create a EC2 hosted DNS instance that does zone transfers from the internal DNS, and allows itself to be queried by external servers.
 
-The following attributes must be set to true in order to instances with a public IP address receive corresponding public DNS hostnames, and the Amazon-provided DNS server can resolve Amazon-provided private DNS hostnames:
-- enableDnsHostnames
-- enableDnsSupport	
+**The following attributes must be set to true** in order to instances with a public IP address receive corresponding public DNS hostnames, and the Amazon-provided DNS server can resolve Amazon-provided private DNS hostnames:
+
+- **enableDnsHostnames**
+- **enableDnsSupport**	
 
 You can check this configuration in: Your VPC -> Description:
     - DNS resolution: Enabled
         - DNS hostnames: Enabled.
+
+### DNS Security Extensions (DNSSEC)
+
+- Protocol for securing DNS traffic -> verifies DNS data integrity and origin
+- protects against main in the middle attached
+- Works only with **Public Hosted Zones.**
 
 [Link](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html)
 
@@ -159,6 +208,8 @@ Through Resolver endpoints and conditional forwarding rules, you can **resolve D
 - **Outbound Resolver** endpoints allow DNS queries from your VPC to your on-premises network or another VPC.
 - **Resolver rules** enable you to create one forwarding rule for each domain name and specify the name of the domain for which you want to forward DNS queries from your VPC to an on-premises DNS resolver and from your on-premises to your VPC. Rules are applied directly to your VPC and can be shared across multiple accounts.
 
+Inbound resolver and outbound resolver supports 10.000 queries oer second per IP address.
+
 The  diagram below shows hybrid DNS resolution with Resolver endpoints. Note that the diagram is simplified to show only one Availability Zone (Ref. [What is Amazon Route 53 Resolver?](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html)).
 
 ![image-20230109161118452](./assets/image-20230109161118452.png)
@@ -170,6 +221,16 @@ The  diagram below shows hybrid DNS resolution with Resolver endpoints. Note tha
 Ref. [AWS DirectC onnect + Hybrid DNS Workshop ](https://catalog.workshops.aws/dxhybrid/en-US)and picture below for an example of Route53 Resolver implementation.
 
 ![image-20230109155414781](./assets/image-20230109155414781.png)
+
+
+
+# Health Check Solution - RDS multi-region failover
+
+![image-20240130080643208](./assets/image-20240130080643208.png)
+
+Figure by Stephane Maarek
+
+
 
 
 

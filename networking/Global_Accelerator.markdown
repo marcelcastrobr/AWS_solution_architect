@@ -1,7 +1,11 @@
 # Global Accelerator
 It is a networking service that helps you improve availability and performance of the applications that you offer to your global users.
-It routes your traffice to the optimal endpoint based on performance.
+It routes your traffic to the optimal endpoint based on performance.
 It is a self-service, pay-per-use offering, requiring no long term commitmments or minimum fees.
+
+- Uses 2 anycast UP created for your application.
+
+- Supports client IP address preservation **except for NLBs and EIPs (elastic IPs) endpoint.**
 
 
 By using AWS Global Accelerator, you can:
@@ -14,13 +18,13 @@ Main facts:
 - Lower first byte latency (round trip time for a package to go from a client to your endpoint and back again)
 - Increase throughput
 - Global service not tied to specific regions.
-- While ELB provides load balancing within one region, AWS Global Accelerator provides traffic management accross multiple regions.
+- **While ELB provides load balancing within one region, AWS Global Accelerator provides traffic management accross multiple regions**.
 - Benefits:
-    - instant regional failover
+    - instant **regional failover**
     - high availability
 
 
 Differences between Global Accelerator and CloudFront
 - CloudFront improves cacheable content (images and videos) and dynanic content(API acceleration and dynamic site delivery).
-- Global Accelerator improves performance for a wide range of applications over TCP and UDP. Good fit for non-HTTP use case. 
+- Global Accelerator improves performance for a wide range of applications over TCP and UDP. Good fit for **non-HTTP use case** (e.g. gaming, IoT, voice over IP). 
 

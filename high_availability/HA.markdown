@@ -43,7 +43,7 @@ It gives targets time to warm up before the load balancer sends them a full shar
 Stick sessions are a mechanism to route requests to the same target in a target group. This is useful for servers that maintain state information in order to provide continuous experience to clients. To use stick sessions, the clients must support cookies. 
 You enable stick sessions at the target group level. 
 
-![ELB](/images/ELB.png)
+![ELB](../images/ELB.png)
 
 
 # High Availability Bastion
@@ -88,4 +88,90 @@ Realized through:
 - AWS Inspector: check EC2 instance for vulnerabilities.
 - VPC Flow Logs: Log network traffic
 - AWS Cloud Trail: Log API calls
+
+
+
+# Solution Architecture - HIgh Availability Architecture Comparison
+
+
+
+### EC2 with Elastic IP 
+
+![image-20240131044145767](./assets/image-20240131044145767.png)
+
+### Stateless web application - horizontal scaling
+
+- DNS based load balancing 
+- ability to use multiple instances
+- Route53 TTL implies client may get outdated information
+- DNS TTL do not allow switch full traffic automatically.
+
+![image-20240131044248733](./assets/image-20240131044248733.png)
+
+### ALB + ASG
+
+- Route53 point to ALB
+- New instances in service quickly due to ALB
+- Time to scale is slow due to starup of EC2 instance 
+- ALB is elastic but does not handle sudden huge peak of demand (need pre-warm).
+- CloudWacth used for scaling
+
+![image-20240131044725654](./assets/image-20240131044725654.png)
+
+
+
+### ALB + ECS on EC2 (backed by ASG)
+
+- ECS tasks on instances using docker
+- Dynamic port featuring
+- Tough to orchestrate ECS autoscaling + ASG autoscalaing
+
+
+
+![image-20240131044844648](./assets/image-20240131044844648.png)
+
+
+
+### ALB + ECS on Fargate
+
+- service autoscaling is done by fargate
+- No need to launch EC2
+- still limited by the ALB in case of sudden peaks.
+
+
+
+![image-20240131045032387](./assets/image-20240131045032387.png)
+
+
+
+### ALB + Lambda
+
+- Limited by lambda runtime of 15 minutes
+- 1000 concurrent lambda executed limitation
+- Simple way to expose lamnda functions as HHTP/S without alll featured from API gateway
+- Able to combine with WAF
+
+
+
+![image-20240131045154019](./assets/image-20240131045154019.png)
+
+### API Gateway + Lambda
+
+- Fully serverless
+- Soft limits of 10000 request/sec for API GW and 1000 concurrent lambda executions
+- Allow to perform authentication, rate limiting, caching using API GW
+- Lambda cold start time may increase latency
+- fully integrated with X-RAY
+
+![image-20240131045450843](./assets/image-20240131045450843.png)
+
+### API Gateway + AWS Service (as proxy)
+
+- Limitation: API GW with payload limit of 10MBytes
+
+![image-20240131045530035](./assets/image-20240131045530035.png)
+
+### API Gateway with HTTP backend
+
+![image-20240131045804984](./assets/image-20240131045804984.png)
 
