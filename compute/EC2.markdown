@@ -10,6 +10,13 @@ Placement group determines how instances are placed on underlying hardware
 - Accelerated computing: P3, P2, G3 and F1 types-Achive high performing general purpose graphics processing unit(GPU). 
 - Storage optimized: H1, I3 and D3 types. Suggested for distributed file systems and heavyweigth data processing applications.
 
+- Summary:
+  - R: need lof od RAM - memory caches
+  - C: need good CPU - compute/databases
+  - M: balanced/medium - general/webapp
+  - I: need I/O - databases
+  - G: need GPU - video rendering/ML
+
 ## Instance Reservation types
    1) On Demand
    2) Reserved
@@ -17,7 +24,7 @@ Placement group determines how instances are placed on underlying hardware
         - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
    3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
    4) Dedicated Host
-   
+
 ### Accelarated computing instances
 Instances which uses hardware accelerators, or co-processors.
 Types are:
@@ -34,7 +41,7 @@ Types are:
     - Valid from, valid until.
     - Desired number of instances
 
-![Termination of Spot instances](/images/spot-instance.png)
+![Termination of Spot instances](../images/spot-instance.png)
 
 ### Spot Fleets
 - Collection of spot instances and optionaly, on-demand instances. 
@@ -52,16 +59,16 @@ Types are:
 ### EC2 PLacement Groups Types
 
 Three types of placement groups:
-- Clustered placement group:
+- **Clustered** placement group:
     - instances within a single AZ (cannot spam multiple AZs.).
     - recomended for: low network latency  and high network throughput.
-- Spread placement group:
+- **Spread** placement group:
     - instances that are each placed on distinct underlying hardware.
     - recommended for: application that have a small number of critical instances that should be kept seperated from each other.
     - supports a maximum of seven running instances per Availability Zone for e.g., in a region that has three AZs, then a total of 21 running instances in the group (seven per zone).
     - are not supported for Dedicated Instances or Dedicated Hosts.
 
-- Partitioned:
+- **Partitioned**:
     - each group divided in logical segments called partitions. EC2 ensure that each partion withing a placement group has its own set of racks.
     - can have a maximum of seven partitions per Availability Zone
 
@@ -129,7 +136,7 @@ An elastic network interface is a logical network component in a VPC that repres
 
 You CANNOT detach a primary network interface from an instance. 
 
-![Elastic Network Interface](/images/elastic_network_interface.png)
+![Elastic Network Interface](../images/elastic_network_interface.png)
 
 Best practices for configuring network interfaces:
 - You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attach)
@@ -192,7 +199,7 @@ Hibernation prerequisites:
 
 # AWS Storage
 
-![AWS Storage](/images/aws_storage.png)
+![AWS Storage](../images/aws_storage.png)
 
 
 # References
