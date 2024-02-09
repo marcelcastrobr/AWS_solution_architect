@@ -30,7 +30,7 @@ Please note that this repo is under construction and will be update as part of m
 - [SQS](application/SQS.markdown)
 ## compute
 - [SAM](compute/SAM.markdown)
-- [Lambda](compute/Lambda.markdown)
+- [lambda](compute/lambda.markdown)
 - [AWS_App_Runner](compute/AWS_App_Runner.markdown)
 - [EC2](compute/EC2.markdown)
 - [Elastic_Beanstalk](compute/Elastic_Beanstalk.markdown)
@@ -45,6 +45,7 @@ Please note that this repo is under construction and will be update as part of m
 - [Redshift](database/Redshift.markdown)
 ## dev_tools
 - [Code_Deploy](dev_tools/Code_Deploy.markdown)
+- [X-ray](dev_tools/X-ray.markdown)
 ## end_user_computing
 - [Amazon_Workspaces](end_user_computing/Amazon_Workspaces.markdown)
 ## financial
@@ -102,7 +103,7 @@ Please note that this repo is under construction and will be update as part of m
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 60
+ Number of markdown pages so far are: 61
 
 
 

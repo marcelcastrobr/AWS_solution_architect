@@ -10,13 +10,6 @@ Placement group determines how instances are placed on underlying hardware
 - Accelerated computing: P3, P2, G3 and F1 types-Achive high performing general purpose graphics processing unit(GPU). 
 - Storage optimized: H1, I3 and D3 types. Suggested for distributed file systems and heavyweigth data processing applications.
 
-- Summary:
-  - R: need lof od RAM - memory caches
-  - C: need good CPU - compute/databases
-  - M: balanced/medium - general/webapp
-  - I: need I/O - databases
-  - G: need GPU - video rendering/ML
-
 ## Instance Reservation types
    1) On Demand
    2) Reserved
@@ -59,16 +52,16 @@ Types are:
 ### EC2 PLacement Groups Types
 
 Three types of placement groups:
-- **Clustered** placement group:
+- Clustered placement group:
     - instances within a single AZ (cannot spam multiple AZs.).
     - recomended for: low network latency  and high network throughput.
-- **Spread** placement group:
+- Spread placement group:
     - instances that are each placed on distinct underlying hardware.
     - recommended for: application that have a small number of critical instances that should be kept seperated from each other.
     - supports a maximum of seven running instances per Availability Zone for e.g., in a region that has three AZs, then a total of 21 running instances in the group (seven per zone).
     - are not supported for Dedicated Instances or Dedicated Hosts.
 
-- **Partitioned**:
+- Partitioned:
     - each group divided in logical segments called partitions. EC2 ensure that each partion withing a placement group has its own set of racks.
     - can have a maximum of seven partitions per Availability Zone
 
