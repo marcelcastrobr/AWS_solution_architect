@@ -30,11 +30,12 @@ jobs:
         run: ./update_readme.sh  
 
       # Commit files
-      - name: Commit files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
+      #- name: Commit files
+      #  run: |
+      #    git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      #    git config --local user.name "github-actions[bot]"
+      #    git add .
+      #    git commit -a -m "Add changes"
          
       # Push changes to branch
       - name: Push changes to branch

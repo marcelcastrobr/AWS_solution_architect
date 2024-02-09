@@ -24,10 +24,11 @@ Please note that this repo is under construction and will be update as part of m
 ## analytics
 - [EMR](analytics/EMR.markdown)
 - [glue](analytics/glue.markdown)
+- [EMR](analytics/EMR.markdown)
 - [kinesis](analytics/kinesis.markdown)
 ## application
-- [step_function](application/step_function.markdown)
 - [SQS](application/SQS.markdown)
+- [step_function](application/step_function.markdown)
 ## compute
 - [SAM](compute/SAM.markdown)
 - [lambda](compute/lambda.markdown)
@@ -43,6 +44,22 @@ Please note that this repo is under construction and will be update as part of m
 - [RDS](database/RDS.markdown)
 - [Aurora](database/Aurora.markdown)
 - [Redshift](database/Redshift.markdown)
+=======
+- [EC2](compute/EC2.markdown)
+- [SAM](compute/SAM.markdown)
+- [EBS](compute/EBS.markdown)
+- [AWS_App_Runner](compute/AWS_App_Runner.markdown)
+- [lambda](compute/lambda.markdown)
+- [Elastic_Beanstalk](compute/Elastic_Beanstalk.markdown)
+## container
+- [ECS](container/ECS.markdown)
+## database
+- [RDS](database/RDS.markdown)
+- [Aurora](database/Aurora.markdown)
+- [elasticcache](database/elasticcache.markdown)
+- [Redshift](database/Redshift.markdown)
+- [DynamoDB](database/DynamoDB.markdown)
+>>>>>>> 9fbcec9291a92edeb48595394928284f05525679
 ## dev_tools
 - [Code_Deploy](dev_tools/Code_Deploy.markdown)
 - [X-ray](dev_tools/X-ray.markdown)
@@ -76,6 +93,7 @@ Please note that this repo is under construction and will be update as part of m
 - [Global_Accelerator](networking/Global_Accelerator.markdown)
 - [API_Gateway](networking/API_Gateway.markdown)
 - [VPC](networking/VPC.markdown)
+- [Cloud_Front](networking/Cloud_Front.markdown)
 - [Direct_Connect](networking/Direct_Connect.markdown)
 - [Load_Balancer](networking/Load_Balancer.markdown)
 - [Route53](networking/Route53.markdown)
@@ -98,7 +116,6 @@ Please note that this repo is under construction and will be update as part of m
 - [EFS](storage/EFS.markdown)
 - [S3](storage/S3.markdown)
 - [FSx](storage/FSx.markdown)
-
 
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
