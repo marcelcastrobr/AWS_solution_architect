@@ -17,7 +17,7 @@ Placement group determines how instances are placed on underlying hardware
         - Convertible: Can be exchanged during the term for another Convertible Reserved Instance with new attributes including instance family, instance type, platform, scope, or tenancy. You can also modify some attributes of a Convertible Reserved Instance.
    3) Spot Instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html
    4) Dedicated Host
-   
+
 ### Accelarated computing instances
 Instances which uses hardware accelerators, or co-processors.
 Types are:
@@ -34,7 +34,7 @@ Types are:
     - Valid from, valid until.
     - Desired number of instances
 
-![Termination of Spot instances](/images/spot-instance.png)
+![Termination of Spot instances](../images/spot-instance.png)
 
 ### Spot Fleets
 - Collection of spot instances and optionaly, on-demand instances. 
@@ -129,7 +129,7 @@ An elastic network interface is a logical network component in a VPC that repres
 
 You CANNOT detach a primary network interface from an instance. 
 
-![Elastic Network Interface](/images/elastic_network_interface.png)
+![Elastic Network Interface](../images/elastic_network_interface.png)
 
 Best practices for configuring network interfaces:
 - You can attach a network interface to an instance when its running (hot attache), when its stopped (warm attach), or when the instance is being launched (cold attach)
@@ -192,7 +192,7 @@ Hibernation prerequisites:
 
 # AWS Storage
 
-![AWS Storage](/images/aws_storage.png)
+![AWS Storage](../images/aws_storage.png)
 
 
 # References

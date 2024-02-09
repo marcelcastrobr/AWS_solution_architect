@@ -93,6 +93,34 @@ You can use the following mechanisms:
 
 
 
+## API Endpoint
+
+Represents a hostname for an API in API GW that is deployed in a specific region.
+
+The hostname is in the form of *{api-id}.execute-api.{region}.amazon.com*.
+
+[Types of API endpoints](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html):
+
+- Edge-optimized API endpoint
+
+  - route request to the nearest CloudFront Point of Presence (POP)
+  - Default endpoint type for API GW REST API.
+
+- Private API endpoint
+
+  - executed through interface VPC endpoints
+
+  - isolated from public internet.
+
+    
+
+- Regional API endpoint
+
+  - requests target to region-specific API Gateway API
+  - pass all header names through as-is.
+
+
+
 ## References
 
 1) [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
