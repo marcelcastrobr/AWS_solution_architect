@@ -12,9 +12,19 @@ Below are two examples of connectivity through AWS Direct Connect.
 
 Picture: [What is AWS Direct Connect?](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html)
 
+
+
+### **Scenario 1: A transit gateway when you have multiple VPCs in the same Region** 
+
 ![image-20230109162237022](./assets/image-20230109162237022.png)
 
 Picture: [Provision Direct Connect Connectivity](https://catalog.workshops.aws/dxhybrid/en-US/2-establishing-connectivity)
+
+
+
+### Scenario 2: A virtual private gateway
+
+![image-20240209084959497](./assets/image-20240209084959497.png)
 
 
 
