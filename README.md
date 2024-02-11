@@ -101,6 +101,7 @@ Please note that this repo is under construction and will be update as part of m
 - [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [AWS_RAM](security/AWS_RAM.markdown)
+- [Amazon_Macie](security/Amazon_Macie.markdown)
 - [test_questions.md](security/test_questions.md)
 - [KMS](security/KMS.markdown)
 - [Amazon_Inspector](security/Amazon_Inspector.markdown)
@@ -118,7 +119,7 @@ Please note that this repo is under construction and will be update as part of m
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 75
+ Number of markdown pages so far are: 76
 
 
 
