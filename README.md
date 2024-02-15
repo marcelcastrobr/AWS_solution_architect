@@ -79,47 +79,6 @@ Please note that this repo is under construction and will be update as part of m
 - [Direct_Connect](networking/Direct_Connect.markdown)
 - [Load_Balancer](networking/Load_Balancer.markdown)
 - [Route53](networking/Route53.markdown)
-## not-share
-- [Bonus](not-share/Bonus)
-- [Review](Review)
-- [Mode](Mode)
-- [Set](Set)
-- [5](5)
-- [-](-)
-- [AWS](AWS)
-- [Certified](Certified)
-- [Solutions](Solutions)
-- [Architect](Architect)
-- [Professional](Professional)
-- [-](-)
-- [Tutorials](Tutorials)
-- [Dojo.pdf](Dojo.pdf)
-- [Review](not-share/Review)
-- [Mode](Mode)
-- [Set](Set)
-- [1](1)
-- [-](-)
-- [AWS](AWS)
-- [Certified](Certified)
-- [Solutions](Solutions)
-- [Architect](Architect)
-- [Professional](Professional)
-- [-](-)
-- [Tutorials](Tutorials)
-- [Dojo.pdf](Dojo.pdf)
-- [Review](not-share/Review)
-- [Mode](Mode)
-- [Set](Set)
-- [2](2)
-- [-](-)
-- [AWS](AWS)
-- [Certified](Certified)
-- [Solutions](Solutions)
-- [Architect](Architect)
-- [Professional](Professional)
-- [-](-)
-- [Tutorials](Tutorials)
-- [Dojo.pdf](Dojo.pdf)
 ## others
 - [AWS_Cloud_Map](others/AWS_Cloud_Map.markdown)
 ## security
@@ -145,7 +104,7 @@ Please note that this repo is under construction and will be update as part of m
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 102
+ Number of markdown pages so far are: 62
 
 
 
