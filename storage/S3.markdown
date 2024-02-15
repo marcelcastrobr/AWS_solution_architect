@@ -106,8 +106,6 @@ You can protect your data at rest using:
     - KMS managed encryption keys (CSE-KMS)
     - Custome managed master ecryption keys (CSE-C)
 
-
-
 #### S3-Managed Keys (SSE-S3)
 
 - uses strong multi-factor encryption

@@ -3,7 +3,7 @@
 cat README_cover.md
 
 let count=0
-for f in $(ls -d */ | sed 's/\/$//' |grep -v 'resources'|grep -v 'images')
+for f in $(ls -d */ | sed 's/\/$//' |grep -v 'resources'|grep -v 'images' |grep -v 'not-share')
 do
     echo "## $f"
     #let count=count+1
