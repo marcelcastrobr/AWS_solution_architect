@@ -249,6 +249,10 @@ Both backups use S3, but you are not able to access the S3 bucket. If you need t
 
 
 
+## Dynamo Common Error Messages
+
+**ProvisionedThroughputExceededException**: exceed maximum allowed provisioned throughput. To solve increase the write capacity unit (WCU).
+
 
 
 # References

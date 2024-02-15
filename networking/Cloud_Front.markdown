@@ -76,17 +76,29 @@ Figure by Stephane Maarek.
 
 
 
+## Only Access S3 URL through CloudFront
+
+**OAC ( Origin Access Control)** allows CloudFront to access and serve files to your users on S3. Thus user can not use direct URL to the S3 bucket. 
+
+Here you can allow everyone to have access to your files or restrict access through CloudFront signed URLs or signed cookies.
+
+![image-20240213075443674](./assets/image-20240213075443674.png) 
+
+Picture from TutorialDoJo.
+
+Ref. [Here](https://tutorialsdojo.com/s3-pre-signed-urls-vs-cloudfront-signed-urls-vs-origin-access-identity-oai-origin-access-control-oac/)  for comparison between S3 pre-signed URLs, cloudfront signed URLs, Origin Acccess Identity (OAI) and Origin Access Control (OAC)
+
 ## CloudFront - Customization at the Edge
 
 Two types:
 
-- CloudFront Functions
+- **CloudFront Functions**
 
   - intereact with **viewer request/response**
   - Lightweight functions written in JavaScript
   - quick time sensitive
 
-- Lambda@Edge
+- **Lambda@Edge**
 
   - Lambda function in NodeJS or python
 
@@ -94,6 +106,16 @@ Two types:
 
   - interact with **viewer request/response** and origin request/response
 
+  - Usecases:
+  
+    - A Lambda function can inspect cookies and rewrite URLs so that users see different versions of a site for A/B testing.
+    - CloudFront can return different objects to viewers based on the device they’re using by checking the User-Agent header, which includes information about the devices. F
+    - check cookies for other criteria. For example, on a retail website that  sells clothing, if you use cookies to indicate which color a user chose  for a jacket, a Lambda function can change the request so that  CloudFront returns the image of a jacket in the selected color.
+    - A Lambda function can generate HTTP responses when CloudFront viewer request or origin request events occur.
+    - A function can **inspect headers or  authorization tokens**, and insert a header to control access to your  content before CloudFront forwards the request to your origin.
+    - A Lambda function can also make network calls to external resources to **confirm user credentials**, or fetch  additional content to customize a response.
+    
+    
     
 
 Usecases:

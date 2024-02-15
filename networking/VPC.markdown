@@ -32,6 +32,7 @@ Security groups cannot span VPCs.
 - You can peer VPC's with other AWS accounts VPC's.
 - Peering is a star configuration. No transitive peering is allowed. (i.e. A - B - C, A can talk to B but A can not talk to C through B)
 - It is allowed to peer between regions.
+- **There is a default limit of 50 VPC peering for each VPC**
 
 
 ## VPC PrivateLink
@@ -49,8 +50,8 @@ A VPC endpoint enables you to privately connect your VPC to supported AWS servic
 It is a elastic network interface with a private IP address that serves as an entry point for traffic destinated to a supported service. 
 
 - Gateway endpoints
-A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service.
-Currently gateway enpoints support:
+  A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service.
+  Currently gateway enpoints support:
     - Amazon S3
     - DynamoDB
 
@@ -96,6 +97,15 @@ Types:
 - Operates in a hub-and-spoke model.
 - Can use accross multiple AWS accounts using RAM (Resource Access Manager)
 - Use route tables to limit how VPC talk to one another. 
+- enables customers to connect 1000s of VPCs.
+- Transit Gateways within an AWS Region **cannot** be peered
+- You can connect to **a maximum of three** Transit Gateways over a single Direct Connect Connection for hybrid connectivity.
+
+Picture below show how to reduce cost for egress traffic. Instead of NAT gateway per spoke VPC (NAT gateway are charged hourly), you create an eggress VPC in the network services account and route all egress traffic from the spoke VPC via a NAT gateway sitting in this VPC with Transit gateway.
+
+![image-20240215091529731](./assets/image-20240215091529731.png)
+
+Picture from TutorialsDoJo 
 
 # VPN CloudHub
 - Allow users to connected to a single private gateway. 

@@ -22,3 +22,23 @@ The 6R: Blog: https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-
 
 
 
+## **AWS Application Discovery Service** 
+
+- helps you plan your migration to the AWS cloud by collecting usage and configuration data about your on-premises servers
+- two ways of performing discovery and collecting data about your on-premises servers:
+  - **Agentless discovery** can be performed by deploying the AWS Agentless Discovery Connector (OVA file) through your VMware Center.
+  - **Agent-based discovery** can be performed by deploying the AWS Application Discovery Agent on each of your VMs and physical servers.
+
+
+
+## [**AWS Cloud Adoption Readiness Tool (CART)**](https://cloudreadiness.amazonaws.com/#/cart) 
+
+- helps organizations of all sizes develop efficient and effective plans for cloud adoption and enterprise cloud migrations.
+- 16-question online survey and assessment report
+
+
+
+## **AWS Migration Hub (Migration Hub)** 
+
+- provides a single place to **discover your existing servers**, **plan** migrations, and **track** the status of each application migration.
+- 

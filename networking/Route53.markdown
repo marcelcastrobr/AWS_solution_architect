@@ -154,12 +154,28 @@ google.com.		53 IN SOA ns1.google.com. dns-admin.google.com. (
 # Hosted Zones
 
 - a container for records that define how to route traffic to a domain and its subdomains.
-- Public hosted zones: how to route traffic on the internet (public domain names)
-- Private hosted zones: how to route traffic witihin one or more VPCs.
+- **Public hosted zones**: how to route traffic on the internet (public domain names)
+- **Private hosted zones**: how to route traffic witihin one or more VPCs.
 
 ![image-20240130075810604](./assets/image-20240130075810604.png)
 
 Figure by Stephane Maarek.
+
+### Route53 Private Hosted Zone
+
+Allow to route traffic within an Amazon VPC. 
+
+You  create a private hosted zone, and specify the VPCs that you want to  associate with the hosted zone.
+
+Ref [Associating an Amazon VPC and a private hosted zone that you created with different AWS accounts .](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-associate-vpcs-different-accounts.html)
+
+
+
+![image-20240211120932901](./assets/image-20240211120932901.png)
+
+
+
+
 
 
 # Using DNS with your VPC 
@@ -208,7 +224,7 @@ Through Resolver endpoints and conditional forwarding rules, you can **resolve D
 - **Outbound Resolver** endpoints allow DNS queries from your VPC to your on-premises network or another VPC.
 - **Resolver rules** enable you to create one forwarding rule for each domain name and specify the name of the domain for which you want to forward DNS queries from your VPC to an on-premises DNS resolver and from your on-premises to your VPC. Rules are applied directly to your VPC and can be shared across multiple accounts.
 
-Inbound resolver and outbound resolver supports 10.000 queries oer second per IP address.
+Inbound resolver and outbound resolver supports 10.000 queries per second per IP address.
 
 The  diagram below shows hybrid DNS resolution with Resolver endpoints. Note that the diagram is simplified to show only one Availability Zone (Ref. [What is Amazon Route 53 Resolver?](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html)).
 
@@ -229,10 +245,6 @@ Ref. [AWS DirectC onnect + Hybrid DNS Workshop ](https://catalog.workshops.aws/d
 ![image-20240130080643208](./assets/image-20240130080643208.png)
 
 Figure by Stephane Maarek
-
-
-
-
 
 
 
