@@ -91,7 +91,26 @@ Realized through:
 
 
 
-# Solution Architecture - HIgh Availability Architecture Comparison
+# RPO and RTO
+
+**RPO - Recovery Point Objective**: maximum delay between interuption of the service
+
+**RTO - Recovery Time Objective**: maximum acceptable amount of time since the last data recovery point.
+
+Strategies to achieve RPO and RTO requirements are:
+
+- Backup and restore: RPO in hours and RTO < 24 hours
+- Pilot light: RPO in minutes and RTO in hours
+- Warm standby: RPO in seconds and RTO in minutes
+- Active-Active: RPO and RTO near zero.
+
+![image-20240213084837321](./assets/image-20240213084837321.png)
+
+Picture from TutorialDojo
+
+
+
+# Solution Architecture - High Availability Architecture Comparison
 
 
 

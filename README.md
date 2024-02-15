@@ -94,6 +94,32 @@ Please note that this repo is under construction and will be update as part of m
 - [-](-)
 - [Tutorials](Tutorials)
 - [Dojo.pdf](Dojo.pdf)
+- [Review](not-share/Review)
+- [Mode](Mode)
+- [Set](Set)
+- [1](1)
+- [-](-)
+- [AWS](AWS)
+- [Certified](Certified)
+- [Solutions](Solutions)
+- [Architect](Architect)
+- [Professional](Professional)
+- [-](-)
+- [Tutorials](Tutorials)
+- [Dojo.pdf](Dojo.pdf)
+- [Review](not-share/Review)
+- [Mode](Mode)
+- [Set](Set)
+- [2](2)
+- [-](-)
+- [AWS](AWS)
+- [Certified](Certified)
+- [Solutions](Solutions)
+- [Architect](Architect)
+- [Professional](Professional)
+- [-](-)
+- [Tutorials](Tutorials)
+- [Dojo.pdf](Dojo.pdf)
 ## others
 - [AWS_Cloud_Map](others/AWS_Cloud_Map.markdown)
 ## security
@@ -101,6 +127,7 @@ Please note that this repo is under construction and will be update as part of m
 - [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
 - [AWS_RAM](security/AWS_RAM.markdown)
+- [Amazon_Macie](security/Amazon_Macie.markdown)
 - [test_questions.md](security/test_questions.md)
 - [KMS](security/KMS.markdown)
 - [Amazon_Inspector](security/Amazon_Inspector.markdown)
@@ -118,7 +145,7 @@ Please note that this repo is under construction and will be update as part of m
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 75
+ Number of markdown pages so far are: 102
 
 
 

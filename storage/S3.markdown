@@ -91,22 +91,37 @@ Availability Zones | >= 3 | >= 3 |  >= 3 | 1 | >= 3 | >= 3 |
 ## Data at rest
 You can protect your data at rest using:
 - Server side encription:
-    - S3-Managed Keys (SSE-S3).
+    - **S3-Managed Keys (SSE-S3).**
         - Each object encripted by a unique key. 
         - As additional safeguard, it encrypts the key itself with a master key that it regularly rotates. 
         - Uses 256-bit advanced encryption standard (AES-256)
-    - Customer master keys (CMKs) stored in AWS KMS-Key Management Service (SSE-KMS):
+    - **Customer master keys (CMKs)** stored in AWS KMS-Key Management Service **(SSE-KMS**):
         - Add addional separed permissions for use of a CMK.
         - Provide audit trail which show when your CMK was used.
-    - Customer-Provided Keys (SSE-C): 
+    - **Customer-Provided Keys (SSE-C**): 
         - User manages the encryption keys and S3 manages the encryption, as it writes to disks and decryption when you access your objects.
         - S3 does not store the encryption key you provided, only a randomly salted HMAC value of the encryption key to validate future requests.
 
-- Client-side encryption options
+- **Client-side encryption** options
     - KMS managed encryption keys (CSE-KMS)
     - Custome managed master ecryption keys (CSE-C)
 
+
+
+#### S3-Managed Keys (SSE-S3)
+
+- uses strong multi-factor encryption
+- encrypts each object with a unique key. As an additional safeguard, it encrypts the key itself with a master key that it rotates regularly
+- Uses  256-bit Advanced Encryption Standard (AES-256)
+
+![image-20240215170812062](./assets/image-20240215170812062.png)
+
+Picture from TutorialDoJo
+
+
+
 # S3 Payment Model
+
 Pay for what you use:
 - GBs per month
 - Transfer out of region
@@ -126,21 +141,24 @@ Usecases:
 - On-premise cache & low-latency files access
 
 ## S3 Storage Gateway Types:
-1. **File gateway** (NFS & SMB): 
+1. **File gateway (NFS & SMB):** 
     - flat files stored directly on S3
     - store and retrieve files directly using the NFS version 3 or 4.1 protocol.
     - store and retrieve files directly using the SMB file system version, 2 and 3 protocol.
     - access the data directly in S3 from any AWS Cloud application or service.
     - manage S3 data using lifecycle policies, cross-region replication, and versioning.
-
-2. Volume gateway (iSCSI)
-    - Stored Volumes: 
-        - data stored on site and assynchronous backed up to S3.
+    - Allows mounting a single folder containing **1,000 TB of data**.
+    
+2. **Volume gateway (iSCSI)**
+    - **Stored Volumes:** 
+        - data **stored on site** and **assynchronous** backed up to S3.
         - Gateway-stored volume configuration provides durable and inexpensive off-site backups that you can recover to your local data center or Amazon EC2. For example, if you need replacement capacity for disaster recovery, you can recover the backups to Amazon EC2
         - supports iSCSI protocol.
-    - Cached Volumes: 
-        - data is stored on S3 and the most frequently accessed data is cached on site.
+        - Gateway-stored volume supports volumes of **512 TB size.**
+    - **Cached Volumes:** 
+        - data is stored on S3 and the **most frequently accessed data is cached on site**.
         - All gateway-cached volume data and snapshot data is stored in Amazon S3 encrypted at rest using server-side encryption (SSE) and it cannot be accessed with S3 API or any other tools
+        - Gateway-Cached volumes can support volumes of **1,024TB in size**
 3. Tape Gateway
     - 
 

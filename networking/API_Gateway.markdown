@@ -101,25 +101,50 @@ The hostname is in the form of *{api-id}.execute-api.{region}.amazon.com*.
 
 [Types of API endpoints](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html):
 
-- Edge-optimized API endpoint
-
+- **Edge-optimized API endpoint**
   - route request to the nearest CloudFront Point of Presence (POP)
   - Default endpoint type for API GW REST API.
-
-- Private API endpoint
-
+  
+- **Private API endpoint**
   - executed through interface VPC endpoints
-
+  
   - isolated from public internet.
-
-    
-
-- Regional API endpoint
-
+  
+- **Regional API endpoint**
   - requests target to region-specific API Gateway API
   - pass all header names through as-is.
 
 
+
+## **WebSocket API** in API Gateway
+
+- API Gateway WebSocket APIs are bidirectional.
+- WebSocket APIs are often used in real-time applications such as chat  applications, collaboration platforms, multiplayer games, and financial  trading platforms.
+- You can use the `@connections` API from your backend service  to send a callback message to a connected client, get connection  information or disconnect from the client.
+
+
+
+
+
+![image-20240215102514079](./assets/image-20240215102514079.png)
+
+Picture by TutorialDojo
+
+## **REST API** in API Gateway
+
+- API Gateway REST APIs use a request/response model where a client sends a request to a service and the service responds back synchronously. 
+- REST APIs support more features    than HTTP APIs, while HTTP APIs are designed with minimal features so that they can be offered at a lower    price. 
+
+
+
+## HTTP APIs in API Gateway
+
+- [Choosing between REST APIs and HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html)
+- You can use HTTP APIs to send requests to AWS Lambda functions or        to any routable HTTP endpoint.
+
+![image-20240215103046762](./assets/image-20240215103046762.png)
+
+![image-20240215103106970](./assets/image-20240215103106970.png)
 
 ## References
 
