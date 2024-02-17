@@ -101,7 +101,8 @@ You can protect your data at rest using:
     - **Customer-Provided Keys (SSE-C**): 
         - User manages the encryption keys and S3 manages the encryption, as it writes to disks and decryption when you access your objects.
         - S3 does not store the encryption key you provided, only a randomly salted HMAC value of the encryption key to validate future requests.
-
+        - For presigned URLs, specify the algorithm using the `x-amz-server-side-encryption-customer-algorithm` request header
+    
 - **Client-side encryption** options
     - KMS managed encryption keys (CSE-KMS)
     - Custome managed master ecryption keys (CSE-C)
