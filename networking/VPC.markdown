@@ -23,7 +23,8 @@ Security groups cannot span VPCs.
     - Each instance has a public and private IP address.
 
 - Custom VPC
-    - 
+    
+    
 
 
 ## VPC Peering
@@ -46,16 +47,28 @@ Security groups cannot span VPCs.
 A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
 
 ### Types of VPC endpoints:
-- Interface endpoints (powered by AWS PrivateLink)
+- **Interface endpoints (powered by AWS PrivateLink)**
 It is a elastic network interface with a private IP address that serves as an entry point for traffic destinated to a supported service. 
 
-- Gateway endpoints
+- **Gateway endpoints**
   A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service.
   Currently gateway enpoints support:
     - Amazon S3
     - DynamoDB
 
+
+
+### [VPC endpoint policy](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-access.html)
+
+- IAM resource policy that you attach to an endpoint when you create or modify the endpoint. 
+- If you do not attach a policy when you create an endpoint, we attach a  default policy for you that allows full access to the service.
+- An endpoint policy **does not** override or replace IAM user policies or service-specific policies (such as S3 bucket policies).
+- You **cannot** attach **more than one policy** to an endpoint
+
+
+
 ### Accessing VPC Endpoints from Remote Networks
+
 - VPC endpoints are only accessible from AWS EC2 instances inside a VPC. This in order for remote networks to access VPC endpoints (e.g. for S3 access from a remote network), a local instance must proxy all remote request before they can utilize a VPC endpoint connection.
 
 ![VPC Endpoints from Remote Networks](../images/remote_vpc_endpoint.png)

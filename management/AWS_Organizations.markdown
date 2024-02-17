@@ -34,18 +34,32 @@ OrganizationAccountAccessRole must be **created manually** if you invite an exis
 - Organization policy used to manage permission in your organization. SCPs is available only in organization that has **all feature enabled**.
 
 - Define allowlist or block list IAM actions.
+
 - Applied at the OU (Organization Unit) or Account level.
+
 - Does not apply to management account.
+
 - SCP is applied to all the users and roles in the account **including root user.**
+
 - SCP **does no affect [service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)**: Service-linked roles enable other AWS services to integrate with AWS Organizations and can’t be restricted by SCPs.
-- SCP mjst have an **explicit Allow**.
+
+- SCP must have an **explicit Allow**.
+
 - Usecases:
   - restrict access to certain services
   - enforce PCI compliance by explicitly disabling services.
 
 - SCP strategies are blocklist and allowlist
+
 - aws:RequestRegion: used by SCP to deny a region.
+
 - Use SCP to restric creating resources without appropriate Tags.
+
+- By default, an SCP named **FullAWSAccess** is attached to every root, OU, and account.
+
+  
+
+
 
 ### [Policy evaluation logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html)
 

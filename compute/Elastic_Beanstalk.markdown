@@ -25,6 +25,17 @@ Elastic Beanstalk supports the deployment of web applications from Docker contai
 
 
 
+## Elactic Beanstalk Deployment Policies
+
+Deployment policies:
+
+- **All-at-once** (default): 
+- **rolling**: splits the environment’s EC2 instances into batches and deploys the new version of the application to one batch at a time
+- **rolling with additional batch**: allow to **maintain full capacity** during deployment as it launches new batch of instances before taking any instances out of service.
+- **immutable**: launch a full set of new instances running the new version of the  application in a separate Auto Scaling group alongside the instances  running the old version.
+
+
+
 ## Architecture models
 
 - **Single instance deployment** -> good for dev
