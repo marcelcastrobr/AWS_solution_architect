@@ -8,3 +8,4 @@
 - Evaluation type:
   - Package vulnerability: database of CVE
   - Network reachability
+- Inspector does not have the capability to **detect** EC2 instances that are using **unapproved AMIs**, unlike AWS Config.

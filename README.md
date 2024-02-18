@@ -27,6 +27,7 @@ Please note that this repo is under construction and will be update as part of m
 - [kinesis](analytics/kinesis.markdown)
 ## application
 - [step_function](application/step_function.markdown)
+- [SNS](application/SNS.markdown)
 - [SQS](application/SQS.markdown)
 ## compute
 - [SAM](compute/SAM.markdown)
@@ -82,6 +83,7 @@ Please note that this repo is under construction and will be update as part of m
 ## others
 - [AWS_Cloud_Map](others/AWS_Cloud_Map.markdown)
 ## security
+- [AWS_Firewall_Manager](security/AWS_Firewall_Manager.markdown)
 - [X_Ray](security/X_Ray.markdown)
 - [AWS_IAM_Idenity_Center](security/AWS_IAM_Idenity_Center.markdown)
 - [CloudHSM](security/CloudHSM.markdown)
@@ -104,7 +106,7 @@ Please note that this repo is under construction and will be update as part of m
 
  Run #bash create_readme.sh > README.md  in order to create README file automatically
 
- Number of markdown pages so far are: 62
+ Number of markdown pages so far are: 64
 
 
 

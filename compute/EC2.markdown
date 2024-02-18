@@ -45,11 +45,13 @@ Types are:
     - diversified: distributed accross your pools
     - InstancePoolsToUSeCount: distributted accross number of spot instance.
 
-## EC2 Facts
+## 
+
+
 
 ## EC2 Placement Groups
 
-### EC2 PLacement Groups Types
+#### EC2 PLacement Groups Types
 
 Three types of placement groups:
 - Clustered placement group:
@@ -66,7 +68,7 @@ Three types of placement groups:
     - can have a maximum of seven partitions per Availability Zone
 
 
-### EC2 PLacement Groups Facts
+#### EC2 PLacement Groups Facts
 - Placement group name must be unique within your AWS account for the region.
 - Placement groups cannot be merged
 
@@ -74,20 +76,29 @@ Three types of placement groups:
 - You cannot merge placement groups
 - You can move or remove an instance to a placement group using the AWS CLI and AWS SDK, but cannot do it via console.
 
+
+
 # Enhanced networking
+
 Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces.
 
 Enhanced network types:
 - Elastic network adapter: The Elastic Network Adapter (ENA) supports network speeds of up to 100 Gbps for supported instance types.
 - Intel 82599 Virtual Function (VF) interface: supports network speeds of up to 10 Gbps
 
+
+
 # EC2 Instance Termination
+
 By default, EBS root volumes are deleted upon instance termination. But, EBS volumes attached to the instances persists upon instance termination. This behaviour is controled by the volumne "DeleteOnTermination" attribute. 
 
 To prevent your instance from being accidentally terminated using Amazon EC2, you can enable termination protection for the instance. The DisableApiTermination attribute controls whether the instance can be terminated using the console, CLI, or API.
 The DisableApiTermination attribute does not prevent you from terminating an instance by initiating shutdown from the instance when the InstanceInitiatedShutdownBehavior attribute is set.
 
+
+
 # EC2 Auto Scaling
+
 - Scale out: add instances
 - Scale in: remove instances
 
@@ -116,7 +127,9 @@ Auto scalling cooldown period is a configurable setting for your auto scalling g
 If a value for the default cooldown period is not provided, its default value is 300 seconds
 
 
+
 ## [Elastic Network Interface](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#scenarios-enis)
+
 An elastic network interface is a logical network component in a VPC that represnets a virtual network card. It can include the following attributes:
 - A primary private IPv4 address from your VPC
 - One or more private secondary IPv4 private address
@@ -136,7 +149,9 @@ Best practices for configuring network interfaces:
 - You can move a network interface from one instance to another, if the instances are in the same AZ and VPC but in differents subnets.
 
 
+
 # EC2 Hibernate
+
 When you hibernate an instance, we signal the operating system to perform hybernation (suspend-to-disk). Hibernation saves the contents from the instance memory (RAM) to your Amazon EBS root volume. We persist instances Amazon EBS root volume and any type Amazon EBS data volumes. 
 
 When you start your instance:
@@ -153,6 +168,18 @@ Hibernation prerequisites:
 - Root volume type - must be an Amazon EBS volume, not an instance store volume.
 - Supported Amazon EBS volume types - General Purpose SSD (gp2) or Provisioned IOPS SSD (io1).
 - Instances cannot be hibernated for more than 60 days.
+
+
+
+# EC2Rescue
+
+- tools that help you to diagnose and [troubleshoot](https://repost.aws/knowledge-center/ec2rescue-windows-troubleshoot) problems on Amazon EC2 Linux and Windows
+- Run manually or through System Manager Automation with *AWSSupport-ExecuteEC2Rescue* document.
+- Troubleshoot OS-level issues:
+  - instance connectivity issues due to firewall, RDP (Remote Desktop Protocol) or network config
+  - OS boot issues
+
+
 
 # HPC on AWS
 

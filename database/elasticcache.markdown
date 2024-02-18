@@ -17,6 +17,12 @@ ElastiCache supports two open-source in memory cachhing engines:
 | ----------- | ----------- |
 | - Multi-threading <br> - Low maintenance <br/>  - Easy horizontal scalability with Auto Discovery<br />-  **no persistent**<br /> - **No backup and restore**<br />- Sharding across multi-node (data partition) | - Support for data structures <br> - **Persistent** <br/> - Atomic operations <br> - Pub/sub messaging <br/> - Read replicas/failover <br> - Cluster mode/sharded cluster <br/><br />- MultiAZ with auto-failover |
 
+![image-20240217112347610](./assets/image-20240217112347610.png)
+
+Picture by TutorialDoJo
+
+
+
 
 
 ## [Caching Strategies](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/Strategies.html):

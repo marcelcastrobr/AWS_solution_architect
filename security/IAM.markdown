@@ -180,21 +180,27 @@ Pass advanced session policies when you use the AWS CLI or AWS API to assume a r
 
 # IAM Roles
 
+In AWS there is two ways to use role: interactively in the IAM console or programatically with the AWS CLI or API.
+
+AssumeRole API: returns a set of temporary credentials.
+
+**IAM Access Analyzer** can be used to check if principals in accounts outside your zone of trust (trusted organization or accounts) have access to assume your roles.
+
+
+
 ## [Service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)
 
 A service-linked role is a type of service role that is linked to an AWS service. 
 
 The service can assume the role to perform an action on your behalf. 
 
-Service-linked roles appear in your AWS account and are owned by the service. 
+Service-linked roles appear in your AWS account and **are owned by the service**. 
 
-An IAM administrator can view,  but not edit the permissions for service-linked roles.  
+An IAM administrator can view,  **but not edit** the permissions for service-linked roles.  
 
 
 
 # Cross Account Resource Access
-
-
 
 - Resources that support [**resource-based policies**](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html#intro-access-resource-based-policies) can be shared directly.
 - If resource does not support resource-based policies use a role as a proxy.
@@ -335,3 +341,12 @@ Here is an example of "launch EC2 instances that have at least one matching tag 
 }
 ```
 
+
+
+# Instance Profile - IAM Role to an EC2
+
+- instance profile contains the role an can provide role´s temporary credenctials to an application that runs on the EC2.
+- Only one role can be assigned to an EC2 instance at a time.
+- No neeed to manage credentials as temporary credentials are used and rotated automatically.
+- If you use the AWS Console to create a role for EC2, the console automatically creates and instance profile and gives it the same name as the role.
+- In CloudFormation reference the IAM Role as property inside the `AWS::IAM::InstanceProfile` of the application instance.

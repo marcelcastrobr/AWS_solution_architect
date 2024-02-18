@@ -69,3 +69,19 @@ Amazon RDS automatically switches to a standby replica in another Availability Z
   - RAC  is working on Oracle on EC2
 - RDS for Oracle supports Transparedn Data Encryption (TDE) 
 - DMS works on RDS for Oracle 
+
+
+
+
+
+# Database Sharding
+
+[Database sharding](https://aws.amazon.com/what-is/database-sharding/) is the process of storing large database across multiple machines.¨
+
+Benefits of database sharding:
+
+- improve response time: fewer rows to search  than entire database¨
+- avoid total service outage
+- scale efficiently
+
+###### 

@@ -3,10 +3,12 @@
 A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. 
 A VPC spans all of the availability zones in the region. You can add one or more subnets in each availability zone.
 Each subnet must reside entirely within one availability zone and cannot span zones.
+
 A VPC contist normally of:
+
 - IGW (Internet Gateway) or Virtual Private Gateway.
 - Route tables
-- Network Access Control List (NACL)
+- Network Access Control List (NACL): 
 - Security groups
 
 AWS always reserve 5 IP addresses within your subnet.
@@ -14,6 +16,34 @@ Security groups cannot span VPCs.
 
 ![VPC Basics ](../images/vpc.png)
 
+
+
+#### Network Access Control List (NACL)
+
+- **stateless** virtual firewall that controls traffic in and out of subnets.
+  - Stateless = return traffic must be explicitly allowed rules.
+- allow and deny rules.
+- rules are evaluated in number order (from lowest to highest - first rule that match -> lower number is more important)
+- By default all inbound and outbound traffic is denied. Need to explicitly allow traffic.
+- One NACl can be associated with multiple subnet. But a subnet can be associated to only one NACL at a time.
+
+![image-20240217103112028](./assets/image-20240217103112028.png)
+
+Picture by TutorialDoJo
+
+#### Security Groups
+
+- **Stateful** and applied to instances
+
+  - Stateful = return traffic is automatically allowed.
+
+- security group controls ingres and egress traffic to an instance while NACLs control ingress and egress to a subnet level.
+
+- **Allow rules only.**
+
+- can reference other security groups in the same region (peered VPC or cross account)
+
+  
 
 ## VPC types
 
@@ -23,7 +53,7 @@ Security groups cannot span VPCs.
     - Each instance has a public and private IP address.
 
 - Custom VPC
-    
+  
     
 
 
@@ -36,10 +66,13 @@ Security groups cannot span VPCs.
 - **There is a default limit of 50 VPC peering for each VPC**
 
 
+
 ## VPC PrivateLink
+
 - Allow to open your service in a VPC to another VPC using Private Link.
 - Does not require VPC peering: no route table NAT, IGWs, etc.
 - Requires network load balancer on the service VPC and an ENI on the customer VPC.
+
 
 
 ## VPC Endpoints
@@ -64,6 +97,14 @@ It is a elastic network interface with a private IP address that serves as an en
 - If you do not attach a policy when you create an endpoint, we attach a  default policy for you that allows full access to the service.
 - An endpoint policy **does not** override or replace IAM user policies or service-specific policies (such as S3 bucket policies).
 - You **cannot** attach **more than one policy** to an endpoint
+
+
+
+### VPC Flow Logs:
+
+- can be defined at VPC level, subnet level or ENI level.
+- Capture denied internet traffic.
+- 
 
 
 

@@ -4,8 +4,7 @@
 EFS is a fully managed file storage service for AWS EC2.
 
 ## EFS Facts
-- Supportts NFSv4 protocol. Not currently support by Windows.
-- Only pay for storage you use
+- Supportts **NFSv4** protocol. Not currently support by Windows.
 - Data is stored accross multiple AZs within a region.
 - Supports thousand of concurrent connections.
 - Customer are using EFS for:
@@ -18,8 +17,12 @@ EFS is a fully managed file storage service for AWS EC2.
     - Workflos management
     - Analytics
 - Can create 125 file systems per account
+- Two performance modes:
+    - **General purpose**: latency sensitive usecases (web serviing, content management, etc)
+    - **Busrt throughput:** throughput scale as file system grows. 
 
-![EFS](/images/EFS.png)
+
+![EFS](../images/EFS.png)
 
 ## EFS Security Mechanisms
 - Control network traffic to and from file system by using VPCs security groups and network ACLs.
@@ -28,6 +31,4 @@ EFS is a fully managed file storage service for AWS EC2.
     - EFS supports action-level and resource-level permissions.
 
 ## EFS Additional resources
-    - [Deep Dive on Elastic File System - 2017 AWS Online Tech Talks
-](https://www.youtube.com/watch?v=NhI0g8vI5M0)
-
+    - [Deep Dive on Elastic File System - 2017 AWS Online Tech Talks](https://www.youtube.com/watch?v=NhI0g8vI5M0)
