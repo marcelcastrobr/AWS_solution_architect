@@ -57,7 +57,22 @@ OrganizationAccountAccessRole must be **created manually** if you invite an exis
 
 - By default, an SCP named **FullAWSAccess** is attached to every root, OU, and account.
 
-  
+
+
+SCP example allowing EC2 and S3 acess.
+
+```json
+{
+    "Version":"2012-10-17",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Action":["EC2:*","S3:*"],
+            "Resource":"*"
+        }
+    ]
+} 
+```
 
 
 

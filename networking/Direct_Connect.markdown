@@ -6,8 +6,6 @@ AWS Direct Connect links your internal network to an AWS Direct Connect location
 
 Below are two examples of connectivity through AWS Direct Connect.
 
-
-
 ![image-20230109162134954](./assets/image-20230109162134954.png)
 
 Picture: [What is AWS Direct Connect?](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html)
@@ -25,6 +23,14 @@ Picture: [Provision Direct Connect Connectivity](https://catalog.workshops.aws/d
 ### Scenario 2: A virtual private gateway
 
 ![image-20240209084959497](./assets/image-20240209084959497.png)
+
+
+
+### Scenario 3: Direct Connect Gateway with two virtual private gateways
+
+![image-20240218083808922](./assets/image-20240218083808922.png)
+
+Picture by TutorialDoJo
 
 
 

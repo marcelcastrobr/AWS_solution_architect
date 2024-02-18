@@ -1,13 +1,14 @@
 # AWS Config
 
 - Helps with auditing and recoding **compliance** of your AWS resources.
-- AWS Config Rules **does not prevent actions** from happening (no deny)
+- AWS Config Rules **does not prevent actions** from happening (**no deny**)
 - Scenarios
   - Unrestricted SSH access on security groups
   - S3 bucket with public access
   - ALB configuration changes over time.
 - AWS Regional service
 - View compliance of resource over time.
+- View relationship between resources (e.g. find all resources that use a particular security group)
 
 
 
