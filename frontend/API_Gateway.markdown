@@ -56,7 +56,7 @@ The three ways to deploy an API Gateway is:
 - 5xx server error
   - 502: bad gateway
   - 503: service unavailable exception
-  - 504: integration failure - e.g. edpoint request time-ou exception
+  - 504: integration failure - e.g. edpoint request time-ou exception. API GW request timeout after **29 seconds** maximum.
 
 
 
@@ -94,3 +94,15 @@ It works with AWS services (lambda, dynamoDB) or HTTP endpoints.
 ![image-20240129084724727](./assets/image-20240129084724727.png)
 
 Figure: Serverless chat app with a WebSocket API, lambda and dynamoDB from [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-chat-app.html).
+
+
+
+
+
+## CORS (Cross-Origin Resource Sharing) at API Gateway
+
+Figure below shows an example where CORS need to be implemented at API GW.
+
+![image-20240218091726697](./assets/image-20240218091726697.png)
+
+Picture by Udemy.
