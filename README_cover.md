@@ -14,10 +14,10 @@ Please note that this repo is under construction and will be update as part of m
 
 
 
-| <img src="./images/sa-ass.png" alt="drawing" width="400"/> | <img src="./images/devops-ass.png" alt="drawing" width="400"/> |
-| ---------------------------------------------------------- | ------------------------------------------------------------ |
+| <img src="./images/sa-ass.png" alt="drawing" width="400"/> | <img src="./images/devops-ass.png" alt="drawing" width="400"/> | <img src="./images/sa-pro.png" alt="drawing" width="400"/> |
+| ---------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
 
- 
+
 
 # Table of Content
 
